@@ -1,0 +1,48 @@
+\chapter{Theory}\label{chap:theory}
+	\section{Nuclei and Spin}
+	\section{NMR}
+	Nuclear Magnetic Resonance (NMR) is a technique that emerged in 1946 with the discovery
+	of the absortion properties of nuclei irradiated with electromagnetic waves resonant to their
+	larmor frequencies.\ref{ReosnanceAbsorption} The subsequent observation of signal from those
+	previously excited nuclei, known as free induction decay (FID) paved the road to the now well
+	established method which in the beginning was primarily used in chemistry for structural
+	analysis of Molecules and chemical kinetics.
+		\subsection{Flip angle}
+			An external, on-resonant magnetic field will cause the magnetization of an ensemble of
+			spins to flip by an angle $\alpha$ known as the flip angle (FA). An FA of $n\cdot 180
+			\deg + 90 \deg$ will rotate the magnetization to the transverse plane perpendicular to the magnetic field
+			resulting in an FID. Pulses of $n\cdot 180 \deg$ will keep the magnetization aligned
+			with the magnetic field or invert it, therefore not resulting in a FID. All other FAs
+			will produce a linear combination of the two cases.
+		\subsection{Relaxation}
+			After being deflected from its equilibrium, z-magnetization tends to relax towards its
+			thermal equilibrium. That process is called T1 relaxation or spin-lattice relaxation and
+			is an exponential decay. In addition, the transverse magnetization decays - usually much
+			faster - because of different magnetic fields experienced by the individual spins
+			leading to a dephasing of the signal.
+			\begin{figure}{h}
+				\todo{T1/T2 figure}
+			\end{figure}
+		\subsection{A simple NMR experiment}
+			The most basic experiment in NMR is the reaction of a spin ensemble to an 
+		\subsection{Field Gradients}
+		\subsection{2D-NMR}
+	\section{MRI}
+		\subsection{MRI in Medicine}
+		\subsection{Frequency encoding}
+		\subsection{Phase encoding}
+	\section{Hyperpolarization}
+		The main limitation of NMR and MRI is the low thermal polarization.
+		For each energy state $E_i$ the Boltzmann distribution dictates
+		\begin{equation}
+			N_i = \exp{\frac{E_i}{k_B T}}
+		\end{equation}
+		For energy differences between two states that are small compared to
+		the thermal Energy, the polarization can be expressed as follows:
+		\begin{equation}
+			P = {N_+-N_-}{N} = \tanh\left(\frac{\hbar \gamma B}{2 k T }\right)
+		\end{equation}
+		\subsection{DNP}
+		\subsection{Hyperpolarization of Noble Gases}
+		\subsection{Brute Force Hyperpolarization}
+		\subsection{Parahydrogen induced Hyperpolarization}

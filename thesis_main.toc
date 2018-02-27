@@ -1,0 +1,14 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Template Structure}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}setup.tex}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Advice}{3}{section.1.3}
+\contentsline {chapter}{\numberline {2}Related Work}{5}{chapter.2}
+\contentsline {chapter}{\numberline {3}Background}{7}{chapter.3}
+\contentsline {chapter}{\numberline {4}Approach}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Problem Definition}{11}{section.4.1}
+\contentsline {section}{\numberline {4.2}First Part of the Approach}{11}{section.4.2}
+\contentsline {section}{\numberline {4.3}N-th Part of the Approach}{11}{section.4.3}
+\contentsline {chapter}{\numberline {5}Experiments}{13}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{15}{chapter.6}
+\contentsline {chapter}{\numberline {7}Acknowledgments}{17}{chapter.7}
+\contentsline {chapter}{Bibliography}{18}{chapter.7}
