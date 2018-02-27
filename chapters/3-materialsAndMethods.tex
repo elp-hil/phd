@@ -14,6 +14,8 @@
 			used. It was operated untuned and unmatched as a broadband resonator. The pulse
 			generation was performed using a National Instruments data acquisition crate (NI
 			\todo{which?}). 
+		\subsection{Software control}
+			All software control was realized using Matlab in combination with the DAQmx libraries. 
 		\subsection{Data Readout}
 			All readout was done using a NI \todo{name}
 		\subsection{Shim System}
@@ -22,8 +24,10 @@
 			.\todo{cm} acrylic tube. The x and y shims are made of four saddle coils respectively that
 			were plainly manufactured individually and bent to fit the tube. The z shims, which are
 			basically a pair of maxwell coils, were added on top of these saddle coils. All shims
-			are driven by a \todo{H\&U} programmable power supply providing up to $\SI{10}{\ampere}$
-			of current.
+			are driven by a \todo{H\&U} programmable power supply providing up to
+			$\SI{10}{\ampere}$ of current. The power supply is connected via a virtual serial port inside
+			a USB connection. That way, the three shim channels can be controlled from inside the
+			Matlab hypercontrol program \ref{subsec:hypercontrol}
 	\section{Magritek Low Field MRI}
 		To acquire images at low fields, a Magritek Terranova \todo{ref } was used. It features
 		similar hardware as the low field spectrometer, but uses its $B_0$ coil only for
