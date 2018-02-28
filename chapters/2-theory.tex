@@ -1,9 +1,64 @@
 \chapter{Theory}\label{chap:theory}
 	\section{Nuclei and Spin}
+	The postulation of an electron spin in 1926 \ref{} and later in 1928 of a proton spin \ref{} opened
+	up new areas of research.\todo{more history}
+	Individual spins can be described by their angular momentum operators $\hat{I}$,
+	$\hat{I}_y$ and $\hat{I}_z$ that return the eigenvalue of the state in its respective
+	direction.
+	\begin{equation}
+		\hat I_z \ket{I, S} = S \ket{I,S}
+	\end{equation}
+	Considering a spin-1/2 particle in a magnetic field along the z-axis (e.g. the proton as a prominent particle in NMR), these
+	eigenstates are 
+	\begin{equation}
+	\ket\alpha = \begin{pmatrix}1\\0\end{pmatrix} \hspace{2 cm} \ket\beta =
+	\begin{pmatrix}0\\1\end{pmatrix}
+	\end{equation}
+	with the eigenvalues of $\pm 1/2$.
+	Generally, every spin-1/2 particle can be in any superposition of those two eigenstates:
+	\begin{equation}
+		\ket\psi = c_\alpha \ket\alpha + c_\beta \ket \beta = \begin{pmatrix} c_\alpha \\
+		c_\beta\end{pmatrix}
+	\end{equation}
+	These superposition states evolve under external conditions until a eigenstate of the particle
+	is reached.
+	Generally, a sample does not consist of one, but of many nuclei and thus many spins need to be
+	described to describe the system. To do so, usually the density matrix formalism is introduced.
+	It onsiders an ensembe of spins that do not interact with each other. In this case, the
+	expectation value of an operator for a single spin $\braket{\hat Q}$ is given by
+	\begin{equation}
+	\bra\psi\hat Q\ket\psi = \left( c_\alpha^*, c_\beta^*\right)
+	\begin{pmatrix}
+		Q_{\alpha\alpha} Q_{\alpha\beta}\\
+		Q_{\beta\alpha} Q_{\beta\beta}
+	\end{pmatrix}
+	\begin{pmatrix}
+		c_\alpha\\
+		c_\beta
+	\end{pmatrix}
+	\end{equation}
+	It can be shown that this is equal to the trace of the density operator 
+	$\ket\psi\bra\psi$multiplied with said operator
+	\begin{equation}
+		\braket{\hat Q} = \Tr \left\{\ket\psi\bra\psi\hat Q\right\}
+	\end{equation}
+	For multiple spins, it follows that the observable becomes the sum of their individual
+	observables:
+	\begin{equation}
+		\braket{\hat Q_{all}}= \bra{\psi_1}\hat Q\ket{\psi_1} + \bra{\psi_2}\hat Q\ket{\psi_2} + \hdots =
+		\Tr{\left\{\left(\ket{\psi_1}\bra{\psi_1} + \bra{\psi_2}\ket{\psi_2}+ \hdots \right) \hat Q\right\}}
+	\end{equation}
+	This means that the system of spins can be described by the sum of the density operators called
+	the density matrix
+	\begin{equation}
+		\hat\rho = \overline{\ket\psi\bra\psi}.
+	\end{equation}
+	In thermal equilibrium, the non-diagonal elements are zero. Through deflection from that
+	equilibrium, non diagonal elements are populated as described in the following section.
 	\section{NMR}
 	Nuclear Magnetic Resonance (NMR) is a technique that emerged in 1946 with the discovery
 	of the absortion properties of nuclei irradiated with electromagnetic waves resonant to their
-	larmor frequencies.\ref{ReosnanceAbsorption} The subsequent observation of signal from those
+	larmor frequencies.\ref{ResonanceAbsorption} The subsequent observation of signal from those
 	previously excited nuclei, known as free induction decay (FID) paved the road to the now well
 	established method which in the beginning was primarily used in chemistry for structural
 	analysis of Molecules and chemical kinetics.
