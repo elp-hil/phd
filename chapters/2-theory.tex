@@ -1,5 +1,5 @@
 \chapter{Theory}\label{chap:theory}
-	\section{Nuclei and Spin}
+	\section{Nuclei and Spins}
 	The postulation of an electron spin in 1926 \ref{} and later in 1928 of a proton spin \ref{} opened
 	up new areas of research.\todo{more history}
 	Individual spins can be described by their angular momentum operators $\hat{I}$,
@@ -9,7 +9,7 @@
 		\hat I_z \ket{I, S} = S \ket{I,S}
 	\end{equation}
 	Considering a spin-1/2 particle in a magnetic field along the z-axis (e.g. the proton as a prominent particle in NMR), these
-	eigenstates are 
+	eigenstates are
 	\begin{equation}
 	\ket\alpha = \begin{pmatrix}1\\0\end{pmatrix} \hspace{2 cm} \ket\beta =
 	\begin{pmatrix}0\\1\end{pmatrix}
@@ -37,7 +37,7 @@
 		c_\beta
 	\end{pmatrix}
 	\end{equation}
-	It can be shown that this is equal to the trace of the density operator 
+	It can be shown that this is equal to the trace of the density operator
 	$\ket\psi\bra\psi$multiplied with said operator
 	\begin{equation}
 		\braket{\hat Q} = \Tr \left\{\ket\psi\bra\psi\hat Q\right\}
@@ -53,8 +53,66 @@
 	\begin{equation}
 		\hat\rho = \overline{\ket\psi\bra\psi}.
 	\end{equation}
-	In thermal equilibrium, the non-diagonal elements are zero. Through deflection from that
-	equilibrium, non diagonal elements are populated as described in the following section.
+	For a spin-1/2 ensemble, the density matrix in thermal equilibrium is
+	\begin{equation}
+		\hat \rho = \begin{pmatrix} \frac{1}{2}+\frac{1}{4}\mathbb{B}& 0\\ 0&
+		\frac{1}{2}-\frac{1}{4}\mathbb{B}\end{pmatrix} = \frac {1}{2} \hat1 + \frac{1}{2} \mathbb{B}
+		\hat I_z
+	\end{equation}
+	with $\mathbb{B} = \frac{\hbar\gamma B_0}{k_b T}$. That means that in thermal equilibrium, the
+	non-diagonal elements are zero, i.e. the socalled coherences (off-diagonal elements) are all
+	equally populated while there is a slight overpopulation of one of the two states. Through deflection from that
+	equilibrium, coherences are populated as described in the following section.
+		\subsection{Radiofrequency pulses}
+		Using the density matrix formalism, radiofrequency pulses described by rotational operators can be
+		applied to the whole ensemble. A pulse $\hat R_\phi(\beta)$ of phase $\phi$ (corresponding
+		to the axis around which magnetization is rotated) and angle $\beta$ where
+		$\beta=\omega_{nut} \cdot \tau_p$ exerting on a state $\ket\psi$ is described by 
+		\begin{equation}
+			\ket{\psi_\tau}= \hat R_\phi(\beta)\ket\psi
+		\end{equation}
+		Calculating the density matrix now leads to
+		\begin{equation}
+			\hat {\rho_\tau} = \overline{\ket{\psi_\tau}\bra{\psi_\tau}} = \overline{\hat
+				R_{\phi}(\beta)\ket\psi\bra\psi \hat R_\phi(-\beta)}
+		\end{equation}
+		where the overbar describes the averaging over all spins in the ensemble.
+		Finally, as we are considering the same flip angle for every single spin in the ensemble,
+		the formula can be reduced to
+		\begin{equation}
+			\hat\rho_\tau = \hat R_\phi(\beta) \hat \rho \hat R_\phi(-\beta)
+		\end{equation}
+		meaning a rotation of the magnetization corresponds to a rotation of the desity matrix.
+		If we consider a $\SI{90}{\degree}$ pulse around the x axis on the previously described
+		equilibrium for a spin-1/2 ensemble it follows:
+		\begin{equation}
+			\begin{split}
+				\hat\rho_\tau = \hat R_x(\pi/2)\hat\rho\hat R_x(-\pi/2) &= \frac{1}{2} \hat 1 +
+				\frac{1}{2} \mathbb{B}\hat R_x(\pi/2) \hat I_z \hat R_x(-\pi/2)\\
+				&=
+				\begin{pmatrix}
+					\frac{1}{2} & -\frac{1}{4i}\mathbb{B}\\
+					\frac{1}{4i}\mathbb{B}\ & \frac{1}{2}
+				\end{pmatrix}
+			\end{split}
+		\end{equation}
+		It can be equally shown that a $\SI{180}{\degree}$ pulse inverts the populations of the
+		diagonal elements while the coherences are untouched.
+		If the system is not in thermal equilibrium, the states will evolve and generally relax back
+		into the original equilibrium state. If one neglects said relaxation at first, the evolution
+		can be described by \todo{ref formula rotationg frame}
+		\begin{equation}
+			\begin{split}{ccc}
+				\ket\psi_\upsilon &= \hat R_z(\Omega^0\upsilon)\ket\psi_\tau ~ \mathrm{and} \\
+				\hat\rho_\upsilon &= \hat R_z(\Omega^0\upsilon)\hat\rho_\tau\hat
+				R_z(-\Omega^0\upsilon)
+			\end{split}
+		\end{equation}
+		which shows that only a time dependent phase $\exp{i\Omega^0 \upsilon}$ is added to the coherences and the populations
+		stay constant. This confirms the macroscopic observation that the ensemble of spins behaves like a rotating vector of
+		magnetization in the x-y-plane (w\textbackslash o relaxation).
+		If relaxation is added to the scheme, we can differentiate between relaxation of the
+		coherences ($T_2$ relaxation) and that of the states ($T_1$ relaxation).
 	\section{NMR}
 	Nuclear Magnetic Resonance (NMR) is a technique that emerged in 1946 with the discovery
 	of the absortion properties of nuclei irradiated with electromagnetic waves resonant to their
@@ -79,8 +137,14 @@
 				\todo{T1/T2 figure}
 			\end{figure}
 		\subsection{A simple NMR experiment}
-			The most basic experiment in NMR is the reaction of a spin ensemble to an 
+		The most basic experiment in NMR is the exposure of a spin ensemble to a $\SI{90}{\degree}$
+		RF pulse and subsequent readout. This will set the diagonal density matrix entries to zero
+		and populate the socalled coherences, i.e. the off-diagonal entries.
 		\subsection{Field Gradients}
+		For different purposes it is beneficial not to have only the homogeneous $B_0$ field, but
+		also field gradients. Generally, these are additional z-fields that change linearly with one
+		of the spatial dimentions. Generation of these fields is usually achieved by thermal
+		conductors of specifically tailored geometries.
 		\subsection{2D-NMR}
 	\section{MRI}
 		\subsection{MRI in Medicine}
