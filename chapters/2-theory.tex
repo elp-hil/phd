@@ -1,4 +1,64 @@
 \chapter{Theory}\label{chap:theory}
+	\section{NMR}
+		Nuclear Magnetic Resonance (NMR) is a technique that emerged in 1946 with the discovery
+		of the absortion properties of nuclei irradiated with electromagnetic waves resonant to their
+		larmor frequencies.\ref{ResonanceAbsorption} The subsequent observation of signal from those
+		previously excited nuclei, known as free induction decay (FID) paved the road to the now well
+		established method which in the beginning was primarily used in chemistry for structural
+		analysis of Molecules and chemical kinetics.
+		\subsection{Larmor frequency}
+			Inside an external magnetic field $B_0$, a magnetic dipole $\mu$ will precess with a frequency
+			proportional to $B_0\cdot \mu$. This also applies to charged particles with a spin $S\neq0$ and thus
+			a magnetic moment $\mu\neq0$. The precession is a result of the torque $\mu\times\vec B$
+			excerted on the magnetic dipole moment.
+		\subsection{Chemical shift}
+			The larmor frequency of nuclei in NMR is largely governed by $B_0$ and $\mu$, but other factors do
+			influence it on a more subtle scale. The most prominent effect is the chemical shift which
+			originates in the shielding of $B_0$ by the electrons' magnetic dilpoles surrounding the nucleus or molecule.
+			The shielding thus generally leads to a decrease of precession frequency, the chemical shift
+			though is calculated as the relative frequency quota towards another known sample's
+			reference frequency:
+			\begin{equation}
+				\delta = \frac{\nu_{sample} - \nu_{reference}}{\nu_{reference}}
+			\end{equation}
+		\subsection{J-coupling}
+			In addition to the change in field by the electrons dipoles, the nucleis' magnetic
+			dipoles inside one molecule will also interact. The interaction can be conveyed either
+			directly or via the electrons' spins. The direct interaction is neglectable in liquids
+			due to fastly rotating spins that average to zero. The indirect interaction via the
+			electrons can also lead to a frequency shift resulting in multiplets usually on scales
+			smaller than the chemical shifts, i.e. in the $\SI{}{\hertz}$ range.
+		\subsection{Flip angle}
+			An external, on-resonant magnetic field will cause the magnetization of an ensemble of
+			spins to flip by an angle $\alpha$ known as the flip angle (FA). An FA of $\mathrm n\cdot 180
+			\deg + 90 \deg$ will rotate the magnetization to the transverse plane perpendicular to the magnetic field
+			resulting in an FID. Pulses of $\mathrm n\cdot 180 \deg$ will keep the magnetization aligned
+			with the magnetic field or invert it, therefore not resulting in a FID. All other FAs
+			will produce a linear combination of the two cases.
+		\subsection{A simple NMR experiment}
+		The most basic experiment in NMR is the exposure of a spin ensemble to a $\SI{90}{\degree}$
+		RF pulse and subsequent readout. This will flip the magnetization by $\SI{90}{\degree}$
+		which will subsequently precess around the z axisi with its Larmor frequency. Using a coil\ref{materialsMethods:coils}
+		mounted around the sample, the alternating field caused by the rotating magnetization will induce a
+		current driving the resonant circuit. That signal - or free induction decay - can be
+		recorded as the voltage over the resonant circuit.
+		\subsection{Relaxation}
+		After being deflected from its thermal equilibrium, the magnetization tends to return to
+		that equilibrium state. That process is called $T_1$ relaxation or spin-lattice relaxation
+		and is an exponential decay. In addition, the transverse magnetization decays with a time
+		constant called $T_2$ that is usually much smaller than $T_1$. $T_2$ relaxation is because
+		of different magnetic fields experienced by the individual spins leading to a dephasing of
+		the signal.
+		\begin{figure}{h}
+			\todo{T1/T2 figure}
+		\end{figure}
+		\subsection{Field Gradients}
+		For different purposes it is beneficial to not only have the homogeneous $B_0$ field, but
+		also field gradients. Generally, these are additional z-fields that change linearly with one
+		of the spatial dimentions. Generation of these fields is usually achieved by thermal
+		conductors of specifically tailored geometries.
+		\subsection{2D-NMR}
+		
 	\section{Nuclei and Spins}
 	The postulation of an electron spin in 1926 \ref{} and later in 1928 of a proton spin \ref{} opened
 	up new areas of research.\todo{more history}
@@ -20,7 +80,9 @@
 		\ket\psi = c_\alpha \ket\alpha + c_\beta \ket \beta = \begin{pmatrix} c_\alpha \\
 		c_\beta\end{pmatrix}
 	\end{equation}
-	These superposition states evolve under external conditions until a eigenstate of the particle
+	Th;lkjsdfljk:
+	thtlth:wqa
+	:ese superposition states evolve under external conditions until a eigenstate of the particle
 	is reached.
 	Generally, a sample does not consist of one, but of many nuclei and thus many spins need to be
 	described to describe the system. To do so, usually the density matrix formalism is introduced.
@@ -102,7 +164,7 @@
 		into the original equilibrium state. If one neglects said relaxation at first, the evolution
 		can be described by \todo{ref formula rotationg frame}
 		\begin{equation}
-			\begin{split}{ccc}
+			\begin{split}
 				\ket\psi_\upsilon &= \hat R_z(\Omega^0\upsilon)\ket\psi_\tau ~ \mathrm{and} \\
 				\hat\rho_\upsilon &= \hat R_z(\Omega^0\upsilon)\hat\rho_\tau\hat
 				R_z(-\Omega^0\upsilon)
@@ -112,44 +174,58 @@
 		stay constant. This confirms the macroscopic observation that the ensemble of spins behaves like a rotating vector of
 		magnetization in the x-y-plane (w\textbackslash o relaxation).
 		If relaxation is added to the scheme, we can differentiate between relaxation of the
-		coherences ($T_2$ relaxation) and that of the states ($T_1$ relaxation).
-	\section{NMR}
-	Nuclear Magnetic Resonance (NMR) is a technique that emerged in 1946 with the discovery
-	of the absortion properties of nuclei irradiated with electromagnetic waves resonant to their
-	larmor frequencies.\ref{ResonanceAbsorption} The subsequent observation of signal from those
-	previously excited nuclei, known as free induction decay (FID) paved the road to the now well
-	established method which in the beginning was primarily used in chemistry for structural
-	analysis of Molecules and chemical kinetics.
-		\subsection{Flip angle}
-			An external, on-resonant magnetic field will cause the magnetization of an ensemble of
-			spins to flip by an angle $\alpha$ known as the flip angle (FA). An FA of $n\cdot 180
-			\deg + 90 \deg$ will rotate the magnetization to the transverse plane perpendicular to the magnetic field
-			resulting in an FID. Pulses of $n\cdot 180 \deg$ will keep the magnetization aligned
-			with the magnetic field or invert it, therefore not resulting in a FID. All other FAs
-			will produce a linear combination of the two cases.
-		\subsection{Relaxation}
-			After being deflected from its equilibrium, z-magnetization tends to relax towards its
-			thermal equilibrium. That process is called T1 relaxation or spin-lattice relaxation and
-			is an exponential decay. In addition, the transverse magnetization decays - usually much
-			faster - because of different magnetic fields experienced by the individual spins
-			leading to a dephasing of the signal.
-			\begin{figure}{h}
-				\todo{T1/T2 figure}
-			\end{figure}
-		\subsection{A simple NMR experiment}
-		The most basic experiment in NMR is the exposure of a spin ensemble to a $\SI{90}{\degree}$
-		RF pulse and subsequent readout. This will set the diagonal density matrix entries to zero
-		and populate the socalled coherences, i.e. the off-diagonal entries.
-		\subsection{Field Gradients}
-		For different purposes it is beneficial not to have only the homogeneous $B_0$ field, but
-		also field gradients. Generally, these are additional z-fields that change linearly with one
-		of the spatial dimentions. Generation of these fields is usually achieved by thermal
-		conductors of specifically tailored geometries.
-		\subsection{2D-NMR}
+		coherences ($T_2$ relaxation) and that of the states ($T_1$ relaxation). The former affects
+		the non diagonal elements only which will deacy to zero while the latter brings the populations of the states back to
+		thermal equilibrium. That can be expressed by
+		\begin{equation}
+			\rho_{ij, \upsilon} = \rho_{ij, \tau} \exp{(\pm
+				i\Omega^0-\lambda)\upsilon},~\mathrm{i,j~=~
+			1,2(+)~or~2,1(-)}
+		\end{equation}
+		for the non diagonal elements and
+		\begin{equation}
+			\rho_{ii,\upsilon} = (\rho_{ii,\tau} - \rho_{ii}^{eq})\exp(-\tau/T_1)+\rho_{ii}^{eq}
+		\end{equation}
+
 	\section{MRI}
+		A huge addition to the world of NMR was the invention of spatially resolved sample maps,
+		i.e. imaging. It was made possible through the clever use of gradients and largely resembles
+		2D-NMR sequences.
 		\subsection{MRI in Medicine}
+			As a non-invasive, non-ionizing imaging method, MRI has become important in many parts
+			of the medical field for example neurology, oncology, cardiology or urology. While the
+			low polarization of nuclei make its sesitivity inferior to other imaging methods such as
+			computed tomography, the nature of the signal generation allow for contrasts that differ
+			vastly from other established mehtods. This uniqueness allows for superior imaging power
+			in many cases despite the smaller sensitvity.
+		\subsection{Slice selection}
+			The first step in most imaging methods is to excite a slice of the sample to perform the
+			first spatial selection. To do so, a gradient - mostly in z direction - is aplied to the
+			sample. The following pulses which usually have a limited frequency bandwidth will
+			affect only the nuclei within a slice of the thickness defined by the gradient strength
+			usually given in $\SI{}{\milli\tesla\per\meter}$ and the pulse's bandwith. It has to be
+			kept in mind that this does not necessarily guarantee that nuclei outside the prepared
+			slice do not contribute to the signal. Movement of parts of the sample such as flow or
+			diffusion can lead to signal artifacts. Furthermore, the following pulses in the
+			sequence have to be carefully designed to not generate FIDs or echos of their own that
+			are not related to the originally selected slice.
 		\subsection{Frequency encoding}
+			During readout, a field gradient can be turned on to encode the second spatial
+			dimension. Considering a positive x-gradient, the nuclei at higher x values will then
+			generate a higher frequency than the ones at lower x values and thus show up further
+			right in a 1D-FT.
 		\subsection{Phase encoding}
+			Generating an encoding for the third spatial dimension is not quite as straightforward.
+			To do so, a third gradient in a third dimension perpendicular to the two others is necessary.
+			Due to redundancy issues, that gradient cannot simply be turned on during readout though
+			but is used to change the phase of the signal the nuclei generate depending on the
+			position in the sample. That means that the gradient strength needs to be varied to
+			satisfy the sampling conditions for the frequencies generated, i.e. the freuquency
+			encoding scheme is run multiple times with a different phase encoding gradient strengths running
+			before it. That way, if the fourier transformed data for each phase encoding step is
+			sorted by gradient strength and fourier transformed in the second dimension, the
+			frequency generated by the more or less quickly changing phase will define the position
+			in y direction.
 	\section{Hyperpolarization}
 		The main limitation of NMR and MRI is the low thermal polarization.
 		For each energy state $E_i$ the Boltzmann distribution dictates
@@ -161,7 +237,19 @@
 		\begin{equation}
 			P = {N_+-N_-}{N} = \tanh\left(\frac{\hbar \gamma B}{2 k T }\right)
 		\end{equation}
-		\subsection{DNP}
+		\subsection{Dynamic nuclear polarization}
+			As the gyromagnetic ratio of electrons is much higher than that of any nucleus (factor
+			of $10^{3}$ compared to protons), dynamic nuclear polarization (DNP) uses electrons at
+			low temperatures and high fields to generate large initial polarization. The
+			polarization is then transferred to specific nuclei by microwave irradiation that
+			induces transitions in the spin system of nucleus and electron that is generated by the
+			addition of free radicals. The low temperatures lead to a freezing of the sample and
+			microwaves are applied in that frozen state. For administration, the frozen sample then
+			needs to be quickly melted and transferred, usually in controlled magnetic environments
+			to prevent fast relaxation. The samples can show high polarizations close to unity but
+			are usually limited by decay during the relatively long delivery times. Efforts building
+			faster transport mechanisms have greatly reduced these times but they stay in the range
+			of tens of seconds.
 		\subsection{Hyperpolarization of Noble Gases}
 		\subsection{Brute Force Hyperpolarization}
 		\subsection{Parahydrogen induced Hyperpolarization}
