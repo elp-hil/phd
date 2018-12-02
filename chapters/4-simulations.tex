@@ -1,6 +1,7 @@
+% !TEX root = ../thesis_main.tex
 \chapter{Simulations}\label{chapter:simulations}
 \section{Biot Savart field simulations}
-	\subsection{$B_0$ fields in low field NMR}
+\subsection{$B_0$ fields in low field NMR}\label{simulations:B0}
 		For $B_0$ field generation, mostly solenoid coils with compensation windings on both ends
 		were used. To find optimal lengths and numbers of layers, Matlab simulations of static fields using Biot Savart's law were implemented.
 		Both solenoidal structures and "closed" loops were simulated.
@@ -20,7 +21,7 @@
 				\caption{Histograms of the magnetic field strength. From left to right, number of compensation windings rise. This leads to a field increase and change in homogeniety.}
 			\end{figure}
 
-		\subsection{Dual Helmholtz Array}
+			\subsection{Dual Helmholtz Array}\label{simulations:DualHelmholtzArray}
 			As a more advanced setup that is less prone to manufacturing errors due to the relatively larger distances to the sample volume, a dual helmholtz array design was considered. A single Helmholtz array provides less Homogeniety than a solenoid (Fig ..) but the additional pair of coils generates a differently shaped field similar to the compensation windings for the solenoid. By variation of the distances of both pairs relative to the center and their respective field strengths, i.e. the currents of the coil pairs, optimal parameters were extracted from the simulations. The 
 	\section{Simulations using the groups' spin dynamics\todo{name?} framework}
 		To estimate the 

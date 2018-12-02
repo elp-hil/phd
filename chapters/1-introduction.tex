@@ -1,4 +1,5 @@
-\chapter{Introduction}\label{chap:introduction}
+% !TEX root = ../thesis_main.tex
+\chapter{Introdduction}\label{chap:introduction}
 \section{setup.tex}\label{sec:setup}
 Edit setup.tex according to your needs. The file contains two sections, one for package includes, and one for defining commands. At the end of the includes and commands there is a section that can safely be removed if you don't need algorithms or tikz. Also don't forget to adapt the pdf hypersetup!!\\
 setup.tex defines:
@@ -8,6 +9,7 @@ setup.tex defines:
         \item \verb|\todo{Do this!}|: \todo{Do this!}
         \item \verb|\extend{Write more when new results are out!}|:\\ \extend{Write more when new results are out!}
         \item \verb|\draft{Hacky text!}|: \draft{Hacky text!}
+        	\cite{bromley1993siamesesignature}
     \end{itemize}
 
     \item some commands for referencing, `in \verb|\chapref{chap:introduction}|' produces 'in \chapref{chap:introduction}'
@@ -31,7 +33,7 @@ setup.tex defines:
     \item named equations:
         \begin{verbatim}
 \begin{align}
-    d(a,b) &= d(b,a)\\ \eqname{symmetry}
+d(a,b) &= d(b,a)\\ \eqname{symmetry}
 \end{align}
         \end{verbatim}
         \begin{align}

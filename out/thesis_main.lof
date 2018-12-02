@@ -1,9 +1,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Half cut views of the low field reactor (left) and high field probe (right). The disk for pH2 provision in the low field reactor is visisble on the bottom sandwiched between the main body and the screw on cap. Hose connections are made to that cap and the top of the main body. The high field probe is shown with its optional piston inserted, the two possible connections at the top for actuation and bottom for sample transfer are visible.\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {1}{\ignorespaces Half cut views of the low field reactor (left) and high field probe (right). The disk for pH2 provision in the low field reactor is visisble on the bottom sandwiched between the main body and the screw on cap. Hose connections are made to that cap and the top of the main body. The high field probe is shown with its optional piston inserted, the two possible connections at the top for actuation and bottom for sample transfer are visible.\relax }}{17}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2}{\ignorespaces Histograms of the magnetic field strength. From left to right, number of compensation windings rise. This leads to a field increase and change in homogeniety.\relax }}{19}{figure.caption.12}
+\contentsline {figure}{\numberline {2}{\ignorespaces Histograms of the magnetic field strength. From left to right, number of compensation windings rise. This leads to a field increase and change in homogeniety.\relax }}{21}{figure.caption.12}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3}{\ignorespaces Calibration data of X- and Y-channel. Each dataset in the key corresponds to a full rotation at one position in the MuMetal shield. The solid lines correspond to a sine fit to each dataset with phase, amplitude and offset as fitting parameters. Error bars are not displayed for better visibility.\relax }}{27}{figure.caption.15}
+\contentsline {figure}{\numberline {4}{\ignorespaces Calibration of the Z-channel. Due to spatial limitations, no full rotation in z direction was possible. The two datasets represent one measurement in "upwards" ond one in "downwards" direction. The solid line represents the average of the positional averages of the two directions.\relax }}{28}{figure.caption.17}
+\contentsline {figure}{\numberline {5}{\ignorespaces Time course of the signal intensity (peak height) when adding human blood to the continuously hyperpolarized solution. Note the string signal drop after addition of \SI {0.5}{\milli \litre } of blood to the solution. The straight and dashed lines indicate the average before and after blood addition.\relax }}{31}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
