@@ -88,7 +88,7 @@
 			\label{fig:results:fluxgate:plotSpatial3d}
 			\centering
 			%\includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial2dProjection.eps}
-			\includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial2dProjection.eps}
+			\includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d.eps}
 		\end{figure}
 \section{Measurements}
 	\subsection{Low field NMR}
@@ -112,22 +112,44 @@
 	\end{figure}
 	\subsection{Sabre in cell solution and blood}
 	\begin{figure}[h]
-		\includegraphics[width=0.9\textwidth]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/timeSeriesBloodInjection.png}
+		\includegraphics[width=0.9\textwidth]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection.eps}
 		\caption{Time course of the signal intensity (peak height) when adding human blood to the continuously hyperpolarized solution. Note the string signal drop after addition of \SI{0.5}{\milli\litre} of blood to the solution. The straight and dashed lines indicate the average before and after blood addition.}
 		\label{chap:MaterialsAndMethods:bloodInjection}
 	\end{figure}
 	\begin{figure}[h]
-		\includegraphics[width=0.9\textwidth]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps}
+		\includegraphics[width=6 in ]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps}
 		\label{chap:MaterialsAndMethods:bloodInjection2}
+		\caption{Signal drop during the injection of \SI{0.5}{\milli\liter} of blood into the solution providing hyperpolarized signal which was permanently provided with fresh pH2.}
 	\end{figure}
 	\subsection{15N Sabre}
+		\subsubsection{15N coil}
+		The coil for 15N signal reception was matched and tuned to fit the requiremenst of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}
+		\subsubsection{Shuttling reproducibility}
+		To ensure that the sample is removed completely from the high field side, spectra in both 'states' of the system were recorded (\ref{fig:results:15N:shuttlingRemoval)}. Integration over both spectra yielded a upper limit of sample remaining inside the high field chamber of which corresponds to an effective polarization reduction of \SI{1}{\percent}.
+		\begin{figure}
+			\label{fig:results:15N:shuttlingRemoval}
+			\centering
+			\includegraphics[width=0.9\textwidth]{/figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle.eps}
+			\caption{1H spectra of the high field reactor in the filled (blue) and empty (red) state. The filled state delivers a lot more signal as expected while the integration over the empty state spectrum shows a signal reduction of 1000.}
+		\end{figure}
+		To test the reproducibility of the shuttling system, a hyperpolarized 1H pyridine sample was shuttled back and forth multiple times. The results of the measurement are shown in figure \ref{fig:results:15N:shuttlingReproducibility}. 
+		\begin{figure}
+			\label{fig:results:15N:shuttlingReproducibility}
+			\centering
+			\includegraphics[width=0.9\textwidth]{/figures/experiments/15NSabre/reproducibility/bubblingLosses.eps}
+			\caption{Signal intensity during multiple minutes of hydrogen bubbling using a hyperpolarized 1H-pyridine sample. Note that the signal drops to about \SI{70}{\percent} of its initial value after 8 minutes of continuous hydrogen supply. The initial rise of signal during the first two minutes indicates a temperature effect unaccounted for.}
+		\end{figure}
 	\subsection{Nanotesla field measurements}
+		The field inside the Mu Metal shielding was measured without anny current flowing in the B0 coil as well as with the coil turned on. 
 	\subsection{High field Sabre}
 \section{Simulations}
 		\subsection{Static magnetic field calculations}
 			Using the Biot Savart law, a Matlab program to calculate the fields of current carrying conductors was implemented. Structural elements were mostly solenoids, but also saddle and helmholtz coils were considered.
 			\subsubsection{solenoid coil}
 				The coil used in the low field NMR system was calculated and the length of the compensation windings was optimized for field homogeniety. To do so, the field was calculated inside a $3 x 3 x 3 cm^3$ volume centered inside the coil and plotted as histograms binning fields. An algorithm analyzing over which field 80\% of the fields sampled spread was used as a marker
-				\begin{figure}
-				\end{figure}
+			\begin{figure}[b]
+				\centering
+				\includegraphics[width=\textwidth]{/home/philipp/Documents/thesis/figures/simulations/compensationWinds.eps}
+				\caption{Histograms of the magnetic field strength. From left to right, number of compensation windings rise. This leads to a field increase and change in homogeniety.}
+			\end{figure}
 %\input{figures/experiments/figExample}
