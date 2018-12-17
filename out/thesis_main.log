@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.10.23)  30 NOV 2018 15:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.10.23)  12 DEC 2018 15:52
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1513,22 +1513,25 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 23
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 24
 .
- (out/thesis_main.lof)
+ (out/thesis_main.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9])
 \tf@lof=\write6
 \openout6 = `thesis_main.lof'.
 
 
-[9] [10
-
-
-]
+[10]
 Package tocbasic Info: character protrusion at lot deactivated on input line 25
 .
  (out/thesis_main.lot)
 \tf@lot=\write7
 \openout7 = `thesis_main.lot'.
 
- [11] [12
+ [11
+
+
+] [12
 
 
 ]
@@ -1542,11 +1545,11 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 27.
  [13] [14
 
 
-]
-[1]
+] [1]
 \openout2 = `chapters/1-introduction.aux'.
 
- (./chapters/1-introduction.tex [2
+
+(./chapters/1-introduction.tex [2
 
 
 
@@ -1615,12 +1618,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  (./chapters/3-materialsAndMethods.tex
 chapter 3.
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 12.
+LaTeX Warning: Reference `simulation:B0' on page 13 undefined on input line 10.
 
 
-Underfull \vbox (badness 2503) has occurred while \output is active []
 
- [13
+LaTeX Warning: Reference `' on page 13 undefined on input line 14.
+
+[13
 
 
 
@@ -1628,19 +1632,16 @@ Underfull \vbox (badness 2503) has occurred while \output is active []
 ]
 
 LaTeX Warning: Reference `subsec:hypercontrol' on page 14 undefined on input li
-ne 36.
+ne 40.
 
-
-Underfull \vbox (badness 7415) has occurred while \output is active []
-
- [14]
-[15]
+[14] [15]
 
 LaTeX Warning: Reference `setupNovosibirsk' on page 16 undefined on input line 
-88.
+92.
 
+[16]
 
-LaTeX Warning: Reference `' on page 16 undefined on input line 95.
+LaTeX Warning: Reference `' on page 17 undefined on input line 99.
 
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/mat
 erialsMethods/lowFieldReactor.eps>
@@ -1652,17 +1653,17 @@ erialsMethods/lowFieldReactor.eps>
 (epstopdf)             Command: <epstopdf --outfile=./lowFieldReactor-eps-conve
 rted-to.pdf /home/philipp/Documents/thesis/figures/materialsMethods/lowFieldRea
 ctor.eps>
-(epstopdf)             \includegraphics on input line 119.
+(epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./lowFieldReactor-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./lowFieldReactor-eps-converted-to.pdf, id=578, 1262.7175pt x 715.67375pt>
+<./lowFieldReactor-eps-converted-to.pdf, id=612, 1262.7175pt x 715.67375pt>
 File: ./lowFieldReactor-eps-converted-to.pdf Graphic file (type pdf)
 <use ./lowFieldReactor-eps-converted-to.pdf>
 Package pdftex.def Info: ./lowFieldReactor-eps-converted-to.pdf  used on input 
-line 119.
+line 123.
 (pdftex.def)             Requested size: 195.18811pt x 110.62251pt.
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/mat
 erialsMethods/highFieldProbe.eps>
@@ -1674,24 +1675,27 @@ erialsMethods/highFieldProbe.eps>
 (epstopdf)             Command: <epstopdf --outfile=./highFieldProbe-eps-conver
 ted-to.pdf /home/philipp/Documents/thesis/figures/materialsMethods/highFieldPro
 be.eps>
-(epstopdf)             \includegraphics on input line 120.
+(epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./highFieldProbe-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<./highFieldProbe-eps-converted-to.pdf, id=579, 1262.7175pt x 715.67375pt>
+<./highFieldProbe-eps-converted-to.pdf, id=613, 1262.7175pt x 715.67375pt>
 File: ./highFieldProbe-eps-converted-to.pdf Graphic file (type pdf)
 <use ./highFieldProbe-eps-converted-to.pdf>
 Package pdftex.def Info: ./highFieldProbe-eps-converted-to.pdf  used on input l
-ine 120.
+ine 124.
 (pdftex.def)             Requested size: 195.18811pt x 110.62251pt.
-[16]
-Underfull \vbox (badness 4543) has occurred while \output is active []
 
- [17 <./lowFieldReactor-eps-converted-to.pdf> <./highFieldProbe-eps-converted-t
-o.pdf>])
-[18]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 2662) has occurred while \output is active []
+
+ [17])
+[18 <./lowFieldReactor-eps-converted-to.pdf> <./highFieldProbe-eps-converted-to
+.pdf>]
 \openout2 = `chapters/4-simulations.aux'.
 
  (./chapters/4-simulations.tex
@@ -1708,54 +1712,31 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/sim
-ulations/compensationWinds.eps>
-(epstopdf)                    date: 2018-06-28 12:04:45
-(epstopdf)                    size: 43786 bytes
-(epstopdf)             Output file: <./compensationWinds-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-14 16:19:06
-(epstopdf)                    size: 43633 bytes
-(epstopdf)             Command: <epstopdf --outfile=./compensationWinds-eps-con
-verted-to.pdf /home/philipp/Documents/thesis/figures/simulations/compensationWi
-nds.eps>
-(epstopdf)             \includegraphics on input line 20.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./compensationWinds-eps-converted-to.pdf): PDF i
-nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./compensationWinds-eps-converted-to.pdf, id=600, 719.68875pt x 516.93124pt>
-File: ./compensationWinds-eps-converted-to.pdf Graphic file (type pdf)
-<use ./compensationWinds-eps-converted-to.pdf>
-Package pdftex.def Info: ./compensationWinds-eps-converted-to.pdf  used on inpu
-t line 20.
-(pdftex.def)             Requested size: 398.33864pt x 286.11935pt.
 [19
 
 
 
 
-]) [20] [21 <./compensationWinds-eps-converted-to.pdf>]
+]) [20]
 \openout2 = `chapters/5-results.aux'.
 
+ (./chapters/5-results.tex
+chapter 5.
 
-(./chapters/5-results.tex [22
+LaTeX Warning: Reference `(' on page 21 undefined on input line 19.
+
+[21
 
 
 
 
 ]
-chapter 5.
 
-LaTeX Warning: Reference `(' on page 23 undefined on input line 19.
-
-[23]
-
-LaTeX Warning: Reference `materialsMethods' on page 24 undefined on input line 
+LaTeX Warning: Reference `materialsMethods' on page 22 undefined on input line 
 47.
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:xysinus' on page 24 undefined on
+LaTeX Warning: Reference `fig:results:fluxgate:xysinus' on page 22 undefined on
  input line 47.
 
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
@@ -1773,7 +1754,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./xField-eps-converted-to.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<./xField-eps-converted-to.pdf, id=633, 433.62pt x 289.08pt>
+<./xField-eps-converted-to.pdf, id=646, 433.62pt x 289.08pt>
 File: ./xField-eps-converted-to.pdf Graphic file (type pdf)
 <use ./xField-eps-converted-to.pdf>
 Package pdftex.def Info: ./xField-eps-converted-to.pdf  used on input line 51.
@@ -1793,7 +1774,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./yField-eps-converted-to.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<./yField-eps-converted-to.pdf, id=634, 433.62pt x 289.08pt>
+<./yField-eps-converted-to.pdf, id=647, 433.62pt x 289.08pt>
 File: ./yField-eps-converted-to.pdf Graphic file (type pdf)
 <use ./yField-eps-converted-to.pdf>
 Package pdftex.def Info: ./yField-eps-converted-to.pdf  used on input line 52.
@@ -1816,7 +1797,7 @@ Package caption Warning: \label without proper reference on input line 60.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:results:calibrationFitParams' on page 24 undefi
+LaTeX Warning: Reference `table:results:calibrationFitParams' on page 22 undefi
 ned on input line 55.
 
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
@@ -1834,7 +1815,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./zField-eps-converted-to.pdf): PDF inclusion: f
 ound PDF version <1.7>, but at most version <1.5> allowed
-<./zField-eps-converted-to.pdf, id=636, 433.62pt x 289.08pt>
+<./zField-eps-converted-to.pdf, id=649, 433.62pt x 289.08pt>
 File: ./zField-eps-converted-to.pdf Graphic file (type pdf)
 <use ./zField-eps-converted-to.pdf>
 Package pdftex.def Info: ./zField-eps-converted-to.pdf  used on input line 77.
@@ -1849,7 +1830,7 @@ Package caption Warning: \label without proper reference on input line 82.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial2d' on page 24 undefi
+LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial2d' on page 22 undefi
 ned on input line 80.
 
 
@@ -1857,7 +1838,7 @@ Package caption Warning: \label without proper reference on input line 88.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial3d' on page 24 undefi
+LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial3d' on page 22 undefi
 ned on input line 80.
 
 
@@ -1878,7 +1859,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./spatial2dProjection-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./spatial2dProjection-eps-converted-to.pdf, id=639, 433.62pt x 289.08pt>
+<./spatial2dProjection-eps-converted-to.pdf, id=652, 433.62pt x 289.08pt>
 File: ./spatial2dProjection-eps-converted-to.pdf Graphic file (type pdf)
 <use ./spatial2dProjection-eps-converted-to.pdf>
 Package pdftex.def Info: ./spatial2dProjection-eps-converted-to.pdf  used on in
@@ -1890,22 +1871,26 @@ Overfull \hbox (35.2803pt too wide) in paragraph at lines 85--86
  []
 
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/fluxgate/spatial2dProjection.eps>
+eriments/fluxgate/spatial3d.eps>
 (epstopdf)                    date: 2018-11-29 13:48:24
-(epstopdf)                    size: 35935 bytes
-(epstopdf)             Output file: <./spatial2dProjection-eps-converted-to.pdf
+(epstopdf)                    size: 35139 bytes
+(epstopdf)             Output file: <./spatial3d-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-11 13:22:55
+(epstopdf)                    size: 7780 bytes
+(epstopdf)             Command: <epstopdf --outfile=./spatial3d-eps-converted-t
+o.pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d.eps
 >
-(epstopdf)                    date: 2018-11-29 13:48:36
-(epstopdf)                    size: 7326 bytes
-(epstopdf)             Command: <epstopdf --outfile=./spatial2dProjection-eps-c
-onverted-to.pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/spa
-tial2dProjection.eps>
 (epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
-File: ./spatial2dProjection-eps-converted-to.pdf Graphic file (type pdf)
-<use ./spatial2dProjection-eps-converted-to.pdf>
-Package pdftex.def Info: ./spatial2dProjection-eps-converted-to.pdf  used on in
-put line 91.
+
+
+pdfTeX warning: pdflatex (file ./spatial3d-eps-converted-to.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<./spatial3d-eps-converted-to.pdf, id=653, 433.62pt x 289.08pt>
+File: ./spatial3d-eps-converted-to.pdf Graphic file (type pdf)
+<use ./spatial3d-eps-converted-to.pdf>
+Package pdftex.def Info: ./spatial3d-eps-converted-to.pdf  used on input line 9
+1.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
 Overfull \hbox (35.2803pt too wide) in paragraph at lines 91--92
@@ -1918,7 +1903,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24]
+[22]
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
 eriments/lowFieldSpectrometer/helmholtzNarrowLine.eps>
 (epstopdf)                    date: 2018-11-16 16:22:26
@@ -1936,7 +1921,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./helmholtzNarrowLine-eps-converted-to.pdf): PDF
  inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./helmholtzNarrowLine-eps-converted-to.pdf, id=647, 340.27126pt x 169.63374pt>
+<./helmholtzNarrowLine-eps-converted-to.pdf, id=661, 340.27126pt x 169.63374pt>
 
 File: ./helmholtzNarrowLine-eps-converted-to.pdf Graphic file (type pdf)
 <use ./helmholtzNarrowLine-eps-converted-to.pdf>
@@ -1965,7 +1950,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./overlayAll8to30-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./overlayAll8to30-eps-converted-to.pdf, id=648, 141.52875pt x 141.52875pt>
+<./overlayAll8to30-eps-converted-to.pdf, id=662, 141.52875pt x 141.52875pt>
 File: ./overlayAll8to30-eps-converted-to.pdf Graphic file (type pdf)
 <use ./overlayAll8to30-eps-converted-to.pdf>
 Package pdftex.def Info: ./overlayAll8to30-eps-converted-to.pdf  used on input 
@@ -1987,7 +1972,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./overlayAll1to6-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<./overlayAll1to6-eps-converted-to.pdf, id=649, 141.52875pt x 141.52875pt>
+<./overlayAll1to6-eps-converted-to.pdf, id=663, 141.52875pt x 141.52875pt>
 File: ./overlayAll1to6-eps-converted-to.pdf Graphic file (type pdf)
 <use ./overlayAll1to6-eps-converted-to.pdf>
 Package pdftex.def Info: ./overlayAll1to6-eps-converted-to.pdf  used on input l
@@ -2012,7 +1997,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./exponentialFit-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<./exponentialFit-eps-converted-to.pdf, id=650, 614.295pt x 794.97pt>
+<./exponentialFit-eps-converted-to.pdf, id=664, 614.295pt x 794.97pt>
 File: ./exponentialFit-eps-converted-to.pdf Graphic file (type pdf)
 <use ./exponentialFit-eps-converted-to.pdf>
 Package pdftex.def Info: ./exponentialFit-eps-converted-to.pdf  used on input l
@@ -2021,25 +2006,38 @@ ine 111.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-</home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSitu
-SabreWater/timeSeriesBloodInjection.png, id=651, 521.97008pt x 375.804pt>
-File: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/i
-nSituSabreWater/timeSeriesBloodInjection.png Graphic file (type png)
-<use /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/in
-SituSabreWater/timeSeriesBloodInjection.png>
-Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/low
-FieldSpectrometer/inSituSabreWater/timeSeriesBloodInjection.png  used on input 
-line 115.
-(pdftex.def)             Requested size: 358.50233pt x 258.10657pt.
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
+eriments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection.eps>
+(epstopdf)                    date: 2018-12-03 09:12:33
+(epstopdf)                    size: 23765 bytes
+(epstopdf)             Output file: <./cellCultureInjection-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-12-03 09:18:33
+(epstopdf)                    size: 6407 bytes
+(epstopdf)             Command: <epstopdf --outfile=./cellCultureInjection-eps-
+converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpe
+ctrometer/inSituSabreWater/cellCultureInjection.eps>
+(epstopdf)             \includegraphics on input line 115.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./cellCultureInjection-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<./cellCultureInjection-eps-converted-to.pdf, id=665, 433.62pt x 289.08pt>
+File: ./cellCultureInjection-eps-converted-to.pdf Graphic file (type pdf)
+<use ./cellCultureInjection-eps-converted-to.pdf>
+Package pdftex.def Info: ./cellCultureInjection-eps-converted-to.pdf  used on i
+nput line 115.
+(pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
 eriments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps>
-(epstopdf)                    date: 2018-11-29 15:27:44
+(epstopdf)                    date: 2018-12-03 09:13:35
 (epstopdf)                    size: 25187 bytes
 (epstopdf)             Output file: <./signalVariation-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-11-30 14:07:18
+(epstopdf)                    date: 2018-12-03 09:18:33
 (epstopdf)                    size: 7397 bytes
 (epstopdf)             Command: <epstopdf --outfile=./signalVariation-eps-conve
 rted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrom
@@ -2050,26 +2048,140 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./signalVariation-eps-converted-to.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./signalVariation-eps-converted-to.pdf, id=653, 433.62pt x 289.08pt>
+<./signalVariation-eps-converted-to.pdf, id=666, 433.62pt x 289.08pt>
 File: ./signalVariation-eps-converted-to.pdf Graphic file (type pdf)
 <use ./signalVariation-eps-converted-to.pdf>
 Package pdftex.def Info: ./signalVariation-eps-converted-to.pdf  used on input 
 line 120.
-(pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
+(pdftex.def)             Requested size: 433.62pt x 289.09251pt.
+
+Overfull \hbox (35.28136pt too wide) in paragraph at lines 120--122
+[][]
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [25] [26] [27 <./xField-eps-converted-to.pdf> <./yField-eps-converted-to.pdf>
-] [28 <./zField-eps-converted-to.pdf>] [29 <./spatial2dProjection-eps-converted
--to.pdf>] [30 <./helmholtzNarrowLine-eps-converted-to.pdf> <./overlayAll8to30-e
-ps-converted-to.pdf> <./overlayAll1to6-eps-converted-to.pdf>] [31 <./exponentia
-lFit-eps-converted-to.pdf> </home/philipp/Documents/thesis/figures/experiments/
-lowFieldSpectrometer/inSituSabreWater/timeSeriesBloodInjection.png>] [32 <./sig
-nalVariation-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:results:15N:shuttlingRemoval)' on page 23 undefin
+ed on input line 128.
+
+Package epstopdf Info: Source file: </figures/experiments/15NSabre/reproducibil
+ity/spectraComparisonShuttle.eps>
+(epstopdf)                    date: 2018-12-12 14:58:13
+(epstopdf)                    size: 144940 bytes
+(epstopdf)             Output file: <./spectraComparisonShuttle-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2018-12-12 14:58:50
+(epstopdf)                    size: 15528 bytes
+(epstopdf)             Command: <epstopdf --outfile=./spectraComparisonShuttle-
+eps-converted-to.pdf /figures/experiments/15NSabre/reproducibility/spectraCompa
+risonShuttle.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./spectraComparisonShuttle-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<./spectraComparisonShuttle-eps-converted-to.pdf, id=667, 3726.92375pt x 2050.6
+6125pt>
+File: ./spectraComparisonShuttle-eps-converted-to.pdf Graphic file (type pdf)
+<use ./spectraComparisonShuttle-eps-converted-to.pdf>
+Package pdftex.def Info: ./spectraComparisonShuttle-eps-converted-to.pdf  used 
+on input line 132.
+(pdftex.def)             Requested size: 358.50233pt x 197.25551pt.
+
+Package caption Warning: \label without proper reference on input line 137.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:results:15N:shuttlingReproducibility' on page 23 
+undefined on input line 135.
+
+Package epstopdf Info: Source file: </figures/experiments/15NSabre/reproducibil
+ity/bubblingLosses.eps>
+(epstopdf)                    date: 2018-12-12 15:45:31
+(epstopdf)                    size: 23608 bytes
+(epstopdf)             Output file: <./bubblingLosses-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-12-12 15:45:59
+(epstopdf)                    size: 7101 bytes
+(epstopdf)             Command: <epstopdf --outfile=./bubblingLosses-eps-conver
+ted-to.pdf /figures/experiments/15NSabre/reproducibility/bubblingLosses.eps>
+(epstopdf)             \includegraphics on input line 139.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./bubblingLosses-eps-converted-to.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<./bubblingLosses-eps-converted-to.pdf, id=669, 433.62pt x 289.08pt>
+File: ./bubblingLosses-eps-converted-to.pdf Graphic file (type pdf)
+<use ./bubblingLosses-eps-converted-to.pdf>
+Package pdftex.def Info: ./bubblingLosses-eps-converted-to.pdf  used on input l
+ine 139.
+(pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
+[23]
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/sim
+ulations/compensationWinds.eps>
+(epstopdf)                    date: 2018-06-28 12:04:45
+(epstopdf)                    size: 43786 bytes
+(epstopdf)             Output file: <./compensationWinds-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-11-14 16:19:06
+(epstopdf)                    size: 43633 bytes
+(epstopdf)             Command: <epstopdf --outfile=./compensationWinds-eps-con
+verted-to.pdf /home/philipp/Documents/thesis/figures/simulations/compensationWi
+nds.eps>
+(epstopdf)             \includegraphics on input line 151.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./compensationWinds-eps-converted-to.pdf): PDF i
+nclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<./compensationWinds-eps-converted-to.pdf, id=677, 719.68875pt x 516.93124pt>
+File: ./compensationWinds-eps-converted-to.pdf Graphic file (type pdf)
+<use ./compensationWinds-eps-converted-to.pdf>
+Package pdftex.def Info: ./compensationWinds-eps-converted-to.pdf  used on inpu
+t line 151.
+(pdftex.def)             Requested size: 398.33864pt x 286.11935pt.
+) [24] [25 <./xField-eps-converted-to.pdf> <./yField-eps-converted-to.pdf>]
+[26 <./zField-eps-converted-to.pdf>] [27 <./spatial2dProjection-eps-converted-t
+o.pdf> <./spatial3d-eps-converted-to.pdf>] [28 <./helmholtzNarrowLine-eps-conve
+rted-to.pdf> <./overlayAll8to30-eps-converted-to.pdf> <./overlayAll1to6-eps-con
+verted-to.pdf>] [29 <./exponentialFit-eps-converted-to.pdf> <./cellCultureInjec
+tion-eps-converted-to.pdf>] [30 <./signalVariation-eps-converted-to.pdf>]
+[31 <./spectraComparisonShuttle-eps-converted-to.pdf> <./bubblingLosses-eps-con
+verted-to.pdf>] [32 <./compensationWinds-eps-converted-to.pdf>]
 \openout2 = `chapters/6-conclusions.aux'.
 
- (./chapters/6-conclusions.tex
+
+(./chapters/6-conclusions.tex
 chapter 6.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3.
+
+
+LaTeX Warning: Reference `simulation:B0' on page 33 undefined on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8.
+
 ) [33
 
 
@@ -2108,7 +2220,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `thesis_main.out' has not changed.
-(rerunfilecheck)             Checksum: 10D5B68C7170E532D1B1EFE8AF9E8793;13627.
+(rerunfilecheck)             Checksum: 87B3F481D0030D3752EDAA1DEDE5FB83;13927.
 
 
 LaTeX Warning: There were undefined references.
@@ -2118,13 +2230,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38228 strings out of 492642
- 724494 string characters out of 6135565
- 868404 words of memory out of 5000000
- 41165 multiletter control sequences out of 15000+600000
- 611391 words of font info for 232 fonts, out of 8000000 for 9000
+ 38259 strings out of 492642
+ 725171 string characters out of 6135565
+ 875099 words of memory out of 5000000
+ 41183 multiletter control sequences out of 15000+600000
+ 611516 words of font info for 234 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,21n,77p,9109b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,21n,77p,9109b,1131s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fon
 ts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -2142,10 +2254,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-d
 ist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1
 /urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
 .pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on out/thesis_main.pdf (54 pages, 1495880 bytes).
+Output written on out/thesis_main.pdf (54 pages, 1305522 bytes).
 PDF statistics:
- 882 PDF objects out of 1000 (max. 8388607)
- 758 compressed objects within 8 object streams
- 165 named destinations out of 1000 (max. 500000)
- 45222 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 933 PDF objects out of 1000 (max. 8388607)
+ 802 compressed objects within 9 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 45253 words of extra memory for PDF output out of 51595 (max. 10000000)
 
