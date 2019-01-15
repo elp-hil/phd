@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.17)  17 DEC 2018 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.21)  9 JAN 2019 16:26
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1219,6 +1219,11 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 23
 Package tocbasic Info: character protrusion at lof deactivated on input line 24
 .
  (out/thesis_main.lof
+
+LaTeX Warning: Reference `chap:MaterialsAndMethods:lowFieldSpectrometer:shims' 
+on page ix undefined on input line 7.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9])
@@ -1360,7 +1365,7 @@ rted-to.pdf /home/philipp/Documents/thesis/figures/materialsMethods/lowFieldRea
 ctor.eps>
 (epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
-<./lowFieldReactor-eps-converted-to.pdf, id=612, 1262.7175pt x 715.67375pt>
+<./lowFieldReactor-eps-converted-to.pdf, id=616, 1262.7175pt x 715.67375pt>
 File: ./lowFieldReactor-eps-converted-to.pdf Graphic file (type pdf)
 <use ./lowFieldReactor-eps-converted-to.pdf>
 Package pdftex.def Info: ./lowFieldReactor-eps-converted-to.pdf  used on input 
@@ -1378,7 +1383,7 @@ ted-to.pdf /home/philipp/Documents/thesis/figures/materialsMethods/highFieldPro
 be.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
-<./highFieldProbe-eps-converted-to.pdf, id=613, 1262.7175pt x 715.67375pt>
+<./highFieldProbe-eps-converted-to.pdf, id=617, 1262.7175pt x 715.67375pt>
 File: ./highFieldProbe-eps-converted-to.pdf Graphic file (type pdf)
 <use ./highFieldProbe-eps-converted-to.pdf>
 Package pdftex.def Info: ./highFieldProbe-eps-converted-to.pdf  used on input l
@@ -1422,19 +1427,46 @@ chapter 5.
 
 LaTeX Warning: Reference `(' on page 21 undefined on input line 19.
 
+Package epstopdf Info: Source file: </figures/experiments/lowFieldSpectrometer/
+shims/shimXY.eps>
+(epstopdf)                    date: 2019-01-09 15:43:34
+(epstopdf)                    size: 91123 bytes
+(epstopdf)             Output file: <./shimXY-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-09 15:43:40
+(epstopdf)                    size: 21902 bytes
+(epstopdf)             Command: <epstopdf --outfile=./shimXY-eps-converted-to.p
+df /figures/experiments/lowFieldSpectrometer/shims/shimXY.eps>
+(epstopdf)             \includegraphics on input line 32.
+Package epstopdf Info: Output file is already uptodate.
+<./shimXY-eps-converted-to.pdf, id=641, 433.62pt x 289.08pt>
+File: ./shimXY-eps-converted-to.pdf Graphic file (type pdf)
+<use ./shimXY-eps-converted-to.pdf>
+Package pdftex.def Info: ./shimXY-eps-converted-to.pdf  used on input line 32.
+(pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
+
+LaTeX Warning: Reference `chap:MaterialsAndMethods:lowFieldSpectrometer:shims' 
+on page 21 undefined on input line 33.
+
+
+LaTeX Warning: Reference `chap:MaterialsAndMethods:lowFieldSpectrometer:shims' 
+on page 21 undefined on input line 33.
+
 [21
 
 
 
 
 ]
+Underfull \vbox (badness 1226) has occurred while \output is active []
 
-LaTeX Warning: Reference `materialsMethods' on page 22 undefined on input line 
-47.
+ [22 <./shimXY-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `materialsMethods' on page 23 undefined on input line 
+52.
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:xysinus' on page 22 undefined on
- input line 47.
+LaTeX Warning: Reference `fig:results:fluxgate:xysinus' on page 23 undefined on
+ input line 52.
 
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
 eriments/fluxgate/xField.eps>
@@ -1445,12 +1477,12 @@ eriments/fluxgate/xField.eps>
 (epstopdf)                    size: 16800 bytes
 (epstopdf)             Command: <epstopdf --outfile=./xField-eps-converted-to.p
 df /home/philipp/Documents/thesis/figures/experiments/fluxgate/xField.eps>
-(epstopdf)             \includegraphics on input line 51.
+(epstopdf)             \includegraphics on input line 56.
 Package epstopdf Info: Output file is already uptodate.
-<./xField-eps-converted-to.pdf, id=646, 433.62pt x 289.08pt>
+<./xField-eps-converted-to.pdf, id=660, 433.62pt x 289.08pt>
 File: ./xField-eps-converted-to.pdf Graphic file (type pdf)
 <use ./xField-eps-converted-to.pdf>
-Package pdftex.def Info: ./xField-eps-converted-to.pdf  used on input line 51.
+Package pdftex.def Info: ./xField-eps-converted-to.pdf  used on input line 56.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
 eriments/fluxgate/yField.eps>
@@ -1461,33 +1493,33 @@ eriments/fluxgate/yField.eps>
 (epstopdf)                    size: 16509 bytes
 (epstopdf)             Command: <epstopdf --outfile=./yField-eps-converted-to.p
 df /home/philipp/Documents/thesis/figures/experiments/fluxgate/yField.eps>
-(epstopdf)             \includegraphics on input line 52.
+(epstopdf)             \includegraphics on input line 57.
 Package epstopdf Info: Output file is already uptodate.
-<./yField-eps-converted-to.pdf, id=647, 433.62pt x 289.08pt>
+<./yField-eps-converted-to.pdf, id=661, 433.62pt x 289.08pt>
 File: ./yField-eps-converted-to.pdf Graphic file (type pdf)
 <use ./yField-eps-converted-to.pdf>
-Package pdftex.def Info: ./yField-eps-converted-to.pdf  used on input line 52.
+Package pdftex.def Info: ./yField-eps-converted-to.pdf  used on input line 57.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 51--53
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 56--58
  [][] 
  []
 
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 51--53
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 56--58
  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 47.75832pt on input line 54.
+LaTeX Warning: Float too large for page by 47.75832pt on input line 59.
 
 
-Package caption Warning: \label without proper reference on input line 60.
+Package caption Warning: \label without proper reference on input line 65.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:results:calibrationFitParams' on page 22 undefi
-ned on input line 55.
+LaTeX Warning: Reference `table:results:calibrationFitParams' on page 23 undefi
+ned on input line 60.
 
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
 eriments/fluxgate/zField.eps>
@@ -1498,33 +1530,33 @@ eriments/fluxgate/zField.eps>
 (epstopdf)                    size: 7483 bytes
 (epstopdf)             Command: <epstopdf --outfile=./zField-eps-converted-to.p
 df /home/philipp/Documents/thesis/figures/experiments/fluxgate/zField.eps>
-(epstopdf)             \includegraphics on input line 77.
+(epstopdf)             \includegraphics on input line 82.
 Package epstopdf Info: Output file is already uptodate.
-<./zField-eps-converted-to.pdf, id=649, 433.62pt x 289.08pt>
+<./zField-eps-converted-to.pdf, id=663, 433.62pt x 289.08pt>
 File: ./zField-eps-converted-to.pdf Graphic file (type pdf)
 <use ./zField-eps-converted-to.pdf>
-Package pdftex.def Info: ./zField-eps-converted-to.pdf  used on input line 77.
+Package pdftex.def Info: ./zField-eps-converted-to.pdf  used on input line 82.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 77--78
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
 
-Package caption Warning: \label without proper reference on input line 82.
+Package caption Warning: \label without proper reference on input line 87.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial2d' on page 22 undefi
-ned on input line 80.
+LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial2d' on page 23 undefi
+ned on input line 85.
 
 
-Package caption Warning: \label without proper reference on input line 88.
+Package caption Warning: \label without proper reference on input line 93.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial3d' on page 22 undefi
-ned on input line 80.
+LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial3d' on page 23 undefi
+ned on input line 85.
 
 Package epstopdf Info: Source file: </figures/experiments/fluxgate/spatial2dPro
 jection.eps>
@@ -1536,16 +1568,16 @@ jection.eps>
 (epstopdf)                    size: 7326 bytes
 (epstopdf)             Command: <epstopdf --outfile=./spatial2dProjection-eps-c
 onverted-to.pdf /figures/experiments/fluxgate/spatial2dProjection.eps>
-(epstopdf)             \includegraphics on input line 85.
+(epstopdf)             \includegraphics on input line 90.
 Package epstopdf Info: Output file is already uptodate.
-<./spatial2dProjection-eps-converted-to.pdf, id=652, 433.62pt x 289.08pt>
+<./spatial2dProjection-eps-converted-to.pdf, id=666, 433.62pt x 289.08pt>
 File: ./spatial2dProjection-eps-converted-to.pdf Graphic file (type pdf)
 <use ./spatial2dProjection-eps-converted-to.pdf>
 Package pdftex.def Info: ./spatial2dProjection-eps-converted-to.pdf  used on in
-put line 85.
+put line 90.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 85--86
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 90--91
  [][] 
  []
 
@@ -1559,16 +1591,16 @@ eriments/fluxgate/spatial3d.eps>
 (epstopdf)             Command: <epstopdf --outfile=./spatial3d-eps-converted-t
 o.pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d.eps
 >
-(epstopdf)             \includegraphics on input line 91.
+(epstopdf)             \includegraphics on input line 96.
 Package epstopdf Info: Output file is already uptodate.
-<./spatial3d-eps-converted-to.pdf, id=653, 433.62pt x 289.08pt>
+<./spatial3d-eps-converted-to.pdf, id=667, 433.62pt x 289.08pt>
 File: ./spatial3d-eps-converted-to.pdf Graphic file (type pdf)
 <use ./spatial3d-eps-converted-to.pdf>
 Package pdftex.def Info: ./spatial3d-eps-converted-to.pdf  used on input line 9
-1.
+6.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 91--92
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 96--97
  [][] 
  []
 
@@ -1578,7 +1610,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22]
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
 eriments/lowFieldSpectrometer/helmholtzNarrowLine.eps>
 (epstopdf)                    date: 2018-11-16 16:22:26
@@ -1590,16 +1621,19 @@ eriments/lowFieldSpectrometer/helmholtzNarrowLine.eps>
 (epstopdf)             Command: <epstopdf --outfile=./helmholtzNarrowLine-eps-c
 onverted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpec
 trometer/helmholtzNarrowLine.eps>
-(epstopdf)             \includegraphics on input line 102.
+(epstopdf)             \includegraphics on input line 107.
 Package epstopdf Info: Output file is already uptodate.
-<./helmholtzNarrowLine-eps-converted-to.pdf, id=661, 340.27126pt x 169.63374pt>
+<./helmholtzNarrowLine-eps-converted-to.pdf, id=669, 340.27126pt x 169.63374pt>
 
 File: ./helmholtzNarrowLine-eps-converted-to.pdf Graphic file (type pdf)
 <use ./helmholtzNarrowLine-eps-converted-to.pdf>
 Package pdftex.def Info: ./helmholtzNarrowLine-eps-converted-to.pdf  used on in
-put line 102.
+put line 107.
 (pdftex.def)             Requested size: 341.43306pt x 170.22087pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1616,13 +1650,13 @@ eriments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30.eps>
 (epstopdf)             Command: <epstopdf --outfile=./overlayAll8to30-eps-conve
 rted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrom
 eter/inSituSabreWater/overlayAll8to30.eps>
-(epstopdf)             \includegraphics on input line 106.
+(epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
-<./overlayAll8to30-eps-converted-to.pdf, id=662, 141.52875pt x 141.52875pt>
+<./overlayAll8to30-eps-converted-to.pdf, id=677, 141.52875pt x 141.52875pt>
 File: ./overlayAll8to30-eps-converted-to.pdf Graphic file (type pdf)
 <use ./overlayAll8to30-eps-converted-to.pdf>
 Package pdftex.def Info: ./overlayAll8to30-eps-converted-to.pdf  used on input 
-line 106.
+line 111.
 (pdftex.def)             Requested size: 199.16931pt x 199.18626pt.
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
 eriments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6.eps>
@@ -1634,13 +1668,13 @@ eriments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6.eps>
 (epstopdf)             Command: <epstopdf --outfile=./overlayAll1to6-eps-conver
 ted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrome
 ter/inSituSabreWater/overlayAll1to6.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
-<./overlayAll1to6-eps-converted-to.pdf, id=663, 141.52875pt x 141.52875pt>
+<./overlayAll1to6-eps-converted-to.pdf, id=678, 141.52875pt x 141.52875pt>
 File: ./overlayAll1to6-eps-converted-to.pdf Graphic file (type pdf)
 <use ./overlayAll1to6-eps-converted-to.pdf>
 Package pdftex.def Info: ./overlayAll1to6-eps-converted-to.pdf  used on input l
-ine 107.
+ine 112.
 (pdftex.def)             Requested size: 199.16931pt x 199.18626pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1655,13 +1689,13 @@ eriments/lowFieldSpectrometer/inSituSabreWater/exponentialFit.eps>
 (epstopdf)             Command: <epstopdf --outfile=./exponentialFit-eps-conver
 ted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrome
 ter/inSituSabreWater/exponentialFit.eps>
-(epstopdf)             \includegraphics on input line 111.
+(epstopdf)             \includegraphics on input line 116.
 Package epstopdf Info: Output file is already uptodate.
-<./exponentialFit-eps-converted-to.pdf, id=664, 614.295pt x 794.97pt>
+<./exponentialFit-eps-converted-to.pdf, id=679, 614.295pt x 794.97pt>
 File: ./exponentialFit-eps-converted-to.pdf Graphic file (type pdf)
 <use ./exponentialFit-eps-converted-to.pdf>
 Package pdftex.def Info: ./exponentialFit-eps-converted-to.pdf  used on input l
-ine 111.
+ine 116.
 (pdftex.def)             Requested size: 170.71652pt x 220.92824pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1677,13 +1711,13 @@ f>
 (epstopdf)             Command: <epstopdf --outfile=./cellCultureInjection-eps-
 converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpe
 ctrometer/inSituSabreWater/cellCultureInjection.eps>
-(epstopdf)             \includegraphics on input line 115.
+(epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
-<./cellCultureInjection-eps-converted-to.pdf, id=665, 433.62pt x 289.08pt>
+<./cellCultureInjection-eps-converted-to.pdf, id=680, 433.62pt x 289.08pt>
 File: ./cellCultureInjection-eps-converted-to.pdf Graphic file (type pdf)
 <use ./cellCultureInjection-eps-converted-to.pdf>
 Package pdftex.def Info: ./cellCultureInjection-eps-converted-to.pdf  used on i
-nput line 115.
+nput line 120.
 (pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1698,16 +1732,16 @@ eriments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps>
 (epstopdf)             Command: <epstopdf --outfile=./signalVariation-eps-conve
 rted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrom
 eter/inSituSabreWater/signalVariation.eps>
-(epstopdf)             \includegraphics on input line 120.
+(epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
-<./signalVariation-eps-converted-to.pdf, id=666, 433.62pt x 289.08pt>
+<./signalVariation-eps-converted-to.pdf, id=681, 433.62pt x 289.08pt>
 File: ./signalVariation-eps-converted-to.pdf Graphic file (type pdf)
 <use ./signalVariation-eps-converted-to.pdf>
 Package pdftex.def Info: ./signalVariation-eps-converted-to.pdf  used on input 
-line 120.
+line 125.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
 
-Overfull \hbox (35.28136pt too wide) in paragraph at lines 120--122
+Overfull \hbox (35.28136pt too wide) in paragraph at lines 125--127
 [][]
  []
 
@@ -1715,8 +1749,8 @@ Overfull \hbox (35.28136pt too wide) in paragraph at lines 120--122
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `fig:results:15N:shuttlingRemoval)' on page 23 undefin
-ed on input line 128.
+LaTeX Warning: Reference `fig:results:15N:shuttlingRemoval)' on page 24 undefin
+ed on input line 133.
 
 Package epstopdf Info: Source file: </figures/experiments/15NSabre/reproducibil
 ity/spectraComparisonShuttle.eps>
@@ -1729,22 +1763,22 @@ o.pdf>
 (epstopdf)             Command: <epstopdf --outfile=./spectraComparisonShuttle-
 eps-converted-to.pdf /figures/experiments/15NSabre/reproducibility/spectraCompa
 risonShuttle.eps>
-(epstopdf)             \includegraphics on input line 132.
+(epstopdf)             \includegraphics on input line 137.
 Package epstopdf Info: Output file is already uptodate.
-<./spectraComparisonShuttle-eps-converted-to.pdf, id=667, 3726.92375pt x 2050.6
+<./spectraComparisonShuttle-eps-converted-to.pdf, id=682, 3726.92375pt x 2050.6
 6125pt>
 File: ./spectraComparisonShuttle-eps-converted-to.pdf Graphic file (type pdf)
 <use ./spectraComparisonShuttle-eps-converted-to.pdf>
 Package pdftex.def Info: ./spectraComparisonShuttle-eps-converted-to.pdf  used 
-on input line 132.
+on input line 137.
 (pdftex.def)             Requested size: 358.50233pt x 197.25551pt.
 
-Package caption Warning: \label without proper reference on input line 137.
+Package caption Warning: \label without proper reference on input line 142.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:results:15N:shuttlingReproducibility' on page 23 
-undefined on input line 135.
+LaTeX Warning: Reference `fig:results:15N:shuttlingReproducibility' on page 24 
+undefined on input line 140.
 
 Package epstopdf Info: Source file: </figures/experiments/15NSabre/reproducibil
 ity/bubblingLosses.eps>
@@ -1755,42 +1789,42 @@ ity/bubblingLosses.eps>
 (epstopdf)                    size: 7101 bytes
 (epstopdf)             Command: <epstopdf --outfile=./bubblingLosses-eps-conver
 ted-to.pdf /figures/experiments/15NSabre/reproducibility/bubblingLosses.eps>
-(epstopdf)             \includegraphics on input line 139.
+(epstopdf)             \includegraphics on input line 144.
 Package epstopdf Info: Output file is already uptodate.
-<./bubblingLosses-eps-converted-to.pdf, id=669, 433.62pt x 289.08pt>
+<./bubblingLosses-eps-converted-to.pdf, id=684, 433.62pt x 289.08pt>
 File: ./bubblingLosses-eps-converted-to.pdf Graphic file (type pdf)
 <use ./bubblingLosses-eps-converted-to.pdf>
 Package pdftex.def Info: ./bubblingLosses-eps-converted-to.pdf  used on input l
-ine 139.
+ine 144.
 (pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
-[23]
+[24]
 Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/sim
 ulations/B0/solenoidCoil/compensationWinds.eps>
-(epstopdf)                    date: 2018-12-17 15:12:52
+(epstopdf)                    date: 2018-12-17 15:14:33
 (epstopdf)                    size: 59896 bytes
 (epstopdf)             Output file: <./compensationWinds-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 15:12:56
+(epstopdf)                    date: 2019-01-09 15:42:31
 (epstopdf)                    size: 10976 bytes
 (epstopdf)             Command: <epstopdf --outfile=./compensationWinds-eps-con
 verted-to.pdf /home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoi
 l/compensationWinds.eps>
-(epstopdf)             \includegraphics on input line 152.
+(epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
-<./compensationWinds-eps-converted-to.pdf, id=677, 578.16pt x 433.62pt>
+<./compensationWinds-eps-converted-to.pdf, id=692, 578.16pt x 433.62pt>
 File: ./compensationWinds-eps-converted-to.pdf Graphic file (type pdf)
 <use ./compensationWinds-eps-converted-to.pdf>
 Package pdftex.def Info: ./compensationWinds-eps-converted-to.pdf  used on inpu
-t line 152.
+t line 157.
 (pdftex.def)             Requested size: 398.33864pt x 298.75482pt.
 
 
-LaTeX Warning: Reference `' on page 24 undefined on input line 156.
+LaTeX Warning: Reference `' on page 25 undefined on input line 161.
 
 
-LaTeX Warning: Reference `' on page 24 undefined on input line 156.
+LaTeX Warning: Reference `' on page 25 undefined on input line 161.
 
 
-LaTeX Warning: Reference `' on page 24 undefined on input line 156.
+LaTeX Warning: Reference `' on page 25 undefined on input line 161.
 
 Package epstopdf Info: Source file: </figures/simulations/B0/helmholtzCoil/fiel
 dSpread.eps>
@@ -1801,26 +1835,31 @@ dSpread.eps>
 (epstopdf)                    size: 44307 bytes
 (epstopdf)             Command: <epstopdf --outfile=./fieldSpread-eps-converted
 -to.pdf /figures/simulations/B0/helmholtzCoil/fieldSpread.eps>
-(epstopdf)             \includegraphics on input line 158.
+(epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
-<./fieldSpread-eps-converted-to.pdf, id=678, 1442.38875pt x 833.1125pt>
+<./fieldSpread-eps-converted-to.pdf, id=693, 1442.38875pt x 833.1125pt>
 File: ./fieldSpread-eps-converted-to.pdf Graphic file (type pdf)
 <use ./fieldSpread-eps-converted-to.pdf>
 Package pdftex.def Info: ./fieldSpread-eps-converted-to.pdf  used on input line
- 158.
+ 163.
 (pdftex.def)             Requested size: 358.50233pt x 207.05724pt.
-) [24] [25 <./xField-eps-converted-to.pdf> <./yField-eps-converted-to.pdf>]
-[26 <./zField-eps-converted-to.pdf>] [27 <./spatial2dProjection-eps-converted-t
-o.pdf> <./spatial3d-eps-converted-to.pdf>] [28 <./helmholtzNarrowLine-eps-conve
+) [25] [26 <./xField-eps-converted-to.pdf> <./yField-eps-converted-to.pdf>]
+[27 <./zField-eps-converted-to.pdf>] [28 <./spatial2dProjection-eps-converted-t
+o.pdf> <./spatial3d-eps-converted-to.pdf>] [29 <./helmholtzNarrowLine-eps-conve
 rted-to.pdf> <./overlayAll8to30-eps-converted-to.pdf> <./overlayAll1to6-eps-con
-verted-to.pdf>] [29 <./exponentialFit-eps-converted-to.pdf> <./cellCultureInjec
-tion-eps-converted-to.pdf>] [30 <./signalVariation-eps-converted-to.pdf>]
-[31 <./spectraComparisonShuttle-eps-converted-to.pdf> <./bubblingLosses-eps-con
-verted-to.pdf>] [32 <./compensationWinds-eps-converted-to.pdf> <./fieldSpread-e
+verted-to.pdf>] [30 <./exponentialFit-eps-converted-to.pdf> <./cellCultureInjec
+tion-eps-converted-to.pdf>] [31 <./signalVariation-eps-converted-to.pdf>]
+[32 <./spectraComparisonShuttle-eps-converted-to.pdf> <./bubblingLosses-eps-con
+verted-to.pdf>] [33 <./compensationWinds-eps-converted-to.pdf> <./fieldSpread-e
 ps-converted-to.pdf>]
 \openout2 = `chapters/6-conclusions.aux'.
 
- (./chapters/6-conclusions.tex
+ (./chapters/6-conclusions.tex [34
+
+
+
+
+]
 chapter 6.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1835,7 +1874,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
 
-LaTeX Warning: Reference `simulation:B0' on page 33 undefined on input line 4.
+LaTeX Warning: Reference `simulation:B0' on page 35 undefined on input line 4.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1849,22 +1888,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 8.
 
-) [33
-
-
-
-
-]
+) [35]
 \openout2 = `chapters/7-acknowledgments.aux'.
 
- (./chapters/7-acknowledgments.tex [34
+ (./chapters/7-acknowledgments.tex [36
 
 
 
 
 ]
 chapter 7.
-) [35] (out/thesis_main.bbl [36
+) [37] (out/thesis_main.bbl [38
 
 
 
@@ -1874,7 +1908,7 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 6.
-) [37] [38]
+) [39] [40]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
 
@@ -1897,11 +1931,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38391 strings out of 492639
- 727624 string characters out of 6135496
- 877508 words of memory out of 5000000
- 41313 multiletter control sequences out of 15000+600000
- 611516 words of font info for 234 fonts, out of 8000000 for 9000
+ 38399 strings out of 492639
+ 727938 string characters out of 6135496
+ 876066 words of memory out of 5000000
+ 41319 multiletter control sequences out of 15000+600000
+ 611391 words of font info for 232 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,21n,77p,9109b,1144s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fon
@@ -1921,10 +1955,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-d
 ist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1
 /urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
 .pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on out/thesis_main.pdf (54 pages, 1314151 bytes).
+Output written on out/thesis_main.pdf (56 pages, 1334895 bytes).
 PDF statistics:
- 940 PDF objects out of 1000 (max. 8388607)
- 810 compressed objects within 9 object streams
- 174 named destinations out of 1000 (max. 500000)
- 45258 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 960 PDF objects out of 1000 (max. 8388607)
+ 826 compressed objects within 9 object streams
+ 177 named destinations out of 1000 (max. 500000)
+ 45263 words of extra memory for PDF output out of 51595 (max. 10000000)
 
