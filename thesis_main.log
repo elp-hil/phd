@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.17)  17 DEC 2018 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.14)  17 JAN 2019 10:08
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **thesis_main.tex
 (./thesis_main.tex
@@ -8,21 +9,15 @@ LaTeX2e <2018-04-01> patch level 5
 (/usr/share/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2018/03/30 v3.25 KOMA-Script document class (book)
 (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-(/usr/share/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
-
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/usr/share/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-)
-(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+) (/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
-)))
-(/usr/share/texmf-dist/tex/latex/koma-script/tocbasic.sty
+))) (/usr/share/texmf-dist/tex/latex/koma-script/tocbasic.sty
 Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box26
@@ -30,22 +25,17 @@ Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `toc' on input line 136.
-Package tocbasic Info: defining new hook before heading of `' on input line 166
-3.
+Package tocbasic Info: defining new hook before heading of `' on input line 1663.
 Package scrbook Info: You've used standard option `11pt'.
 (scrbook)             This is correct!
 (scrbook)             Internally I'm using `fontsize=11pt'.
 (scrbook)             If you'd like to set the option with \KOMAoptions,
 (scrbook)             you'd have to use `fontsize=11pt' there
 (scrbook)             instead of `11pt', too.
-Class scrbook Info: File `scrsize11pt.clo' used to setup font sizes on input li
-ne 2331.
-
-(/usr/share/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2018/03/30 v3.25 KOMA-Script font size class option (11pt
-)
-)
-(/usr/share/texmf-dist/tex/latex/koma-script/typearea.sty
+Class scrbook Info: File `scrsize11pt.clo' used to setup font sizes on input line 2331.
+ (/usr/share/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2018/03/30 v3.25 KOMA-Script font size class option (11pt)
+) (/usr/share/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2018/03/30 v3.25 KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count80
@@ -106,41 +96,31 @@ Package tocbasic Info: omitting babel extension for `lot'
 \c@table=\count89
 Class scrbook Info: Redefining `\numberline' on input line 6445.
 \bibindent=\dimen102
-) (./setup/setup.tex
-(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+) (./setup.tex (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-
-(/usr/share/texmf-dist/tex/latex/base/t1enc.def
+ (/usr/share/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+)) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
-
-(/usr/share/texmf-dist/tex/latex/ucs/utf8x.def
+ (/usr/share/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-))
-(/usr/share/texmf-dist/tex/latex/ucs/ucs.sty
+)) (/usr/share/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
-
-(/usr/share/texmf-dist/tex/latex/ucs/data/uni-global.def
+ (/usr/share/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count90
 \uc@combtoks=\toks17
 \uc@combtoksb=\toks18
 \uc@temptokena=\toks19
-)
-(/usr/share/texmf-dist/tex/latex/koma-script/scrhack.sty
+) (/usr/share/texmf-dist/tex/latex/koma-script/scrhack.sty
 Package: scrhack 2018/03/30 v3.25 KOMA-Script package 
-
-(/usr/share/texmf-dist/tex/latex/xpatch/xpatch.sty
-(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+ (/usr/share/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2018-11-19 L3 programming layer (loader) 
-
-(/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+ (/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 Package: expl3 2018-11-19 L3 programming layer (code)
 \c_max_int=\count91
 \l_tmpa_int=\count92
@@ -286,32 +266,26 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l__coffin_scaled_width_dim=\dimen134
 \l__seq_internal_a_int=\count173
 \l__seq_internal_b_int=\count174
-)
-(/usr/share/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+) (/usr/share/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2018-11-19 v L3 Experimental driver: PDF mode
 \l__driver_color_stack_int=\count175
 ))
 Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
-
-(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+ (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2018-10-17 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count176
 \g__xparse_grabber_int=\count177
 \l__xparse_m_args_int=\count178
 \l__xparse_mandatory_args_int=\count179
 \l__xparse_v_nesting_int=\count180
-)
-(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count181
-)))
-(/usr/share/texmf-dist/tex/latex/psnfss/helvet.sty
+))) (/usr/share/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
-)
-(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
-
-(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen135
@@ -325,28 +299,21 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 Package caption Info: KOMA-Script document class.
 \c@caption@flags=\count182
 \c@ContinuedFloat=\count183
-)
-(/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+) (/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
-)
-(/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+) (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 Package scrhack Info: loading setspace hack on input line 31.
-
-(/usr/share/texmf-dist/tex/latex/koma-script/setspace.hak
-File: setspace.hak 2018/03/30 v3.25 KOMA-Script package (hacking package setspa
-ce)
-)
-(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+ (/usr/share/texmf-dist/tex/latex/koma-script/setspace.hak
+File: setspace.hak 2018/03/30 v3.25 KOMA-Script package (hacking package setspace)
+) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -358,11 +325,9 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-
-(/usr/share/texmf-dist/tex/latex/graphics/dvipsnam.def
+ (/usr/share/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
-(/usr/share/texmf-dist/tex/latex/tools/array.sty
+)) (/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen142
 \ar@mcellbox=\box43
@@ -371,17 +336,13 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \extratabsurround=\skip64
 \backup@length=\skip65
 \ar@cellbox=\box44
-)
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
@@ -404,25 +365,21 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \c@lotdepth=\count190
 \sf@top=\skip69
 \sf@bottom=\skip70
-)
-(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip71
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
 \ex@=\dimen147
-))
-(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen148
-)
-(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count191
@@ -462,8 +419,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-)
-(/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+) (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks26
 \thm@bodyfont=\toks27
@@ -474,15 +430,13 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@postskip=\skip75
 \thm@headsep=\skip76
 \dth@everypar=\toks31
-)
-(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(/usr/share/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count269
 \calc@Bcount=\count270
@@ -494,35 +448,25 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count271
 \calc@Cskip=\skip79
-)
-(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
-
-(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+ (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+) (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+))) (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -530,12 +474,9 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-)))
-(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+))) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -543,32 +484,21 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )))
-(/usr/share/texmf-dist/tex/latex/printlen/printlen.sty
-Package: printlen 2009/09/03 v1.1a print lengths with units
-)
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 50.
-
-(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(scrhack)             need that hack, on input line 49.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
-
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -583,8 +513,7 @@ Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package hobsub Info: Skipping package `kvdefinekeys' (already loaded).
 Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
-)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -596,33 +525,27 @@ Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+) (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-(/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
+) (/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen158
 \Hy@linkcounter=\count272
 \Hy@pagecounter=\count273
-
-(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count274
-
-(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+ (/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `unicode' set `true' on input line 4409.
-
-(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+ (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2018/09/30 v6.88a Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Option `bookmarks' set `true' on input line 4409.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4409
-.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4409.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 4409.
 Package hyperref Info: Option `breaklinks' set `false' on input line 4409.
 Package hyperref Info: Option `colorlinks' set `false' on input line 4409.
@@ -634,8 +557,7 @@ Package hyperref Info: Backreferencing OFF on input line 4555.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4788.
 \c@Hy@tempcnt=\count275
-
-(/usr/share/texmf-dist/tex/latex/url/url.sty
+ (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -658,23 +580,18 @@ LaTeX Info: Redefining \pageref on input line 6470.
 \c@Hfootnote=\count279
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
 \Fld@listcount=\count280
 \c@bookmark@seq@number=\count281
-
-(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+ (/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip80
-)
-(/usr/share/texmf-dist/tex/latex/siunitx/siunitx.sty
+) (/usr/share/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2018/05/17 v2.7s A comprehensive (SI) units package
-
-(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+ (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2018-10-17 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box47
@@ -717,16 +634,12 @@ Package: l3keys2e 2018-10-17 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_result_box=\box53
 \l__siunitx_table_number_align_skip=\skip83
 \l__siunitx_table_text_align_skip=\skip84
-
-(/usr/share/texmf-dist/tex/latex/translator/translator.sty
+ (/usr/share/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
-))
-(/usr/share/texmf-dist/tex/latex/braket/braket.sty)
+)) (/usr/share/texmf-dist/tex/latex/braket/braket.sty)
 (/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-
-(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count299
 \float@exts=\toks32
@@ -735,24 +648,20 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box55
 )
 Package scrhack Info: loading float hack on input line 32.
-
-(/usr/share/texmf-dist/tex/latex/koma-script/float.hak
+ (/usr/share/texmf-dist/tex/latex/koma-script/float.hak
 File: float.hak 2018/03/30 v3.25 KOMA-Script package (hacking package float)
 Package scrhack Info: redefining \newfloat on input line 163.
 Package scrhack Info: redefining \listof on input line 163.
 Package scrhack Info: undefining \float@addtolists on input line 163.
-)
-(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 Package tocbasic Info: setting babel extension for `loa' on input line 95.
 \@float@every@algorithm=\toks34
 \c@algorithm=\count300
-)
-(/usr/share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+) (/usr/share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
-
-(/usr/share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+ (/usr/share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -775,37 +684,24 @@ Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldsymbols=\mathgroup8
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
-)
-(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks35
 \pgfutil@tempdima=\dimen174
 \pgfutil@tempdimb=\dimen175
-
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box56
-
-(/usr/share/texmf-dist/tex/latex/ms/everyshi.sty
+ (/usr/share/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
-
-(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+ (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
-
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks36
 \pgfkeys@temptoks=\toks37
-
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks38
 ))
 \pgf@x=\dimen176
@@ -825,51 +721,31 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \t@pgf@toka=\toks39
 \t@pgf@tokb=\toks40
 \t@pgf@tokc=\toks41
-
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
-
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
-
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
-)))
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count312
 \pgfsyssoftpath@bigbuffer@items=\count313
-)
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-))
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
-
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen184
 \pgfmath@count=\count314
 \pgfmath@box=\box57
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
 \pgfmath@stack@operation=\toks44
-)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
-.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
-x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
-.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count315
 )) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
@@ -887,8 +763,7 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@yy=\dimen196
 \pgf@zx=\dimen197
 \pgf@zy=\dimen198
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen199
 \pgf@path@lasty=\dimen256
@@ -896,91 +771,66 @@ File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen257
 \pgf@shorten@start@additional=\dimen258
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box58
 \pgf@hbox=\box59
 \pgf@layerbox@main=\box60
 \pgf@picture@serial@count=\count316
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen259
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
-ex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen260
 \pgf@pt@y=\dimen261
 \pgf@pt@temp=\dimen262
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
-x
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen263
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen264
 \pgf@sys@shading@range@num=\count317
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
-
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box61
-))
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
-)))
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+))) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box62
-)
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
-)
-(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen265
 \pgf@nodesepend=\dimen266
-)
-(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-))
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+ (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen267
 \pgffor@skip=\dimen268
 \pgffor@stack=\toks45
 \pgffor@toks=\toks46
-))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
-
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
-x
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count318
 \pgfplotmarksize=\dimen269
@@ -1006,13 +856,9 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgf@matrix@numberofcolumns=\count325
 )
 \tikz@expandcount=\count326
-
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-topaths.code.tex
+ (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-positioning.code.tex
+))) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 ) (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
@@ -1022,23 +868,23 @@ LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen276
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
 \MT@listname@count=\count328
-
-(/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+ (/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
-
 LaTeX Info: Redefining \lsstyle on input line 913.
 LaTeX Info: Redefining \lslig on input line 913.
 \MT@outer@space=\skip88
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-
-(/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
+ (/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
-Package hyperref Info: Option `pdfnewwindow' set `true' on input line 115.
-Package hyperref Info: Option `plainpages' set `false' on input line 115.
-)
-No file thesis_main.aux.
+Package hyperref Info: Option `pdfnewwindow' set `true' on input line 114.
+Package hyperref Info: Option `plainpages' set `false' on input line 114.
+) (./thesis_main.aux (./chapters/0_0-titlepage_en.aux) (./chapters/0_1-declaration.aux) (./chapters/0_2-abstract.aux) (./chapters/1-introduction.aux) (./chapters/2-theory.aux) (./chapters/3-materialsAndMethods.aux) (./chapters/4-simulations.aux) (./chapters/5-results.aux
+
+LaTeX Warning: Label `table:results:calibrationFitParams' multiply defined.
+
+) (./chapters/6-conclusions.aux) (./chapters/7-acknowledgments.aux))
 \openout1 = `thesis_main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -1058,10 +904,9 @@ LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 9.
-(/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
+ (/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-(/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
+) (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -1069,8 +914,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count329
 \scratchdimen=\dimen277
@@ -1088,8 +932,7 @@ Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 9.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count335
@@ -1097,23 +940,17 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 9.
 LaTeX Info: Redefining \pageref on input line 9.
 LaTeX Info: Redefining \nameref on input line 9.
-
-(./thesis_main.out) (./thesis_main.out)
+ (./thesis_main.out) (./thesis_main.out)
 \@outlinefile=\write4
 \openout4 = `thesis_main.out'.
 
-
-(/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
-.dict
+ (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
-)
-(/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-German.
-dict
+) (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-German.dict
 Dictionary: translator-basic-dictionary, Language: German 
 ) (/usr/share/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
-)
-ABD: EveryShipout initializing macros
+) ABD: EveryShipout initializing macros
 LaTeX Info: Redefining \microtypecontext on input line 9.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1129,25 +966,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-(/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
+ (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 9.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 9.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1161,8 +992,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package hyperref Info: Option `pageanchor' set `false' on input line 13.
 \openout2 = `chapters/0_0-titlepage_en.aux'.
 
-
-(./chapters/0_0-titlepage_en.tex
+ (./chapters/0_0-titlepage_en.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 14.
  [1
@@ -1196,66 +1026,53 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 23
-.
-
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+Package tocbasic Info: character protrusion at toc deactivated on input line 23.
+ (./thesis_main.toc [5] [6])
 \tf@toc=\write5
 \openout5 = `thesis_main.toc'.
 
-[5] [6
+ [7] [8
 
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 24
-.
+Package tocbasic Info: character protrusion at lof deactivated on input line 24.
+ (./thesis_main.lof
+
+LaTeX Warning: Reference `chap:MaterialsAndMethods:lowFieldSpectrometer:shims' on page ix undefined on input line 7.
 
 
-Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+Underfull \vbox (badness 6094) has occurred while \output is active []
 
+ [9])
 \tf@lof=\write6
 \openout6 = `thesis_main.lof'.
 
-[7] [8
-
-
-]
-Package tocbasic Info: character protrusion at lot deactivated on input line 25
-.
-
-
-Package hyperref Warning: old lot file detected, not used; run LaTeX again.
-
+ [10]
+Package tocbasic Info: character protrusion at lot deactivated on input line 25.
+ (./thesis_main.lot)
 \tf@lot=\write7
 \openout7 = `thesis_main.lot'.
 
-[9] [10
+ [11
+
+
+] [12
 
 
 ]
-Package tocbasic Info: character protrusion at loa deactivated on input line 26
-.
-
-
-Package hyperref Warning: old loa file detected, not used; run LaTeX again.
-
+Package tocbasic Info: character protrusion at loa deactivated on input line 26.
+ (./thesis_main.loa)
 \tf@loa=\write8
 \openout8 = `thesis_main.loa'.
 
 Package hyperref Info: Option `pageanchor' set `true' on input line 27.
-[11] [12
-
-
-] [1]
-\openout2 = `chapters/1-introduction.aux'.
-
- (./chapters/1-introduction.tex [2
-
+ [13] [14
 
 
 ]
+\openout2 = `chapters/1-introduction.aux'.
+
+ (./chapters/1-introduction.tex
 chapter 1.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
@@ -1266,8 +1083,7 @@ File: omsphv.fd
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 9.
-
-(/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+ (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1275,132 +1091,101 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-
-LaTeX Warning: Citation `bromley1993siamesesignature' on page 3 undefined on in
-put line 12.
-
-
-LaTeX Warning: Reference `chap:introduction' on page 3 undefined on input line 
-15.
-
-
 Overfull \hbox (0.37068pt too wide) in paragraph at lines 15--16
-[]\T1/phv/m/n/10.95 (-20) some com-mands for ref-er-enc-ing, `in [][]\T1/cmtt/m
-/n/10.95 \chapref{chap:introduction}[]\T1/phv/m/n/10.95 (-20) ' pro-duces
+[]\T1/phv/m/n/10.95 (-20) some com-mands for ref-er-enc-ing, `in [][]\T1/cmtt/m/n/10.95 \chapref{chap:introduction}[]\T1/phv/m/n/10.95 (-20) ' pro-duces
  []
 
-[3]) [4]
+[1
+
+
+
+]) [2]
 \openout2 = `chapters/2-theory.aux'.
 
  (./chapters/2-theory.tex
 chapter 2.
-
-LaTeX Warning: Citation `ResonanceAbsorption' on page 5 undefined on input line
- 6.
-
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 10.
 
 Underfull \vbox (badness 2269) has occurred while \output is active []
 
- [5
+ [3
 
 
 
 
 ]
 
-LaTeX Warning: Reference `materialsMethods:coils' on page 6 undefined on input 
-line 42.
+LaTeX Warning: Reference `materialsMethods:coils' on page 4 undefined on input line 42.
 
-[6]
+[4]
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 64.
+LaTeX Warning: Reference `' on page 5 undefined on input line 64.
 
 
-LaTeX Warning: Reference `' on page 7 undefined on input line 64.
+LaTeX Warning: Reference `' on page 5 undefined on input line 64.
 
-[7]
+[5]
 Underfull \vbox (badness 7273) has occurred while \output is active []
 
- [8]
+ [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-[10] [11]) [12]
+ [7] [8] [9]) [10]
 \openout2 = `chapters/3-materialsAndMethods.aux'.
 
  (./chapters/3-materialsAndMethods.tex
 chapter 3.
 
-LaTeX Warning: Reference `simulation:B0' on page 13 undefined on input line 10.
+LaTeX Warning: Reference `simulation:B0' on page 11 undefined on input line 10.
 
 
+LaTeX Warning: Reference `' on page 11 undefined on input line 14.
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 14.
-
-
-LaTeX Warning: Reference `simulations:B0' on page 13 undefined on input line 17
-.
-
-[13
+[11
 
 
 
 
 ]
 
-LaTeX Warning: Reference `subsec:hypercontrol' on page 14 undefined on input li
-ne 40.
+LaTeX Warning: Reference `subsec:hypercontrol' on page 12 undefined on input line 40.
 
-[14] [15]
+[12] [13]
 
-LaTeX Warning: Reference `sec:shuttlingSystem' on page 16 undefined on input li
-ne 80.
+LaTeX Warning: Reference `setupNovosibirsk' on page 14 undefined on input line 92.
 
+[14]
 
-LaTeX Warning: Reference `setupNovosibirsk' on page 16 undefined on input line 
-92.
+LaTeX Warning: Reference `' on page 15 undefined on input line 99.
 
-[16]
-
-LaTeX Warning: Reference `' on page 17 undefined on input line 99.
-
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/mat
-erialsMethods/lowFieldReactor.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor.eps>
 (epstopdf)                    date: 2018-03-01 14:13:05
 (epstopdf)                    size: 2857303 bytes
-(epstopdf)             Output file: <./lowFieldReactor-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:21
-(epstopdf)                    size: 110291 bytes
-(epstopdf)             Command: <repstopdf --outfile=./lowFieldReactor-eps-conv
-erted-to.pdf /home/philipp/Documents/thesis/figures/materialsMethods/lowFieldRe
-actor.eps>
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-01 14:44:02
+(epstopdf)                    size: 110163 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor.eps>
 (epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
-<./lowFieldReactor-eps-converted-to.pdf, id=459, 1262.7175pt x 715.67375pt>
-File: ./lowFieldReactor-eps-converted-to.pdf Graphic file (type pdf)
-<use ./lowFieldReactor-eps-converted-to.pdf>
-Package pdftex.def Info: ./lowFieldReactor-eps-converted-to.pdf  used on input 
-line 123.
+</home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor-eps-converted-to.pdf, id=612, 1262.7175pt x 715.67375pt>
+File: /home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor-eps-converted-to.pdf  used on input line 123.
 (pdftex.def)             Requested size: 195.18811pt x 110.62251pt.
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/mat
-erialsMethods/highFieldProbe.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe.eps>
 (epstopdf)                    date: 2018-03-01 14:16:16
 (epstopdf)                    size: 2899381 bytes
-(epstopdf)             Output file: <./highFieldProbe-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:23
-(epstopdf)                    size: 790960 bytes
-(epstopdf)             Command: <repstopdf --outfile=./highFieldProbe-eps-conve
-rted-to.pdf /home/philipp/Documents/thesis/figures/materialsMethods/highFieldPr
-obe.eps>
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-01 14:44:03
+(epstopdf)                    size: 790806 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
-<./highFieldProbe-eps-converted-to.pdf, id=460, 1262.7175pt x 715.67375pt>
-File: ./highFieldProbe-eps-converted-to.pdf Graphic file (type pdf)
-<use ./highFieldProbe-eps-converted-to.pdf>
-Package pdftex.def Info: ./highFieldProbe-eps-converted-to.pdf  used on input l
-ine 124.
+</home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe-eps-converted-to.pdf, id=613, 1262.7175pt x 715.67375pt>
+File: /home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe-eps-converted-to.pdf  used on input line 124.
 (pdftex.def)             Requested size: 195.18811pt x 110.62251pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1408,9 +1193,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 2662) has occurred while \output is active []
 
- [17])
-[18 <./lowFieldReactor-eps-converted-to.pdf> <./highFieldProbe-eps-converted-to
-.pdf>]
+ [15]) [16 </home/philipp/Documents/thesis/figures/materialsMethods/lowFieldReactor-eps-converted-to.pdf> </home/philipp/Documents/thesis/figures/materialsMethods/highFieldProbe-eps-converted-to.pdf>]
 \openout2 = `chapters/4-simulations.aux'.
 
  (./chapters/4-simulations.tex
@@ -1427,158 +1210,229 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 4.
 
-[19
+[17
 
 
 
 
-]) [20]
+]) [18]
 \openout2 = `chapters/5-results.aux'.
 
  (./chapters/5-results.tex
 chapter 5.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 4.
 
-LaTeX Warning: Reference `(' on page 21 undefined on input line 19.
+LaTeX Warning: Reference `(' on page 19 undefined on input line 19.
 
-[21
+Package epstopdf Info: Source file: </figures/experiments/lowFieldSpectrometer/shims/shimXY.eps>
+(epstopdf)                    date: 2019-01-09 15:43:34
+(epstopdf)                    size: 91123 bytes
+(epstopdf)             Output file: </figures/experiments/lowFieldSpectrometer/shims/shimXY-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:53
+(epstopdf)                    size: 21902 bytes
+(epstopdf)             Command: <repstopdf --outfile=/figures/experiments/lowFieldSpectrometer/shims/shimXY-eps-converted-to.pdf /figures/experiments/lowFieldSpectrometer/shims/shimXY.eps>
+(epstopdf)             \includegraphics on input line 32.
+Package epstopdf Info: Output file is already uptodate.
+</figures/experiments/lowFieldSpectrometer/shims/shimXY-eps-converted-to.pdf, id=638, 433.62pt x 289.08pt>
+File: /figures/experiments/lowFieldSpectrometer/shims/shimXY-eps-converted-to.pdf Graphic file (type pdf)
+<use /figures/experiments/lowFieldSpectrometer/shims/shimXY-eps-converted-to.pdf>
+Package pdftex.def Info: /figures/experiments/lowFieldSpectrometer/shims/shimXY-eps-converted-to.pdf  used on input line 32.
+(pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
+
+LaTeX Warning: Reference `chap:MaterialsAndMethods:lowFieldSpectrometer:shims' on page 19 undefined on input line 33.
+
+
+LaTeX Warning: Reference `chap:MaterialsAndMethods:lowFieldSpectrometer:shims' on page 19 undefined on input line 33.
+
+[19
 
 
 
 
 ]
 
-LaTeX Warning: Reference `sec:methodsFluxgate' on page 22 undefined on input li
-ne 42.
+Package caption Warning: \label without proper reference on input line 42.
+See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `materialsMethods' on page 22 undefined on input line 
-47.
+LaTeX Warning: Reference `fig:results:bubblingReactorPressure' on page 20 undefined on input line 40.
+
+Package epstopdf Info: Source file: </figures/simulations/15NSabre/bubblingReactorPressure.eps>
+(epstopdf)                    date: 2019-01-17 08:44:05
+(epstopdf)                    size: 0 bytes
+(epstopdf)             Output file: </figures/simulations/15NSabre/bubblingReactorPressure-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:54
+(epstopdf)                    size: 2217 bytes
+(epstopdf)             Command: <repstopdf --outfile=/figures/simulations/15NSabre/bubblingReactorPressure-eps-converted-to.pdf /figures/simulations/15NSabre/bubblingReactorPressure.eps>
+(epstopdf)             \includegraphics on input line 44.
+Package epstopdf Info: Output file is already uptodate.
+</figures/simulations/15NSabre/bubblingReactorPressure-eps-converted-to.pdf, id=648, 614.295pt x 794.97pt>
+File: /figures/simulations/15NSabre/bubblingReactorPressure-eps-converted-to.pdf Graphic file (type pdf)
+<use /figures/simulations/15NSabre/bubblingReactorPressure-eps-converted-to.pdf>
+Package pdftex.def Info: /figures/simulations/15NSabre/bubblingReactorPressure-eps-converted-to.pdf  used on input line 44.
+(pdftex.def)             Requested size: 358.50233pt x 463.94566pt.
+[20 </figures/experiments/lowFieldSpectrometer/shims/shimXY-eps-converted-to.pdf>] [21 </figures/simulations/15NSabre/bubblingReactorPressure-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:results:15N:shuttlingRemoval)' on page 22 undefined on input line 52.
+
+Package epstopdf Info: Source file: </figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle.eps>
+(epstopdf)                    date: 2018-12-12 14:58:13
+(epstopdf)                    size: 144940 bytes
+(epstopdf)             Output file: </figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:54
+(epstopdf)                    size: 15528 bytes
+(epstopdf)             Command: <repstopdf --outfile=/figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle-eps-converted-to.pdf /figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+</figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle-eps-converted-to.pdf, id=665, 3726.92375pt x 2050.66125pt>
+File: /figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle-eps-converted-to.pdf Graphic file (type pdf)
+<use /figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle-eps-converted-to.pdf>
+Package pdftex.def Info: /figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle-eps-converted-to.pdf  used on input line 56.
+(pdftex.def)             Requested size: 358.50233pt x 197.25551pt.
+
+Package caption Warning: \label without proper reference on input line 61.
+See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:xysinus' on page 22 undefined on
- input line 47.
+LaTeX Warning: Reference `fig:results:15N:shuttlingReproducibility' on page 22 undefined on input line 59.
 
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/fluxgate/xField.eps>
+Package epstopdf Info: Source file: </figures/experiments/15NSabre/reproducibility/bubblingLosses.eps>
+(epstopdf)                    date: 2018-12-12 15:45:31
+(epstopdf)                    size: 23608 bytes
+(epstopdf)             Output file: </figures/experiments/15NSabre/reproducibility/bubblingLosses-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:54
+(epstopdf)                    size: 7101 bytes
+(epstopdf)             Command: <repstopdf --outfile=/figures/experiments/15NSabre/reproducibility/bubblingLosses-eps-converted-to.pdf /figures/experiments/15NSabre/reproducibility/bubblingLosses.eps>
+(epstopdf)             \includegraphics on input line 63.
+Package epstopdf Info: Output file is already uptodate.
+</figures/experiments/15NSabre/reproducibility/bubblingLosses-eps-converted-to.pdf, id=667, 433.62pt x 289.08pt>
+File: /figures/experiments/15NSabre/reproducibility/bubblingLosses-eps-converted-to.pdf Graphic file (type pdf)
+<use /figures/experiments/15NSabre/reproducibility/bubblingLosses-eps-converted-to.pdf>
+Package pdftex.def Info: /figures/experiments/15NSabre/reproducibility/bubblingLosses-eps-converted-to.pdf  used on input line 63.
+(pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
+
+LaTeX Warning: Reference `materialsMethods' on page 22 undefined on input line 75.
+
+
+LaTeX Warning: Reference `fig:results:fluxgate:xysinus' on page 22 undefined on input line 75.
+
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/fluxgate/xField.eps>
 (epstopdf)                    date: 2018-11-29 13:48:24
 (epstopdf)                    size: 41316 bytes
-(epstopdf)             Output file: <./xField-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:23
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/fluxgate/xField-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:54
 (epstopdf)                    size: 16800 bytes
-(epstopdf)             Command: <repstopdf --outfile=./xField-eps-converted-to.
-pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/xField.eps>
-(epstopdf)             \includegraphics on input line 51.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/fluxgate/xField-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/xField.eps>
+(epstopdf)             \includegraphics on input line 79.
 Package epstopdf Info: Output file is already uptodate.
-<./xField-eps-converted-to.pdf, id=495, 433.62pt x 289.08pt>
-File: ./xField-eps-converted-to.pdf Graphic file (type pdf)
-<use ./xField-eps-converted-to.pdf>
-Package pdftex.def Info: ./xField-eps-converted-to.pdf  used on input line 51.
+</home/philipp/Documents/thesis/figures/experiments/fluxgate/xField-eps-converted-to.pdf, id=669, 433.62pt x 289.08pt>
+File: /home/philipp/Documents/thesis/figures/experiments/fluxgate/xField-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/fluxgate/xField-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/fluxgate/xField-eps-converted-to.pdf  used on input line 79.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/fluxgate/yField.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/fluxgate/yField.eps>
 (epstopdf)                    date: 2018-11-29 13:48:24
 (epstopdf)                    size: 40336 bytes
-(epstopdf)             Output file: <./yField-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:23
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/fluxgate/yField-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:54
 (epstopdf)                    size: 16509 bytes
-(epstopdf)             Command: <repstopdf --outfile=./yField-eps-converted-to.
-pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/yField.eps>
-(epstopdf)             \includegraphics on input line 52.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/fluxgate/yField-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/yField.eps>
+(epstopdf)             \includegraphics on input line 80.
 Package epstopdf Info: Output file is already uptodate.
-<./yField-eps-converted-to.pdf, id=496, 433.62pt x 289.08pt>
-File: ./yField-eps-converted-to.pdf Graphic file (type pdf)
-<use ./yField-eps-converted-to.pdf>
-Package pdftex.def Info: ./yField-eps-converted-to.pdf  used on input line 52.
+</home/philipp/Documents/thesis/figures/experiments/fluxgate/yField-eps-converted-to.pdf, id=670, 433.62pt x 289.08pt>
+File: /home/philipp/Documents/thesis/figures/experiments/fluxgate/yField-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/fluxgate/yField-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/fluxgate/yField-eps-converted-to.pdf  used on input line 80.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 51--53
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 79--81
  [][] 
  []
 
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 51--53
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 79--81
  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 47.75832pt on input line 54.
+LaTeX Warning: Float too large for page by 47.75832pt on input line 82.
 
 
-LaTeX Warning: Reference `table:results:calibrationFitParams' on page 22 undefi
-ned on input line 55.
+Package caption Warning: \label without proper reference on input line 88.
+See the caption package documentation for explanation.
 
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/fluxgate/zField.eps>
+
+LaTeX Warning: Reference `table:results:calibrationFitParams' on page 22 undefined on input line 83.
+
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/fluxgate/zField.eps>
 (epstopdf)                    date: 2018-11-29 13:48:24
 (epstopdf)                    size: 25448 bytes
-(epstopdf)             Output file: <./zField-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:23
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/fluxgate/zField-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:54
 (epstopdf)                    size: 7483 bytes
-(epstopdf)             Command: <repstopdf --outfile=./zField-eps-converted-to.
-pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/zField.eps>
-(epstopdf)             \includegraphics on input line 77.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/fluxgate/zField-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/zField.eps>
+(epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
-<./zField-eps-converted-to.pdf, id=497, 433.62pt x 289.08pt>
-File: ./zField-eps-converted-to.pdf Graphic file (type pdf)
-<use ./zField-eps-converted-to.pdf>
-Package pdftex.def Info: ./zField-eps-converted-to.pdf  used on input line 77.
+</home/philipp/Documents/thesis/figures/experiments/fluxgate/zField-eps-converted-to.pdf, id=672, 433.62pt x 289.08pt>
+File: /home/philipp/Documents/thesis/figures/experiments/fluxgate/zField-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/fluxgate/zField-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/fluxgate/zField-eps-converted-to.pdf  used on input line 105.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 77--78
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 105--106
  [][] 
  []
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial2d' on page 22 undefi
-ned on input line 80.
+Package caption Warning: \label without proper reference on input line 110.
+See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial3d' on page 22 undefi
-ned on input line 80.
+LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial2d' on page 22 undefined on input line 108.
 
-Package epstopdf Info: Source file: </figures/experiments/fluxgate/spatial2dPro
-jection.eps>
+
+Package caption Warning: \label without proper reference on input line 116.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:results:fluxgate:plotSpatial3d' on page 22 undefined on input line 108.
+
+Package epstopdf Info: Source file: </figures/experiments/fluxgate/spatial2dProjection.eps>
 (epstopdf)                    date: 2018-11-29 13:48:24
 (epstopdf)                    size: 35935 bytes
-(epstopdf)             Output file: <./spatial2dProjection-eps-converted-to.pdf
->
-(epstopdf)                    date: 2018-12-17 14:06:00
+(epstopdf)             Output file: </figures/experiments/fluxgate/spatial2dProjection-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:54
 (epstopdf)                    size: 7326 bytes
-(epstopdf)             Command: <repstopdf --outfile=./spatial2dProjection-eps-
-converted-to.pdf /figures/experiments/fluxgate/spatial2dProjection.eps>
-(epstopdf)             \includegraphics on input line 85.
+(epstopdf)             Command: <repstopdf --outfile=/figures/experiments/fluxgate/spatial2dProjection-eps-converted-to.pdf /figures/experiments/fluxgate/spatial2dProjection.eps>
+(epstopdf)             \includegraphics on input line 113.
 Package epstopdf Info: Output file is already uptodate.
-<./spatial2dProjection-eps-converted-to.pdf, id=498, 433.62pt x 289.08pt>
-File: ./spatial2dProjection-eps-converted-to.pdf Graphic file (type pdf)
-<use ./spatial2dProjection-eps-converted-to.pdf>
-Package pdftex.def Info: ./spatial2dProjection-eps-converted-to.pdf  used on in
-put line 85.
+</figures/experiments/fluxgate/spatial2dProjection-eps-converted-to.pdf, id=675, 433.62pt x 289.08pt>
+File: /figures/experiments/fluxgate/spatial2dProjection-eps-converted-to.pdf Graphic file (type pdf)
+<use /figures/experiments/fluxgate/spatial2dProjection-eps-converted-to.pdf>
+Package pdftex.def Info: /figures/experiments/fluxgate/spatial2dProjection-eps-converted-to.pdf  used on input line 113.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 85--86
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 113--114
  [][] 
  []
 
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/fluxgate/spatial3d.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d.eps>
 (epstopdf)                    date: 2018-11-29 13:48:24
 (epstopdf)                    size: 35139 bytes
-(epstopdf)             Output file: <./spatial3d-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:48
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:55
 (epstopdf)                    size: 7780 bytes
-(epstopdf)             Command: <repstopdf --outfile=./spatial3d-eps-converted-
-to.pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d.ep
-s>
-(epstopdf)             \includegraphics on input line 91.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d.eps>
+(epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
-<./spatial3d-eps-converted-to.pdf, id=499, 433.62pt x 289.08pt>
-File: ./spatial3d-eps-converted-to.pdf Graphic file (type pdf)
-<use ./spatial3d-eps-converted-to.pdf>
-Package pdftex.def Info: ./spatial3d-eps-converted-to.pdf  used on input line 9
-1.
+</home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d-eps-converted-to.pdf, id=676, 433.62pt x 289.08pt>
+File: /home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d-eps-converted-to.pdf  used on input line 119.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (35.2803pt too wide) in paragraph at lines 91--92
+Overfull \hbox (35.2803pt too wide) in paragraph at lines 119--120
  [][] 
  []
 
@@ -1588,139 +1442,108 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22]
-
-LaTeX Warning: Reference `simulations:DualHelmholtzArray' on page 23 undefined 
-on input line 95.
-
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/lowFieldSpectrometer/helmholtzNarrowLine.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine.eps>
 (epstopdf)                    date: 2018-11-16 16:22:26
 (epstopdf)                    size: 17803 bytes
-(epstopdf)             Output file: <./helmholtzNarrowLine-eps-converted-to.pdf
->
-(epstopdf)                    date: 2018-12-17 14:04:48
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:55
 (epstopdf)                    size: 9525 bytes
-(epstopdf)             Command: <repstopdf --outfile=./helmholtzNarrowLine-eps-
-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpe
-ctrometer/helmholtzNarrowLine.eps>
-(epstopdf)             \includegraphics on input line 102.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine.eps>
+(epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
-<./helmholtzNarrowLine-eps-converted-to.pdf, id=505, 340.27126pt x 169.63374pt>
-
-File: ./helmholtzNarrowLine-eps-converted-to.pdf Graphic file (type pdf)
-<use ./helmholtzNarrowLine-eps-converted-to.pdf>
-Package pdftex.def Info: ./helmholtzNarrowLine-eps-converted-to.pdf  used on in
-put line 102.
+</home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine-eps-converted-to.pdf, id=678, 340.27126pt x 169.63374pt>
+File: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine-eps-converted-to.pdf  used on input line 130.
 (pdftex.def)             Requested size: 341.43306pt x 170.22087pt.
+[22] [23 </figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle-eps-converted-to.pdf> </figures/experiments/15NSabre/reproducibility/bubblingLosses-eps-converted-to.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30.eps>
 (epstopdf)                    date: 2018-11-20 13:22:21
 (epstopdf)                    size: 25622 bytes
-(epstopdf)             Output file: <./overlayAll8to30-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:48
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:55
 (epstopdf)                    size: 10266 bytes
-(epstopdf)             Command: <repstopdf --outfile=./overlayAll8to30-eps-conv
-erted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectro
-meter/inSituSabreWater/overlayAll8to30.eps>
-(epstopdf)             \includegraphics on input line 106.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30.eps>
+(epstopdf)             \includegraphics on input line 134.
 Package epstopdf Info: Output file is already uptodate.
-<./overlayAll8to30-eps-converted-to.pdf, id=506, 141.52875pt x 141.52875pt>
-File: ./overlayAll8to30-eps-converted-to.pdf Graphic file (type pdf)
-<use ./overlayAll8to30-eps-converted-to.pdf>
-Package pdftex.def Info: ./overlayAll8to30-eps-converted-to.pdf  used on input 
-line 106.
+</home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30-eps-converted-to.pdf, id=701, 141.52875pt x 141.52875pt>
+File: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30-eps-converted-to.pdf  used on input line 134.
 (pdftex.def)             Requested size: 199.16931pt x 199.18626pt.
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6.eps>
 (epstopdf)                    date: 2018-11-20 13:21:59
 (epstopdf)                    size: 26911 bytes
-(epstopdf)             Output file: <./overlayAll1to6-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:48
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:55
 (epstopdf)                    size: 11031 bytes
-(epstopdf)             Command: <repstopdf --outfile=./overlayAll1to6-eps-conve
-rted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrom
-eter/inSituSabreWater/overlayAll1to6.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6.eps>
+(epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
-<./overlayAll1to6-eps-converted-to.pdf, id=507, 141.52875pt x 141.52875pt>
-File: ./overlayAll1to6-eps-converted-to.pdf Graphic file (type pdf)
-<use ./overlayAll1to6-eps-converted-to.pdf>
-Package pdftex.def Info: ./overlayAll1to6-eps-converted-to.pdf  used on input l
-ine 107.
+</home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6-eps-converted-to.pdf, id=702, 141.52875pt x 141.52875pt>
+File: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6-eps-converted-to.pdf  used on input line 135.
 (pdftex.def)             Requested size: 199.16931pt x 199.18626pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/lowFieldSpectrometer/inSituSabreWater/exponentialFit.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit.eps>
 (epstopdf)                    date: 2018-11-20 08:56:04
 (epstopdf)                    size: 14553 bytes
-(epstopdf)             Output file: <./exponentialFit-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:48
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:55
 (epstopdf)                    size: 2217 bytes
-(epstopdf)             Command: <repstopdf --outfile=./exponentialFit-eps-conve
-rted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrom
-eter/inSituSabreWater/exponentialFit.eps>
-(epstopdf)             \includegraphics on input line 111.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit.eps>
+(epstopdf)             \includegraphics on input line 139.
 Package epstopdf Info: Output file is already uptodate.
-<./exponentialFit-eps-converted-to.pdf, id=508, 614.295pt x 794.97pt>
-File: ./exponentialFit-eps-converted-to.pdf Graphic file (type pdf)
-<use ./exponentialFit-eps-converted-to.pdf>
-Package pdftex.def Info: ./exponentialFit-eps-converted-to.pdf  used on input l
-ine 111.
+</home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit-eps-converted-to.pdf, id=703, 614.295pt x 794.97pt>
+File: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit-eps-converted-to.pdf  used on input line 139.
 (pdftex.def)             Requested size: 170.71652pt x 220.92824pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection.eps>
 (epstopdf)                    date: 2018-12-03 09:12:33
 (epstopdf)                    size: 23765 bytes
-(epstopdf)             Output file: <./cellCultureInjection-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2018-12-17 14:04:48
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:55
 (epstopdf)                    size: 6407 bytes
-(epstopdf)             Command: <repstopdf --outfile=./cellCultureInjection-eps
--converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSp
-ectrometer/inSituSabreWater/cellCultureInjection.eps>
-(epstopdf)             \includegraphics on input line 115.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection.eps>
+(epstopdf)             \includegraphics on input line 143.
 Package epstopdf Info: Output file is already uptodate.
-<./cellCultureInjection-eps-converted-to.pdf, id=509, 433.62pt x 289.08pt>
-File: ./cellCultureInjection-eps-converted-to.pdf Graphic file (type pdf)
-<use ./cellCultureInjection-eps-converted-to.pdf>
-Package pdftex.def Info: ./cellCultureInjection-eps-converted-to.pdf  used on i
-nput line 115.
+</home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection-eps-converted-to.pdf, id=704, 433.62pt x 289.08pt>
+File: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection-eps-converted-to.pdf  used on input line 143.
 (pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/exp
-eriments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps>
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps>
 (epstopdf)                    date: 2018-12-03 09:13:35
 (epstopdf)                    size: 25187 bytes
-(epstopdf)             Output file: <./signalVariation-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:49
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:55
 (epstopdf)                    size: 7397 bytes
-(epstopdf)             Command: <repstopdf --outfile=./signalVariation-eps-conv
-erted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectro
-meter/inSituSabreWater/signalVariation.eps>
-(epstopdf)             \includegraphics on input line 120.
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps>
+(epstopdf)             \includegraphics on input line 148.
 Package epstopdf Info: Output file is already uptodate.
-<./signalVariation-eps-converted-to.pdf, id=510, 433.62pt x 289.08pt>
-File: ./signalVariation-eps-converted-to.pdf Graphic file (type pdf)
-<use ./signalVariation-eps-converted-to.pdf>
-Package pdftex.def Info: ./signalVariation-eps-converted-to.pdf  used on input 
-line 120.
+</home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation-eps-converted-to.pdf, id=705, 433.62pt x 289.08pt>
+File: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation-eps-converted-to.pdf  used on input line 148.
 (pdftex.def)             Requested size: 433.62pt x 289.09251pt.
 
-Overfull \hbox (35.28136pt too wide) in paragraph at lines 120--122
+Overfull \hbox (35.28136pt too wide) in paragraph at lines 148--150
 [][]
  []
 
@@ -1728,108 +1551,48 @@ Overfull \hbox (35.28136pt too wide) in paragraph at lines 120--122
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `fig:results:15N:shuttlingRemoval)' on page 23 undefin
-ed on input line 128.
+Underfull \vbox (badness 1270) has occurred while \output is active []
 
-Package epstopdf Info: Source file: </figures/experiments/15NSabre/reproducibil
-ity/spectraComparisonShuttle.eps>
-(epstopdf)                    date: 2018-12-12 14:58:13
-(epstopdf)                    size: 144940 bytes
-(epstopdf)             Output file: <./spectraComparisonShuttle-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:49
-(epstopdf)                    size: 15528 bytes
-(epstopdf)             Command: <repstopdf --outfile=./spectraComparisonShuttle
--eps-converted-to.pdf /figures/experiments/15NSabre/reproducibility/spectraComp
-arisonShuttle.eps>
-(epstopdf)             \includegraphics on input line 132.
+ [24]
+Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds.eps>
+(epstopdf)                    date: 2018-12-17 15:14:33
+(epstopdf)                    size: 59896 bytes
+(epstopdf)             Output file: </home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:55
+(epstopdf)                    size: 10976 bytes
+(epstopdf)             Command: <repstopdf --outfile=/home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds-eps-converted-to.pdf /home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds.eps>
+(epstopdf)             \includegraphics on input line 165.
 Package epstopdf Info: Output file is already uptodate.
-<./spectraComparisonShuttle-eps-converted-to.pdf, id=511, 3726.92375pt x 2050.6
-6125pt>
-File: ./spectraComparisonShuttle-eps-converted-to.pdf Graphic file (type pdf)
-<use ./spectraComparisonShuttle-eps-converted-to.pdf>
-Package pdftex.def Info: ./spectraComparisonShuttle-eps-converted-to.pdf  used 
-on input line 132.
-(pdftex.def)             Requested size: 358.50233pt x 197.25551pt.
-
-LaTeX Warning: Reference `fig:results:15N:shuttlingReproducibility' on page 23 
-undefined on input line 135.
-
-Package epstopdf Info: Source file: </figures/experiments/15NSabre/reproducibil
-ity/bubblingLosses.eps>
-(epstopdf)                    date: 2018-12-12 15:45:31
-(epstopdf)                    size: 23608 bytes
-(epstopdf)             Output file: <./bubblingLosses-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:49
-(epstopdf)                    size: 7101 bytes
-(epstopdf)             Command: <repstopdf --outfile=./bubblingLosses-eps-conve
-rted-to.pdf /figures/experiments/15NSabre/reproducibility/bubblingLosses.eps>
-(epstopdf)             \includegraphics on input line 139.
-Package epstopdf Info: Output file is already uptodate.
-<./bubblingLosses-eps-converted-to.pdf, id=512, 433.62pt x 289.08pt>
-File: ./bubblingLosses-eps-converted-to.pdf Graphic file (type pdf)
-<use ./bubblingLosses-eps-converted-to.pdf>
-Package pdftex.def Info: ./bubblingLosses-eps-converted-to.pdf  used on input l
-ine 139.
-(pdftex.def)             Requested size: 358.50233pt x 239.01443pt.
-[23]
-Package epstopdf Info: Source file: </home/philipp/Documents/thesis/figures/sim
-ulations/compensationWinds.eps>
-(epstopdf)                    date: 2018-06-28 12:04:45
-(epstopdf)                    size: 43786 bytes
-(epstopdf)             Output file: <./compensationWinds-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:04:49
-(epstopdf)                    size: 43949 bytes
-(epstopdf)             Command: <repstopdf --outfile=./compensationWinds-eps-co
-nverted-to.pdf /home/philipp/Documents/thesis/figures/simulations/compensationW
-inds.eps>
-(epstopdf)             \includegraphics on input line 152.
-Package epstopdf Info: Output file is already uptodate.
-<./compensationWinds-eps-converted-to.pdf, id=521, 719.68875pt x 516.93124pt>
-File: ./compensationWinds-eps-converted-to.pdf Graphic file (type pdf)
-<use ./compensationWinds-eps-converted-to.pdf>
-Package pdftex.def Info: ./compensationWinds-eps-converted-to.pdf  used on inpu
-t line 152.
-(pdftex.def)             Requested size: 398.33864pt x 286.11935pt.
+</home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds-eps-converted-to.pdf, id=711, 578.16pt x 433.62pt>
+File: /home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds-eps-converted-to.pdf Graphic file (type pdf)
+<use /home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds-eps-converted-to.pdf>
+Package pdftex.def Info: /home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds-eps-converted-to.pdf  used on input line 165.
+(pdftex.def)             Requested size: 398.33864pt x 298.75482pt.
 
 
-LaTeX Warning: Reference `' on page 24 undefined on input line 156.
+LaTeX Warning: Reference `' on page 25 undefined on input line 169.
 
 
-LaTeX Warning: Reference `' on page 24 undefined on input line 156.
+LaTeX Warning: Reference `' on page 25 undefined on input line 169.
 
 
-LaTeX Warning: Reference `' on page 24 undefined on input line 156.
+LaTeX Warning: Reference `' on page 25 undefined on input line 169.
 
-Package epstopdf Info: Source file: </figures/simulations/B0/helmholtzCoil/fiel
-dSpread.eps>
+Package epstopdf Info: Source file: </figures/simulations/B0/helmholtzCoil/fieldSpread.eps>
 (epstopdf)                    date: 2018-12-17 14:43:13
 (epstopdf)                    size: 464694 bytes
-(epstopdf)             Output file: <./fieldSpread-eps-converted-to.pdf>
-(epstopdf)             Command: <repstopdf --outfile=./fieldSpread-eps-converte
-d-to.pdf /figures/simulations/B0/helmholtzCoil/fieldSpread.eps>
-(epstopdf)             \includegraphics on input line 158.
-runsystem(repstopdf --outfile=./fieldSpread-eps-converted-to.pdf /figures/simul
-ations/B0/helmholtzCoil/fieldSpread.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <./fieldSpread-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-12-17 14:51:53
-(epstopdf)                    size: 44307 bytes.
-<./fieldSpread-eps-converted-to.pdf, id=522, 1442.38875pt x 833.1125pt>
-File: ./fieldSpread-eps-converted-to.pdf Graphic file (type pdf)
-<use ./fieldSpread-eps-converted-to.pdf>
-Package pdftex.def Info: ./fieldSpread-eps-converted-to.pdf  used on input line
- 158.
+(epstopdf)             Output file: </figures/simulations/B0/helmholtzCoil/fieldSpread-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-17 09:34:56
+(epstopdf)                    size: 44307 bytes
+(epstopdf)             Command: <repstopdf --outfile=/figures/simulations/B0/helmholtzCoil/fieldSpread-eps-converted-to.pdf /figures/simulations/B0/helmholtzCoil/fieldSpread.eps>
+(epstopdf)             \includegraphics on input line 171.
+Package epstopdf Info: Output file is already uptodate.
+</figures/simulations/B0/helmholtzCoil/fieldSpread-eps-converted-to.pdf, id=712, 1442.38875pt x 833.1125pt>
+File: /figures/simulations/B0/helmholtzCoil/fieldSpread-eps-converted-to.pdf Graphic file (type pdf)
+<use /figures/simulations/B0/helmholtzCoil/fieldSpread-eps-converted-to.pdf>
+Package pdftex.def Info: /figures/simulations/B0/helmholtzCoil/fieldSpread-eps-converted-to.pdf  used on input line 171.
 (pdftex.def)             Requested size: 358.50233pt x 207.05724pt.
-) [24] [25 <./xField-eps-converted-to.pdf> <./yField-eps-converted-to.pdf>]
-[26 <./zField-eps-converted-to.pdf>] [27 <./spatial2dProjection-eps-converted-t
-o.pdf> <./spatial3d-eps-converted-to.pdf>] [28 <./helmholtzNarrowLine-eps-conve
-rted-to.pdf> <./overlayAll8to30-eps-converted-to.pdf> <./overlayAll1to6-eps-con
-verted-to.pdf>] [29 <./exponentialFit-eps-converted-to.pdf> <./cellCultureInjec
-tion-eps-converted-to.pdf>] [30 <./signalVariation-eps-converted-to.pdf>]
-[31 <./spectraComparisonShuttle-eps-converted-to.pdf> <./bubblingLosses-eps-con
-verted-to.pdf>] [32 <./compensationWinds-eps-converted-to.pdf> <./fieldSpread-e
-ps-converted-to.pdf>]
+) [25] [26 </home/philipp/Documents/thesis/figures/experiments/fluxgate/xField-eps-converted-to.pdf> </home/philipp/Documents/thesis/figures/experiments/fluxgate/yField-eps-converted-to.pdf>] [27 </home/philipp/Documents/thesis/figures/experiments/fluxgate/zField-eps-converted-to.pdf>] [28 </figures/experiments/fluxgate/spatial2dProjection-eps-converted-to.pdf> </home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial3d-eps-converted-to.pdf>] [29 </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine-eps-converted-to.pdf> </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30-eps-converted-to.pdf> </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6-eps-converted-to.pdf>] [30 </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit-eps-converted-to.pdf> </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection-eps-converted-to.pdf>] [31 </home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation-eps-converted-to.pdf>] [32 </home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds-eps-converted-to.pdf> </figures/simulations/B0/helmholtzCoil/fieldSpread-eps-converted-to.pdf>]
 \openout2 = `chapters/6-conclusions.aux'.
 
  (./chapters/6-conclusions.tex
@@ -1880,67 +1643,37 @@ chapter 7.
 
 
 
-]
-
-LaTeX Warning: Empty `thebibliography' environment or \BreakBibliography
-               before end of `thebibliography' environment on input line 3.
-
-) [37] [38]
+] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)) [37] [38]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
- (./thesis_main.aux (./chapters/0_0-titlepage_en.aux)
-(./chapters/0_1-declaration.aux) (./chapters/0_2-abstract.aux)
-(./chapters/1-introduction.aux) (./chapters/2-theory.aux)
-(./chapters/3-materialsAndMethods.aux) (./chapters/4-simulations.aux)
-(./chapters/5-results.aux) (./chapters/6-conclusions.aux)
-(./chapters/7-acknowledgments.aux))
+ (./thesis_main.aux (./chapters/0_0-titlepage_en.aux) (./chapters/0_1-declaration.aux) (./chapters/0_2-abstract.aux) (./chapters/1-introduction.aux) (./chapters/2-theory.aux) (./chapters/3-materialsAndMethods.aux) (./chapters/4-simulations.aux) (./chapters/5-results.aux) (./chapters/6-conclusions.aux) (./chapters/7-acknowledgments.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+Package rerunfilecheck Info: File `thesis_main.out' has not changed.
+(rerunfilecheck)             Checksum: 87B3F481D0030D3752EDAA1DEDE5FB83;13927.
 
-
-Package rerunfilecheck Warning: File `thesis_main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis_main.out':
-(rerunfilecheck)             Before: 4493C87B75FFD764CD4118171DDDFEDA;13276
-(rerunfilecheck)             After:  87B3F481D0030D3752EDAA1DEDE5FB83;13927.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38067 strings out of 492639
- 723022 string characters out of 6135496
- 865856 words of memory out of 5000000
- 41038 multiletter control sequences out of 15000+600000
- 607746 words of font info for 226 fonts, out of 8000000 for 9000
+ 38387 strings out of 492639
+ 732288 string characters out of 6135497
+ 873663 words of memory out of 5000000
+ 41309 multiletter control sequences out of 15000+600000
+ 611642 words of font info for 234 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,21n,77p,9109b,1144s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
-exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1
-/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a
-.pfb>
-Output written on thesis_main.pdf (52 pages, 1329940 bytes).
+ 67i,21n,77p,9103b,1151s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on thesis_main.pdf (54 pages, 1337824 bytes).
 PDF statistics:
- 791 PDF objects out of 1000 (max. 8388607)
- 663 compressed objects within 7 object streams
- 172 named destinations out of 1000 (max. 500000)
- 41130 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 960 PDF objects out of 1000 (max. 8388607)
+ 827 compressed objects within 9 object streams
+ 177 named destinations out of 1000 (max. 500000)
+ 45268 words of extra memory for PDF output out of 51595 (max. 10000000)
 
