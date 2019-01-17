@@ -5,7 +5,7 @@
 % if you'd rather have a one sided thesis, add `onside' to the documentclass
 \documentclass[11pt, a4paper, BCOR=10mm, english, ngerman]{scrbook}
 % include all packages and define commands in setup.tex
-\input{setup/setup}
+\input{setup}
 \begin{document}
     \pagestyle{empty} % no header and no page number
     % disable hyper links to remove warning "destination with same identifier"
@@ -27,7 +27,7 @@
     \hypersetup{pageanchor=true}  % re-enable hyperlinking
 
     \mainmatter  % Arabic page numbers
-    \printlength\textwidth 
+    %\printlength\textwidth 
     \def\input@path{{/home/philipp/Documents/thesis/figures/}}
     \include{chapters/1-introduction}
     \include{chapters/2-theory}
