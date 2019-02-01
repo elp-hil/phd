@@ -1,94 +1,73 @@
 % !TEX root = ../thesis_main.tex
 \chapter{Results}\label{chap:results}
-    As a large part of this work consisted of hardware design and manufacturing, I will split the
-    results section into sole hardware results and results of measurements \textit{with} that hardware as well as commercially available machines.
+    As a large part of this work consisted of hardware design and manufacturing, I will split the results section into sole hardware results and results of measurements \textit{with} that hardware as well as commercially available machines.
 \section{Hardware}
     \subsection{Low field NMR}
         \subsubsection{Receive coils}
-        Receive circuits provided a Q-factor of \SI{128}{}. Note that the connection to the NI DAQ introduces additional
-            capacities and inductances that cannot be neglected especially in the higher frequency
-            range above $\SI{100}{\kilo\hertz}$ where the coil's intrinsic capacities are
-            comparatively small. An Additional, higher order resonance with worse Q factor can be seen to the right in the same plot at around \SI{460}{\kilo Hz}.
-            \begin{figure}[h]
-                \label{fig:results:networkAnalysis}
-                \includegraphics[width = \textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
-                \caption{Network analysis of a receive coil commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was used to receive the NMR signal.}
-            \end{figure}
+        Receive circuits provided a Q-factor of \SI{128}{}. Note that through the connection to the NI DAQ introduces additional impedances that cannot be neglected especially in the higher frequency above $\SI{100}{\kilo\hertz}$ where the coil's intrinsic capacities are comparatively small. An additional, higher order resonance with worse Q factor can be seen to the right in the same plot at around \SI{460}{\kilo Hz}. The second graph shows the same measurement performed with the untuned saddle coil. The latter shows no significant dips and is thus considered broadband, i.e. as long as the RF-amplifiers power is sufficient, it can be used at arbitrary frequencies.
+        \begin{figure}
+            \label{fig:results:networkAnalysis}
+            \includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
+            \caption{Network analysis of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was used to receive the NMR signal. The braodband transmit coil shows a flat frequency response.}
+        \end{figure}
+        Dual resonant coils for 1H and 13C signal reception did show a less prominent dip in both channels, while the additional channel (1H in most cases) \todo{ref methods} was affected more strongly by the new circuitry.
         \subsubsection{$\mathbf{B_0}$ coils}
-            The manufactured $\mathrm{B_0}$ coils show fields (i.e. frequencies) as well as  linewidths in the order of magnitude the
-            simulations predicted. Through manufacturing errors, and changes to the coil in long
-            term use cases, the linewidths deteriorated. It is important to note that, at currents
-            above $\SI{1}{\ampere}$, the $\mathrm{B_0}$ coil heated noiticabely. while the heating
-            itself is unproblematic, the resulting exansion of the materials leads to an overall
-            longer coil and thus lower fields \ref(fieldSolenoid). To avoid field shifts during
-            measurements, the setup should therefore be in thermal equilibrium. This is especially
-            relevant when switching fields during measurements using the programmable power supply.
+            The manufactured $\mathrm{B_0}$ coils show fields (i.e. frequencies) as well as  linewidths in the order of magnitude the simulations predicted. Through manufacturing errors, and changes to the coil in long term use cases, the linewidths deteriorated. It is important to note that, at currents above $\SI{1}{\ampere}$, the $\mathrm{B_0}$ coil heated noiticabely. while the heating itself is unproblematic, the resulting exansion of the materials leads to an overall longer coil and thus lower fields \ref(fieldSolenoid). To avoid field shifts during measurements, the setup should therefore be in thermal equilibrium. This is especially relevant when switching fields during measurements using the programmable power supply.
         \subsection{Shims and programmable power supply}
-            The three linear shims are adjustable via the programmable power supply and show
-            their expected effect. The rotational position of the receive coil is relevant to the
-            shims indicating they're working as intended. Using the added shim tool, line widths
-            were reduced from $\approxsdf,.
-            \SI{250}{\hertz}$ to $\approx \SI{30}{\hertz}$ in the case of large samples of $\approx
-            $\SI{40}{\milli\litre}. If the initial field was generated by a less homogeneous, more
-            asymmetric coil in which no signal was visible without shims, signal was discovered and linewidths went down to
-            $\approx \SI{50}{\hertz}$.
-            \begin{figure}[h]
+            The three linear shims are adjustable via the programmable power supply and show their expected effect. The rotational position of the receive coil is relevant to the shims indicating they're working as intended. Using the added shim tool, line widths were reduced from $\approx \SI{250}{\hertz}$ to $\approx \SI{30}{\hertz}$ in the case of large samples of $\approx $\SI{40}{\milli\litre}. If the initial field was generated by a less homogeneous, more asymmetric coil in which no signal was visible without shims, signal was discovered and linewidths went down to $\approx \SI{50}{\hertz}$.
+            \begin{figure}
                 \label{fig:results:lowFieldSpectrometer:shims}
-                \includegraphics[width=0.9\textwidth]{/figures/experiments/lowFieldSpectrometer/shims/shimXY.eps}
+                \includegraphics[width=0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/shims/shimXY.eps}
                 \caption[Manual low field shimming]{Linear shimmung in x- and y-directions. Shimming was done manually: 1H spectra of water were recorded and evaluated as to their linewidth. Later, automatic shimming was implemented (see section \ref{chap:MaterialsAndMethods:lowFieldSpectrometer:shims})}
             \end{figure}
     \subsection{Sabre shuttling system}
-        The system designed to transfer a sample between fields works as intended. Fluid losses are
-        small and thus acceptable with about \todo{how much} lost within \todo{nn} shuttling cycles at high flow rates of \todo{flow} and long bubbling times of 30 seconds per measurement. The
-        bubbling system works well and provides pH2 to the solution in large amounts. 
+        The system designed to transfer a sample between fields works as intended. Fluid losses are small and thus
+        acceptable with about \SI{25}{\percent} lost within \~15 shuttling cycles at high flow rates of \SI{20}{\litre
+        \per\hour} and long bubbling times of 30 seconds per measurement i.e. \SI{8}{\minute} of pH2 flow through the
+        sample. The bubbling system works well and provides pH2 to the solution in amounts large enough to generate
+        polarization levels in the single digit percent range \ref{fig:results:highlyPolarized15Nspectrum}.
         \subsubsection{Pressure stability}
-        The pressure stability of the vessels has been simulated to withstand \SI{200}{\bar} well within the yield strengths of PSU\ref{fig:results:bubblingReactorPressure}. I decided using a factor of safety of $\gamma = 4$ . Experimentally, a pressure resistance of \SI{50}{\bar} was confirmed; no problems concerning material fatigue were observed whatsoever within a few thousand pressure cycles.
-        \begin{figure}
-            \label{fig:results:bubblingReactorPressure}
-            \centering
-                \subfloat[Overall displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/displacement200.eps}}
-                \hfill
-                \subfloat[X displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/xDisplacement200.eps}}\\
-                \subfloat[Y displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/yDisplacement200.eps}}
-                \hfill
-                \subfloat[Z displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/zDisplacement200.eps}}
-                \caption[Reactor wall stress simulations]{Wall stress of the low field reactor for pressure levels at \SI{200}{\bar}. As expected, the most vulnerable part is the long side of the cylinder, but wall thickness of \si{3}{\milli\meter} suffices for a factor of safety of 4 if the setup is operated at a maximum pressure of \SI{50}{\bar}. The yellow arrows shown in pairs of four indicate the areas pressure was applied to in the simulation.}
-        \end{figure}
-        
-        chemical resistance is good though resistance to pure pyridine is not given. while there was never
-        any problem with the $\si{}{\milli\molar}$ pyridine concentrations used in the experiments, a
-        neat pyridine batch showed to dissolve the psu casing.
+            The pressure stability of the vessels has been simulated to withstand \SI{200}{\bar} . I decided using a factor of safety of $\gamma = 4$. As expected, the most vulnerable part is the long side of the cylinder, but wall thickness of \SI{3}{\milli\meter} suffices for a factor of safety of 4 if the setup is operated at a maximum pressure of \SI{50}{\bar}.Experimentally, the pressure resistance of \SI{50}{\bar} was confirmed; no problems concerning material fatigue were observed whatsoever within a few thousand pressure cycles. Figure \ref{fig:results:bubblingReactorPressure} shows the displacement of the different parts at \SI{200}{\bar}. The maximum displacement is in the range of \SI{0.25}{\milli\meter} and is within the yield strengths of PSU.
+            \begin{figure}
+                \centering
+                    \subfloat[Overall displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/displacement200.eps}}
+                    \hfill
+                    \subfloat[X displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/xDisplacement200.eps}}\\
+                    \subfloat[Y displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/yDisplacement200.eps}}
+                    \hfill
+                    \subfloat[Z displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/zDisplacement200.eps}}
+                    \caption[Reactor wall stress simulations]{Wall stress of the low field reactor for pressure levels at \SI{200}{\bar}. (a) shows the overall displacement while (b), (c) and (d) show the displacement in X-, Y-, and Z-direction.  The yellow arrows shown in pairs of four indicate the areas pressure was applied to in the simulation.}
+                \label{fig:results:bubblingReactorPressure}
+            \end{figure}
+            Chemical resistance to methanol- and ethanol-pyridine mixtures was as good as expected, though resistance to pure pyridine is not given. While there was never any problem with the pyridine concentrations  up to \SI{30}{\micro\Molar} used in the experiments, a neat pyridine batch showed to dissolve the PSU casing.\todo{ref discussion, other materials}
         \subsubsection{Shuttling reproducibility}
-        To ensure that the sample is removed completely from the high field side, spectra in both 'states' of the system were recorded (\ref{fig:results:15N:shuttlingRemoval)}. Integration over both spectra yielded a upper limit of sample remaining inside the high field chamber of which corresponds to an effective polarization reduction of \SI{1}{\percent}.
-        \begin{figure}
-            \label{fig:results:15N:shuttlingRemoval}
-            \centering
-            \includegraphics[width=0.9\textwidth]{/figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle.eps}
-            \caption[High field removal efficiency]{1H spectra of the high field reactor in the filled (blue) and empty (red) state. The filled state delivers a lot more signal as expected while the integration over the empty state spectrum shows a signal reduction of 1000.}
-        \end{figure}
-        To test the reproducibility of the shuttling system, a hyperpolarized 1H pyridine sample was shuttled back and forth multiple times. The results of the measurement are shown in figure \ref{fig:results:15N:shuttlingReproducibility}. 
-        \begin{figure}
-            \label{fig:results:15N:shuttlingReproducibility}
-            \centering
-            \includegraphics[width=0.9\textwidth]{/figures/experiments/15NSabre/reproducibility/bubblingLosses.eps}
-            \caption[Bubbling fluid losses]{Signal intensity during multiple minutes of hydrogen bubbling using a hyperpolarized 1H-pyridine sample. Note that the signal drops to about \SI{70}{\percent} of its initial value after 8 minutes of continuous hydrogen supply. The initial rise of signal during the first two minutes indicates a temperature effect unaccounted for.}
-        \end{figure}
+            To ensure that the sample is removed completely from the high field side, spectra in both 'states' of the system were recorded (Figure \ref{fig:results:15N:shuttlingRemoval}).
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/reproducibility/spectraComparisonShuttle.eps}
+                \caption[High field removal efficiency]{1H spectra of the high field reactor in the filled (blue) and empty (red) state. The filled state delivers a lot more signal as expected while the integration over the empty state spectrum shows a signal reduction of 1000.}
+                \label{fig:results:15N:shuttlingRemoval}
+            \end{figure}
+            To test the reproducibility of the shuttling system, a hyperpolarized 1H pyridine sample was shuttled back and forth multiple times. The results of the measurement are shown in figure \ref{fig:results:15N:shuttlingReproducibility}. The residue left in the high field chamber after the shuttling procedure does not generate significant signal, but after maximizing the noise integral through phase shifts, the ratios upper limit $\frac{I_{in}}{I_{out}}$ can be estimated and corresponds to a maximum fluid volume of \SI{0.05}{ml}remaining in the high field chamber. Considering this fraction completely non-polarized, the overall polarization of a \SI{3}{ml} sample will be reduced by \SI{nn}{\percent} \ref{fig:results:15N:shuttlingReproducibility}.
+            \begin{figure}
+                \label{fig:results:15N:shuttlingReproducibility}
+                \centering
+                \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/reproducibility/bubblingLosses.eps}
+                \caption[Bubbling fluid losses]{Signal intensity during multiple minutes of hydrogen bubbling using a hyperpolarized 1H-pyridine sample. Note that the signal drops to about \SI{70}{\percent} of its initial value after 8 minutes of continuous hydrogen supply. The initial rise of signal during the first two minutes indicates a temperature effect unaccounted for.}
+            \end{figure}
     \subsection{Fluxgate readout electronics}
-        The readout electronics were designed to feature a wide range of amplifications for all
-        three spatial dimensions. A 24 V DC power supply was fitted with a DC-DC-converter to
-        provide the $\pm\SI{15}{\volt}$ to power the Fluxgate. Additionally the PCB board was fitted
-        with the electronic parts (see \ref{sec:methodsFluxgate}). For testing purposes, a simple program
-        using serial in and output to toggle the analog switches was written. All switches were
-        successfully tested to work, though three had to be replaced at some point for malfunction.
-        Apparently this was due to damage during assembly as the board is now working as expected.
+        The readout electronics were designed to feature a wide range of amplifications for all three spatial dimensions. A 24 V DC power supply was fitted with a DC-DC-converter to provide the $\pm\SI{15}{\volt}$ to power the Fluxgate. Additionally the PCB board was fitted with the electronic parts (see \ref{sec:methodsFluxgate}). For testing purposes, a simple program using serial in and output to toggle the analog switches was written. All switches were successfully tested to work, though three had to be replaced at some point for malfunction.  Apparently this was due to damage during assembly as the board is now working as expected.
     \subsection{Fluxgate calibration}
-    The three spatial channels of the fluxgate sensor needed to be calibrated as to their intrinsic offsets as described in \ref{materialsMethods}. Data for X- and Y-channels are shown in figure \ref{fig:results:fluxgate:xysinus}
-        \begin{figure}[h]
+        The three spatial channels of the fluxgate sensor needed to be calibrated as to their intrinsic offsets as described in \ref{materialsMethods}. Data for X- and Y-channels are shown in figure \ref{fig:results:fluxgate:xysinus}.
+        \begin{figure}
             \label{fig:results:fluxgate:ysinus}
             \centering
             \includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/xField.eps}
             \includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/yField.eps}
-            \caption[Calibration results X/Y]{Calibration data of X- and Y-channel. Each dataset in the key corresponds to a full rotation at one position in the MuMetal shield. The solid lines correspond to a sine fit to each dataset with phase, amplitude and offset as fitting parameters. Error bars are not displayed for better visibility.}
+            \caption[Calibration results X/Y]{Calibration data of X- and Y-channel. Each dataset in the key
+            corresponds to a full rotation at one position in the MuMetal shield. The solid lines correspond to
+            a sine fit to each dataset with phase, amplitude and offset as fitting parameters. Error bars are not
+            displayed for better visibility.}
         \end{figure}
         The fit parameters shown in table \ref{table:results:calibrationFitParams} allow for calibration of X- and Y- channel by calculating the average offset for all Positions.
         \begin{table}
@@ -98,7 +77,7 @@
                 \label{table:results:calibrationFitParams}
                 position & 1& 2 & 3 & 4 & 5 & 6\\
                 \hline
-                amplitude & 22.4 & 27.0 & 35.9 & 39.6 & 45.2 & 42.5\\ 
+                amplitude & 22.4 & 27.0 & 35.9 & 39.6 & 45.2 & 42.5\\
                 offset \\
                 phase \\
                 \hline
@@ -110,20 +89,20 @@
             \end{tabular}
             \caption[Fluxgate calibration results]{Calibration results at different positions of the fluxgate inside the mu metal shield. See figure \ref{fig:results:fluxgate:plotSpatial} for a comprehensive visualization of those results. Figure \ref{fig:materialsMethods:muMetalsizes}\todo{add ref} shows the dimensions and positions of the setup.}
         \end{table}
-        \begin{figure}[h]
+        \begin{figure}
             \label{fig:results:fluxgate:zcal}
             \centering
             \includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/zField.eps}
             \caption[calibration results Z]{Calibration of the Z-channel. Due to spatial limitations, no full rotation in z direction was possible. The two datasets represent one measurement in "upwards" ond one in "downwards" direction. The solid line represents the average of the positional averages of the two directions.}
         \end{figure}
         Using the data for calibration, the measurements of the X- and Y-channels can be used to plot a 2D-section of the field using the phase of the fit as the field direction and the amplitude as its magnitude. Both X- and Y-sensor are shown in figure \ref{fig:results:fluxgate:plotSpatial2d}. The absolute positions are indicated in the figure to enable comparison of the individual results in the same absolute position. The same data is also shown in a 3D plot (fig. \ref{fig:results:fluxgate:plotSpatial3d} to show the field progression inside the mu metal shield.
-        \begin{figure}[t]
+        \begin{figure}
             \label{fig:results:fluxgate:plotSpatial2d}
             \centering
             %\includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial2dProjection.eps}
             \includegraphics{/figures/experiments/fluxgate/spatial2dProjection.eps}
         \end{figure}
-        \begin{figure}[t]
+        \begin{figure}
             \label{fig:results:fluxgate:plotSpatial3d}
             \centering
             %\includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial2dProjection.eps}
@@ -132,53 +111,70 @@
 \section{Measurements}
     \subsection{Low field NMR}
     Low field spectra were acquired using different setups. The main modification between setups concerned the $B_0$ coil. The initially used solenoid coil showed linewidths of about 0.5 - \SI{1}{\kilo\hertz}. Due to mechanical destruction of one coil and those rather wide lines, a new coil design was simulated and built \ref{simulations:DualHelmholtzArray} using Biot Savart calculations.
-    \begin{figure}[h] 
+    \begin{figure}
         \centering
         %\includegraphics{}
     \end{figure}
-    \begin{figure}[h]
+    \begin{figure}
         \centering
         \includegraphics[width = 12cm]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine.eps}
     \end{figure}
     \subsection{Sabre in water}
-    \begin{figure}[h]
+    \begin{figure}
         \subfloat{\includegraphics[width = 0.5 \textwidth]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll8to30.eps}}
         \subfloat{\includegraphics[width = 0.5 \textwidth]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/overlayAll1to6.eps}}
     \end{figure}
-    \begin{figure}[h]
+    \begin{figure}
         \centering
         \includegraphics[width = 6 cm]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit.eps}
     \end{figure}
     \subsection{Sabre in cell solution and blood}
-    \begin{figure}[h]
+    \begin{figure}
         \includegraphics[width=0.9\textwidth]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection.eps}
         \caption[Cell culture solution addition to hyperpolarized signal]{Time course of the signal intensity (peak height) when adding human blood to the continuously hyperpolarized solution. Note the string signal drop after addition of \SI{0.5}{\milli\litre} of blood to the solution. The straight and dashed lines indicate the average before and after blood addition.}
         \label{chap:MaterialsAndMethods:bloodInjection}
     \end{figure}
-    \begin{figure}[h]
-        \includegraphics[width=6 in ]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps}
+    \begin{figure}
+        \includegraphics[width=0.99\textwidth]{/home/philipp/Documents/thesis/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps}
         \label{chap:MaterialsAndMethods:bloodInjection2}
         \caption[Blood addition to hyperpolarized signal]{Signal drop during the injection of \SI{0.5}{\milli\liter} of blood into the solution providing hyperpolarized signal which was permanently provided with fresh pH2.}
     \end{figure}
     \subsection{15N Sabre}
         \subsubsection{15N coil}
-        The coil for 15N signal reception was matched and tuned to fit the requiremenst of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}
+        The coil for 15N signal reception was matched and tuned to fit the requirements of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}
     \subsection{Nanotesla field measurements}
-        	The field inside the Mu Metal shielding was measured without anny current flowing in the B0 coil as well as with the coil turned on. 
+            The field inside the Mu Metal shielding was measured without any current flowing in the B0 coil as well as with the coil turned on.
     \subsection{High field Sabre}
 \section{Simulations}
         \subsection{Static magnetic field calculations}
             Using the Biot Savart law, a Matlab program to calculate the fields of current carrying conductors was implemented. Structural elements were mostly solenoids, but also saddle and helmholtz coils were considered.
-            \subsubsection{solenoid coil}
-                The coil used in the low field NMR system was calculated and the length of the compensation windings was optimized for field homogeniety. To do so, the field was calculated inside a $3 x 3 x 3 cm^3$ volume centered inside the coil and plotted as histograms binning fields. An algorithm analyzing over which field 80\% of the fields sampled spread was used as a marker
-            \begin{figure}[b]
-                \centering
-                \includegraphics[width=\textwidth]{/home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds.eps}
-                \caption[Compensation wind optimization]{Histograms of the magnetic field strength. From left to right, number of compensation windings rise. This leads to a field increase and change in homogeniety.}
+            \subsubsection{Solenoid Coil}
+                The coil used in the low field NMR system was calculated and the length of the compensation windings was optimized for field homogeniety.
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=0.99\textwidth]{/home/philipp/Documents/thesis/figures/simulations/B0/solenoidCoil/compensationWinds.eps}
+                    \caption[Compensation wind optimization]{Histograms of the magnetic field strength. From left to right, number of compensation windings rise. This leads to a field increase and change in homogeniety.}
+                \label{fig:results:compensationWindOptimization}
             \end{figure}
         \subsubsection{Helmholtz Array}
-        The previously used program was also used to simulate the field of the helmholtz array used in later experients. The simulations were used to optimize the parameters for the setup before manufacture. The simulation results concerning the positions of the coils are shown in figure \ref{}. The optimal result is marked, and the field homogeniety is plotted for this result (figure \ref{}). Comparing the field map to figure \ref{} shows a factor \todo{nn} improvement.
+        The previously used program was also used to simulate the field of the helmholtz array used in later experients. The simulations were used to optimize the parameters for the setup before manufacture. Simulation steps are shown in figure \ref{fig:results:optimizationSteps}.
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.99\textwidth]{/figures/simulations/B0/helmholtzCoil/optimizationSteps.pdf}
+            \caption{Optimization steps of the two distances of inner and outer coil pair. Note the small range in the lower graph that is probably already inside the margin of error of manufacture and actual positioning.}
+            \label{fig:results:optimizationSteps}
+        \end{figure}
+        Note that the figures shown here do not include the optimization of the current ratio between the two coils. The simulation results concerning the positions of the coils are shown in figures \ref{fig:results:compensationWindOptimization} and \ref{fig:results:fieldSpread}. The optimal result is marked, and the field homogeniety is plotted for this result (figure \ref{}). Comparing the field map to figure \ref{} shows a factor \todo{nn} improvement.
+        \begin{figure}
+           \centering
+           \includegraphics[width = \textwidth]{/figures/simulations/B0/helmholtzCoil/distanceVariation.pdf}
+           \label{fig:results:distanceVariation}
+           \caption{Optimization of the coils distances by 'fminsearchbnd'. Note that the current ratio of the coils was also varied in the simulations, but kept constant for the recording of the data shown here. The value displayed is the ratio of the field spread in the active volume of the coil and the absolute field strength. The black area in the center is where field homogeniety is highest.}
+        \end{figure}
         \begin{figure}
             \includegraphics[width = 0.9\textwidth]{/figures/simulations/B0/helmholtzCoil/fieldSpread.eps}
+            \label{fig:results:fieldSpread}
+            \caption{3D plot of the central region of high homogeniety shown in \ref{fig:results:distanceVariation}. Note that the distance variation of the inner coil has a more prominent effect on field homogeniety than the outer one. The minimum value found is a relative spread of $5\cdot 10^{-5}$.}
         \end{figure}
+        The lowest value found is a relative spread of $4.6 \cdot 10^{-5}$ corresponding to a linewidth of \SI{12.5}{\hertz}. Experimentally, similar values were observed (see chapter \ref{chap:results:thinLine}). Small variations in the distances lead to strong decrease in homogeniety especially for the inner coil pair making exact positioning crucial.
 %\input{figures/experiments/figExample}
