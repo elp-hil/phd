@@ -4,28 +4,28 @@
 \section{Hardware}
     \subsection{Low field NMR}
         \subsubsection{Receive coils}
-        Receive circuits provided a Q-factor of \SI{128}{}.  An additional, higher order resonance with worse Q factor can be seen to the right in the same plot at around \SI{460}{\kilo Hz}. The second graph shows the same measurement performed with the untuned saddle coil. The latter shows no significant dips and is thus considered broadband, i.e. as long as the RF-amplifiers power is sufficient, it can be used at arbitrary frequencies. Note that additional impedances are introduced into the system through the connection to the NI DAQ interface that cannot be neglected especially in the higher frequency range above $\SI{100}{\kilo\hertz}$ where the coil's intrinsic capacities are comparatively small. A measurement similar to the network analyzer measurement is shown in figure \ref{fig:results:niNetworkAnalysis}. A slight frequency shift can be obsereved, the signal amplitude does not provide a decent measure though and cannot provide a Q-factor.
-        \begin{figure}
-            \label{fig:results:networkAnalysis}
-            \includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
-            \caption{Network analysis of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was used to receive the NMR signal. The braodband transmit coil shows a flat frequency response.}
-        \end{figure}
-        \begin{figure}
-            \label{fig:results:niNetworkAnalysis}
-            %\includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/niNetworkAnalysis.pdf}
-            \caption{ADC result of a pulse transmitted to the tuned receive coil. the central peak shows the resonance frequency of the coil. Similar to the actual network analysis measurement, a higher order resonance can be seen to the right at around \SI{500}{\kilo\hertz}.}
-        \end{figure}
-        Dual resonant coils for 1H and 13C signal reception did show a less prominent dip in both channels, while the additional channel (1H in most cases) \todo{ref methods} was affected more strongly by the new circuitry.
+            Receive circuits provided a Q-factor of \SI{128}{} as shown in figure \ref{fig:results:networkAnalysis}.  An additional, higher order resonance with worse Q factor can be seen to the right in the same plot at around \SI{460}{\kilo Hz}. The second graph shows the same measurement performed with the untuned saddle coil. The latter shows no significant dips and is thus considered broadband, i.e. as long as the RF-amplifiers power is sufficient, it can be used at arbitrary frequencies. Note that additional impedances are introduced into the system through the connection to the NI DAQ interface that cannot be neglected especially in the higher frequency range above $\SI{100}{\kilo\hertz}$ where the coil's intrinsic capacities are comparatively small. A measurement similar to the network analyzer measurement is shown in figure \ref{fig:results:niNetworkAnalysis}. A slight frequency shift can be obsereved, the signal amplitude does not provide a decent measure though and cannot provide a Q-factor as input voltages depend on the configuration of the TRX circuit.
+            \begin{figure}
+                \label{fig:results:networkAnalysis}
+                \includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
+                \caption{Network analysis of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was used to receive the NMR signal. The braodband transmit coil shows a flat frequency response.}
+            \end{figure}
+            \begin{figure}
+                \label{fig:results:niNetworkAnalysis}
+                %\includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/niNetworkAnalysis.pdf}
+                \caption{ADC result of a pulse transmitted to the tuned receive coil. the central peak shows the resonance frequency of the coil. Similar to the actual network analysis measurement, a higher order resonance can be seen to the right at around \SI{500}{\kilo\hertz}.}
+            \end{figure}
+            Dual resonant coils for 1H and 13C signal reception did show a less prominent dip in both channels, while the additional channel (1H in most cases) \todo{ref methods} was affected more strongly by the changed circuitry.
         \subsubsection{$\mathbf{B_0}$ coils}
-        The manufactured $\mathrm{B_0}$ coils show fields (i.e. frequencies) as well as  linewidths in the order of magnitude the simulations predicted (section \ref{sec:results:sim}). Through manufacturing errors, and changes to the coil in long term use cases, the linewidths deteriorated. It is important to note that, at currents above $\SI{1}{\ampere}$, the $\mathrm{B_0}$ coil heated noiticabely. while the heating itself is unproblematic, the resulting exansion of the materials leads to an overall longer coil and thus lower fields \ref{fieldSolenoid}. To avoid field shifts during measurements, the setup should therefore be in thermal equilibrium. This is especially relevant when switching fields during measurements using the programmable power supply.
-        \subsection{Shims and programmable power supply}
+            The manufactured $\mathrm{B_0}$ coils show fields (i.e. frequencies) as well as  linewidths in the order of magnitude the simulations predicted (section \ref{sec:results:sim}). Through manufacturing errors, and changes to the coil in long term use cases, the linewidths deteriorated. It is important to note that, at currents above $\SI{1}{\ampere}$, the $\mathrm{B_0}$ coil heated noiticabely. while the heating itself is unproblematic, the resulting exansion of the materials leads to an overall longer coil and thus lower fields \ref{fieldSolenoid}. To avoid field shifts during measurements, the setup should therefore be in thermal equilibrium. This is especially relevant when switching fields during measurements using the programmable power supply.
+    \subsection{Shims and programmable power supply}
         The three linear shims are adjustable via the programmable power supply and show their expected effect. The rotational position of the receive coil is relevant to the shims indicating they're working as intended (i.e. x- and y-shim currents need to be exchanged while z shim remains unchanged on a \SI{90}{\degree} rotation) . Manual shimming results are shown in figure \ref{chap:MaterialsAndMethods:lowFieldSpectrometer:shims}. The optimal results were achieved for currents of \SI{0}{\milli\ampere},  \SI{0}{\milli\ampere} and \SI{0}{\milli\ampere} for x-, y- and z-shim respectively. Using the added shim tool \todo{methRef}, line widths were reduced from $\approx \SI{250}{\hertz}$ to $\approx \SI{30}{\hertz}$ in the case of large samples of $\approx $\SI{40}{\milli\litre}. If the initial field was generated by a less homogeneous, more asymmetric coil in which no signal was visible without shims, signal was discovered and linewidths went down to $\approx \SI{50}{\hertz}$.
         \begin{figure}
             \label{fig:results:lowFieldSpectrometer:shims}
             \includegraphics[width=0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/shims/shimXY.eps}
             \caption[Manual low field shimming]{Linear shimmung in x- and y-directions. Shimming was done manually: 1H spectra of water were recorded and evaluated as to their linewidth. Later, automatic shimming was implemented (see section \ref{chap:MaterialsAndMethods:lowFieldSpectrometer:shims}). Black dots indicate actual measuremet points, the red mesh is a spline interpolation of the measurement data. The same interpolation is shown as a colormap on the bottom of the graph where black color corresponds to narrowest lines and thus highest homogeniety.}
         \end{figure}
-            The automatic discovery of the linewidth of a given measurement works well and yields results similar to the ones of a manual adjustment with a lot less user interaction. The fast fittingless linewidth detection based on interpolation yields linewidths within \SI{10}{\percent} of the fitted result if the SNR is sufficient, i.e. the maximum value can clearly be attributed to the water resonance.
+        The automatic discovery of the linewidth of a given measurement works well and yields results similar to the ones of a manual adjustment with a lot less user interaction. The fast fittingless linewidth detection based on interpolation yields linewidths within \SI{10}{\percent} of the fitted result if the SNR is sufficient, i.e. the maximum value can clearly be attributed to the water resonance.
     \subsection{Sabre shuttling system}
         The system designed to transfer a sample between fields works as intended. Fluid losses are small and thus
         acceptable with about \SI{25}{\percent} lost within \~15 shuttling cycles at high flow rates of \SI{20}{\litre
@@ -33,7 +33,9 @@
         sample. The bubbling system works well and provides pH2 to the solution in amounts large enough to generate
         polarization levels in the single digit percent range \ref{fig:results:highlyPolarized15Nspectrum}.
         \subsubsection{15N coil}
-        The coil for 15N signal reception was matched and tuned to fit the requirements of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}. Clear signal was visible using the 15N glycine phantom in a single shut measurement. Shimming reduced linewidths of the phantom to \SI{10}{\hertz}. Linewidths of the hyperpolarized 15N pyridine signal were 
+            The coil for 15N signal reception was matched and tuned to fit the requirements of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}. Clear signal was visible using the 15N glycine phantom in a single shut measurement. Shimming reduced linewidths of the phantom to \SI{10}{\hertz}. Linewidths of the hyperpolarized 15N pyridine signal were 
+        \subsubsection{Parahydrogen supply - bubbling}
+            The newly constructed bubbling disk showed to provide hydrogen more homogenously than the previously used single hole supply. Different hole sizes provide similar flow for samples of different viscosities. The widening cylinder provides enough spcae for bubbles to burst and reduce losses due to fluid splashing into the venting line.
         \subsubsection{Pressure stability}
             The pressure stability of the vessels has been simulated to withstand \SI{200}{\bar} . I decided using a factor of safety of $\gamma = 4$. As expected, the most vulnerable part is the long side of the cylinder, but wall thickness of \SI{3}{\milli\meter} suffices for a factor of safety of 4 if the setup is operated at a maximum pressure of \SI{50}{\bar}.Experimentally, the pressure resistance of \SI{50}{\bar} was confirmed; no problems concerning material fatigue were observed whatsoever within a few thousand pressure cycles. Figure \ref{fig:results:bubblingReactorPressure} shows the displacement of the different parts at \SI{200}{\bar}. The maximum displacement is in the range of \SI{0.25}{\milli\meter} and is within the yield strengths of PSU.
             \begin{figure}
@@ -49,7 +51,7 @@
             \end{figure}
             Chemical resistance to methanol- and ethanol-pyridine mixtures was as good as expected, though resistance to pure pyridine is not given. While there was never any problem with the pyridine concentrations  up to \SI{30}{\micro\Molar} used in the experiments, a neat pyridine batch showed to dissolve the PSU casing.\todo{ref discussion, other materials}
         \subsubsection{Mu metal shielding}
-        The three layered mu metal shield reached fields of \SI{50}{\nano\tesla} insisde the stray field of the \SI{9.4}{\tesla} small animal MRI. In earth magnetic field, fields inside the shield went down even further to \todo{measure}.Manual degaussing was prone to errors and left the shields in different, non-comparable states. The workshop-built automatic degaussing power supply was capable of reducing those errors and generate a field of \SI{50}{\nano\tesla} reproducibly.The slew rate of \SI{0.25}{\ampere\per\second} showed to be sufficient in combination with an initial current of \SI{7}{\ampere}. The adaption to other shield sizes works automatically after a single calibration run.
+            The three layered mu metal shield reached fields of \SI{50}{\nano\tesla} insisde the stray field of the \SI{9.4}{\tesla} small animal MRI. In earth magnetic field, fields inside the shield went down even further to \todo{measure}.Manual degaussing was prone to errors and left the shields in different, non-comparable states. The workshop-built automatic degaussing power supply was capable of reducing those errors and generate a field of \SI{50}{\nano\tesla} reproducibly.The slew rate of \SI{0.25}{\ampere\per\second} showed to be sufficient in combination with an initial current of \SI{7}{\ampere}. The adaption to other shield sizes works automatically after a single calibration run.
         \subsubsection{Shuttling reproducibility}
             To ensure that the sample is removed completely from the high field side, spectra in both 'states' of the system were recorded (Figure \ref{fig:results:15N:shuttlingRemoval}). The residue left in the high field chamber after the shuttling procedure does not generate significant signal, but after maximizing the noise integral through phase shifts, the ratios upper limit $\frac{I_{in}}{I_{out}}$ can be estimated and corresponds to a maximum fluid volume of \SI{0.05}{ml}remaining in the high field chamber. Considering this fraction completely non-polarized, the overall polarization of a \SI{3}{ml} sample will be reduced by \SI{9999}{\percent} \ref{fig:results:15N:shuttlingReproducibility}.
             \begin{figure}
@@ -121,25 +123,23 @@
 \section{Measurements}
     \subsection{Low field NMR}
     \label{chap:results:lowFieldNMR}
-    Low field spectra were acquired using different setups. The main modification between setups concerned the $B_0$ coil. The initially used solenoid coil showed linewidths of about 0.5 - \SI{1}{\kilo\hertz}. Due to mechanical destruction of one coil and those rather wide lines, a new coil design was simulated and built \ref{fig:results:compensationWindOptimization} using Biot Savart calculations. While currents to generate the same field were higher by a factor of about 2, field homogeniety improved greatly and now shows linewidths of about \SI{18}{\hertz} (figure \ref{results:lowFieldSpectrometer:thinLine}).
-    Flip angle calibrations for different pulse durations were calibrated and yielded the results shown in table \ref{table:results:FA}. These results were used in successive measurements with the low field NMR unless stated differently.
-
-    \begin{table}
-        \centering
-        \begin{tabular}{ccccc}
-            pulse duration [ms] & 200 &  400 & 800 & 1200 \\
-            $\mathrm{V}_{\SI{90}{\degree}}$ [V] & & & & 
-        \end{tabular} 
-        \label{table:results:FA}
-        \caption{Results of the manual flip angle calibration using the saddle excitation coil and the syringe receive coil for pulse durations ranging from 200 to 1200 ms and block pulse shape.}
-    \end{table}
-        \begin{figure}
+        Low field spectra were acquired using different setups. The main modification between setups concerned the $B_0$ coil. The initially used solenoid coil showed linewidths of about 0.5 - \SI{1}{\kilo\hertz}. Due to mechanical destruction of one coil and those rather wide lines, a new coil design was simulated and built \ref{fig:results:compensationWindOptimization} using Biot Savart calculations. While currents to generate the same field were higher by a factor of about 2, field homogeniety improved greatly and now shows linewidths of about \SI{18}{\hertz} (figure \ref{results:lowFieldSpectrometer:thinLine}). Flip angle calibrations for different pulse durations were calibrated and yielded the results shown in table \ref{table:results:FA}. These results were used in successive measurements with the low field NMR unless stated differently.
+        \begin{table}
             \centering
-            \includegraphics[width = 12cm]{/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine.eps}
-            \caption{A $_1\mathrm{H}$ line of a Magnevist doped water sample inside the 'syringe coil'. Linewidth is down to \SI{18}{\hertz} in this example without the use of shim coils.}
-            \label{results:lowFieldSpectrometer:thinLine}
-        \end{figure}
-        \subsection{Sabre in water}
+            \begin{tabular}{ccccc}
+                pulse duration [ms] & 200 &  400 & 800 & 1200 \\
+                $\mathrm{V}_{\SI{90}{\degree}}$ [V] & & & & 
+            \end{tabular} 
+            \label{table:results:FA}
+            \caption{Results of the manual flip angle calibration using the saddle excitation coil and the syringe receive coil for pulse durations ranging from 200 to 1200 ms and block pulse shape.}
+        \end{table}
+            \begin{figure}
+                \centering
+                \includegraphics[width = 12cm]{/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine.eps}
+                \caption{A $_1\mathrm{H}$ line of a Magnevist doped water sample inside the 'syringe coil'. Linewidth is down to \SI{18}{\hertz} in this example without the use of shim coils.}
+                \label{results:lowFieldSpectrometer:thinLine}
+            \end{figure}
+    \subsection{Sabre in water}
         For measurements of continuously hyperpolarized nicotinamide in deuterated water, the buildup of hyperpolarization was observed by TR variation. The results of these measurements are shown in figure \ref{results:lowFieldSpectrometer:SabreInWater:TRVariation}. TR was varied from \SI{1}{\second} to \SI{30}{\second}, the signal was stronger for longer TR and thus longer buildup time. The difference between TR~=~\SI{15}{\second} and TR~=~\SI{30}{\second} is already within the margin of error and implies that a plateau is reached in this domain. Note that a dummy scan was necessary for each TR measurement series to deplete the previously built hyperpolarization. The effective buildup rate can be calculated from these results (table \ref{table:results:TRvariation)}) and is shown in figure \ref{results:lowFieldSpectrometer:hpBuildup}.
         \begin{table}
             \centering
@@ -164,8 +164,8 @@
             \centering
             \includegraphics[width = 6 cm]{/figures/experiments/lowFieldSpectrometer/inSituSabreWater/exponentialFit.eps}
         \end{figure}
-        \subsection{Sabre in cell solution and blood}
-    Measurements in pure water yielded sufficient signal to try more biologically relevant substances. Cell culture solution (PTSD) wsa the first step up and showed to already significantly reduce the polarization yield. Addition of \SI{0.5}{\milli\litre} of PTSD already reduced the signal by a factor of 3. This already indicated that with human blood as an addition to the solution, the performance would not be better if not worse. Measurements confimed this suspicion, the signal showed to drop by a factor of \~8 after injection of 0.3 ml of human blood into the solution already. Adding \SI{0.5}{\milli\litre} of blood completely diminishes the signal.
+    \subsection{Sabre in cell solution and blood}
+        Measurements in pure water yielded sufficient signal to try more biologically relevant substances. Cell culture solution (PTSD) wsa the first step up and showed to already significantly reduce the polarization yield. Addition of \SI{0.5}{\milli\litre} of PTSD already reduced the signal by a factor of 3. This already indicated that with human blood as an addition to the solution, the performance would not be better if not worse. Measurements confimed this suspicion, the signal showed to drop by a factor of \~8 after injection of 0.3 ml of human blood into the solution already. Adding \SI{0.5}{\milli\litre} of blood completely diminishes the signal.
         \begin{figure}
             \includegraphics[width=0.9\textwidth]{/figures/experiments/lowFieldSpectrometer/inSituSabreWater/cellCultureInjection.eps}
             \caption[Cell culture solution addition to hyperpolarized signal]{Time course of the signal intensity (peak height) when adding cell culture solution to a continuously hyperpolarized solution of IrIMes, pyridine and MeOD. Note the strong signal drop after addition of \SI{0.5}{\milli\litre} of cell culture solution to the sample. The straight and dashed lines indicate the average before and after addition.}
@@ -176,7 +176,7 @@
             \label{chap:MaterialsAndMethods:bloodInjection2}
             \caption[Blood addition to hyperpolarized signal]{Signal drop during the injection of \SI{0.5}{\milli\liter} of blood into the solution providing hyperpolarized signal which was permanently provided with fresh pH2.}
         \end{figure}
-        \subsection{Liposomes and Sabre}
+    \subsection{Liposomes and Sabre}
         The results of cell culture solution and human blood addition to a working, hyperpolarized sample suggested that other approaches were necessary to achieve hyperpolariation in biologically relevant surroundings. The previously described method of encapsulation of substrate and catalyst in double layered liposomes. While the liposomes formed, the size distribution according to the lipochemists was broader than usual. \todo{plot results if available} The experiments trying to hyperpolarize the liposomal structures failed and it showed that the addition of the components used in the generation of liposomes into a working hyperpolarized solution already depleted the signal to a non-detectabel level. Different solvents and substrates were tested in combinations but did not yield any observable signal.
     \subsection{15N Sabre}
         $^{15}\mathrm{N}$ labeled substances were used to generate high polarization on the substrate in \si{\nano\tesla} fields. Results are shown here and include spectroscopic as well as imaging experiments.
@@ -191,9 +191,9 @@
     \subsection{Polarization measurements}
         The scheme used in the first, preliminary tests provided polarizations in the range of \todo{range}. This value was drastically improved by using a more sophisticated approach, i.e. an automated high pressure shuttling system to generate high polarizations reproducibly and even at high concentrations to generate high magnetization.
         Polarizations in high concentration regimes and under otherwise optimal parameters (i.e. high flow of \SI{50}{\litre\per\minute}, high pressures of \SI{50}{\bar}, field at \SI{340}{\nano\tesla}) the maximum polarization measured was $\mathrm{P} = 4\% \pm 0.2 \%$. The paramter that was not controllable in this setup but does have a substantial influence on the magnetizatioin yield was the temperature of the sample that decreased while parahydrogen flowed through the volatile methanol used as solvent, see \ref{cd:sabreShuttling:tempControl} for a closer discussion.
-    The two methods used for quantification - compariso to thermal signal, the more reliable, but very slow method, and comparison to the 15N glycine phantom, less reliable per se but fast - yield similar results if match and tune of the coil are readjusted after echanging the sample for the phantom. This ensures a similar flip angle used in the phantom measurement and thus a decent estimate of polarization.
+        The two methods used for quantification - compariso to thermal signal, the more reliable, but very slow method, and comparison to the 15N glycine phantom, less reliable per se but fast - yield similar results if match and tune of the coil are readjusted after echanging the sample for the phantom. This ensures a similar flip angle used in the phantom measurement and thus a decent estimate of polarization.
     \subsection{Nanotesla field measurements}
-            The field inside the Mu Metal shielding was measured without any current flowing in the B0 coil as well as with the coil turned on. Measurements showed different results for the solenoid coil used in the beginning and the later used helmholtz coil.
+        The field inside the Mu Metal shielding was measured without any current flowing in the B0 coil as well as with the coil turned on. Measurements showed different results for the solenoid coil used in the beginning and the later used helmholtz coil.
     \subsection{High field Sabre}
         High field sabre results from the IMTEK \SI{600}{\mega\hertz} spectrometer were obtained. These results show that small amounts of substrate can be hyperpolarized in situ both through the less efficient spontaneous hyperpolarization as well as through pulsed hyperpolarization (Light-Sabre, \todo{ref}).
 \section{Simulations}
