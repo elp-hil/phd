@@ -7,8 +7,10 @@
             Receive circuits provided a Q-factor of \SI{128}{} as shown in figure \ref{fig:results:networkAnalysis}.  An additional, higher order resonance with worse Q factor can be seen to the right in the same plot at around \SI{460}{\kilo Hz}. The second graph shows the same measurement performed with the untuned saddle coil. The latter shows no significant dips and is thus considered broadband, i.e. as long as the RF-amplifiers power is sufficient, it can be used at arbitrary frequencies. Note that additional impedances are introduced into the system through the connection to the NI DAQ interface that cannot be neglected especially in the higher frequency range above $\SI{100}{\kilo\hertz}$ where the coil's intrinsic capacities are comparatively small. A measurement similar to the network analyzer measurement is shown in figure \ref{fig:results:niNetworkAnalysis}. A slight frequency shift can be obsereved, the signal amplitude does not provide a decent measure though and cannot provide a Q-factor as input voltages depend on the configuration of the TRX circuit.
             \begin{figure}
                 \label{fig:results:networkAnalysis}
-                \includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
-                \caption{Network analysis of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was used to receive the NMR signal. The braodband transmit coil shows a flat frequency response.}
+                \centering
+                %\includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
+                \includegraphics[width = 6 in]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
+                \caption{Network analysis Frequency of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was used to receive the NMR signal. The braodband transmit coil shows a flat frequency response.}
             \end{figure}
             \begin{figure}
                 \label{fig:results:niNetworkAnalysis}
@@ -53,11 +55,12 @@
         \subsubsection{Mu metal shielding}
             The three layered mu metal shield reached fields of \SI{50}{\nano\tesla} insisde the stray field of the \SI{9.4}{\tesla} small animal MRI. In earth magnetic field, fields inside the shield went down even further to \todo{measure}.Manual degaussing was prone to errors and left the shields in different, non-comparable states. The workshop-built automatic degaussing power supply was capable of reducing those errors and generate a field of \SI{50}{\nano\tesla} reproducibly.The slew rate of \SI{0.25}{\ampere\per\second} showed to be sufficient in combination with an initial current of \SI{7}{\ampere}. The adaption to other shield sizes works automatically after a single calibration run.
         \subsubsection{Low field manipulation}
-        Fields generated inside the shield were different using solenoid coil and helmholtz coil. Both coils were used to measure fields at the reactors position. As field steps using the power supply directly were in the range of \SI{213\pm 31}{\nano\tesla} per \SI{0.1}{\milli\ampere}, the lowest settable current, an additional \SI{10}{\kilo\ohm} resistor was used to reduce the current by a factor of 1000. The source was not usable in constant current mod, thus the voltage was set introducing a larger error to the current, but allowing for very precise adjustments to the current. Results that show the highly linear dependence of current (or voltage, ohmsch dep.) and magnetic field are shown in figures \ref{} and \ref{figures:results:helmholtzCoilsCenterField}
+        The field inside the Mu Metal shielding was measured without any current flowing in the B0 coil as well as with the coil turned on. Measurements showed different results for the solenoid coil used in the beginning and the later used helmholtz coil. Both coils were used to measure fields at the reactors position. As field steps using the power supply directly were in the range of \SI{213\pm 31}{\nano\tesla} per \SI{0.1}{\milli\ampere}, the lowest settable current, an additional \SI{10}{\kilo\ohm} resistor was used to reduce the current by a factor of 1000. The source was not usable in constant current mode, thus the voltage was set introducing a larger error to the current, but allowing for very precise adjustments to the current. Results that show the highly linear dependence of current (or voltage, ohmsch dep.) and magnetic field are shown in figures \ref{} and \ref{figures:results:helmholtzCoilsCenterField}. The slope of the voltage-field line is steeper for the solenoid coil as shown in the inset of figure \ref{}. $B_{xy}$ is small compared to $B_z$ over the complete range displayed.
             \begin{figure}
+                \centering
                 \label{figures:results:helmholtzCoilsCenterField}
-                \includegraphics[width=0.9\textwidth]{/figures/experiments/helmholtzCoils/fieldHelmholtzCoils.pdf}
-                \caption{Field over voltage applied to the inner Helmholtz coil pair via a \SI{10}{\kilo\ohm} resistor to limit currents to values below the power supply's resolution.}
+                \includegraphics[width=0.99\textwidth]{/figures/experiments/helmholtzCoils/fieldHelmholtzCoils.pdf}
+                \caption{Calibration of the voltage (and thus current) to reference actual fields using the fluxgate sensor and ramping trough the voltages in both polarities. In the insert, the fields of the previously used solenoid coil can be seen in comparison to the helmholtz coils' field in the central region. Its slope is steeper than the helmholtz coils'. oltage applied to the inner Helmholtz coil pair via a \SI{10}{\kilo\ohm} resistor to limit currents to values below the power supply's resolution.}
             \end{figure}
             
         \subsubsection{Shuttling reproducibility}
@@ -186,7 +189,7 @@
             \label{chap:MaterialsAndMethods:bloodInjection}
         \end{figure}
         \begin{figure}
-            \includegraphics[width=0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.eps}
+            \includegraphics[width=0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.pdf}
             \label{chap:MaterialsAndMethods:bloodInjection2}
             \caption[Blood addition to hyperpolarized signal]{Signal drop during the injection of \SI{0.5}{\milli\liter} of blood into the solution providing hyperpolarized signal which was permanently provided with fresh pH2.}
         \end{figure}
@@ -206,8 +209,6 @@
         The scheme used in the first, preliminary tests provided polarizations in the range of \todo{range}. This value was drastically improved by using a more sophisticated approach, i.e. an automated high pressure shuttling system to generate high polarizations reproducibly and even at high concentrations to generate high magnetization.
         Polarizations in high concentration regimes and under otherwise optimal parameters (i.e. high flow of \SI{50}{\litre\per\minute}, high pressures of \SI{50}{\bar}, field at \SI{340}{\nano\tesla}) the maximum polarization measured was $\mathrm{P} = 4\% \pm 0.2 \%$. The paramter that was not controllable in this setup but does have a substantial influence on the magnetizatioin yield was the temperature of the sample that decreased while parahydrogen flowed through the volatile methanol used as solvent, see \ref{cd:sabreShuttling:tempControl} for a closer discussion.
         The two methods used for quantification - compariso to thermal signal, the more reliable, but very slow method, and comparison to the 15N glycine phantom, less reliable per se but fast - yield similar results if match and tune of the coil are readjusted after echanging the sample for the phantom. This ensures a similar flip angle used in the phantom measurement and thus a decent estimate of polarization.
-    \subsection{Nanotesla field measurements}
-        The field inside the Mu Metal shielding was measured without any current flowing in the B0 coil as well as with the coil turned on. Measurements showed different results for the solenoid coil used in the beginning and the later used helmholtz coil.
     \subsection{High field Sabre}
         High field sabre results from the IMTEK \SI{600}{\mega\hertz} spectrometer were obtained. These results show that small amounts of substrate can be hyperpolarized in situ both through the less efficient spontaneous hyperpolarization as well as through pulsed hyperpolarization (Light-Sabre, \todo{ref}).
 \section{Simulations}
