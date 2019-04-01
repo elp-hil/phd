@@ -35,7 +35,14 @@
         sample. The bubbling system works well and provides pH2 to the solution in amounts large enough to generate
         polarization levels in the single digit percent range \ref{fig:results:highlyPolarized15Nspectrum}.
         \subsubsection{15N coil}
-            The coil for 15N signal reception was matched and tuned to fit the requirements of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}. Clear signal was visible using the 15N glycine phantom in a single shut measurement. Shimming reduced linewidths of the phantom to \SI{10}{\hertz}. Linewidths of the hyperpolarized 15N pyridine signal were 
+            The coil for 15N signal reception was matched and tuned to fit the requirements of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}. Clear signal was visible using the 15N glycine phantom in a single shut measurement. Shimming reduced linewidths of the phantom to \SI{10}{\hertz}. Linewidths of the hyperpolarized 15N pyridine signal were in the range of \SI{30}{\hertz}.
+        \subsubsection{Flip angle calibration}
+            The flip angle for the $^{15}N$ coil was not automatically calibratable which is why it was manually calibrated. The example shown here uses a 
+            \begin{figure}
+                \label{fig:results:15N:flipAngle}
+                \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/flipAngle/faDiss.pdf}
+                \caption{Signal area of the $^{15}N$-Glycine phantom measured in the $^{15}N$ coil plotted over relative voltage and attenuation. The plot over relative voltageis fit with a sine to find the \SI{90}{\degree} flip angle. The \SI{90}{\degree} angle is marked by a vertical line for both the voltage and attenuation plot.}
+            \end{figure}
         \subsubsection{Parahydrogen supply - bubbling}
             The newly constructed bubbling disk showed to provide hydrogen more homogenously than the previously used single hole supply. Different hole sizes provide similar flow for samples of different viscosities. The widening cylinder provides enough spcae for bubbles to burst and reduce losses due to fluid splashing into the venting line.
         \subsubsection{Pressure stability}
@@ -55,7 +62,15 @@
         \subsubsection{Mu metal shielding}
             The three layered mu metal shield reached fields of \SI{50}{\nano\tesla} insisde the stray field of the \SI{9.4}{\tesla} small animal MRI. In earth magnetic field, fields inside the shield went down even further to \todo{measure}.Manual degaussing was prone to errors and left the shields in different, non-comparable states. The workshop-built automatic degaussing power supply was capable of reducing those errors and generate a field of \SI{50}{\nano\tesla} reproducibly.The slew rate of \SI{0.25}{\ampere\per\second} showed to be sufficient in combination with an initial current of \SI{7}{\ampere}. The adaption to other shield sizes works automatically after a single calibration run.
         \subsubsection{Low field manipulation}
-        The field inside the Mu Metal shielding was measured without any current flowing in the B0 coil as well as with the coil turned on. Measurements showed different results for the solenoid coil used in the beginning and the later used helmholtz coil. Both coils were used to measure fields at the reactors position. As field steps using the power supply directly were in the range of \SI{213\pm 31}{\nano\tesla} per \SI{0.1}{\milli\ampere}, the lowest settable current, an additional \SI{10}{\kilo\ohm} resistor was used to reduce the current by a factor of 1000. The source was not usable in constant current mode, thus the voltage was set introducing a larger error to the current, but allowing for very precise adjustments to the current. Results that show the highly linear dependence of current (or voltage, ohmsch dep.) and magnetic field are shown in figures \ref{} and \ref{figures:results:helmholtzCoilsCenterField}. The slope of the voltage-field line is steeper for the solenoid coil as shown in the inset of figure \ref{}. $B_{xy}$ is small compared to $B_z$ over the complete range displayed.
+        The field inside the Mu Metal shielding was measured without any current flowing in the B0 coil as well as with the coil turned on. Measurements showed different results for the solenoid coil used in the beginning and the later used helmholtz coil. Both coils were used to measure fields at the reactors position. As field steps using the power supply directly were in the range of \SI{213\pm 31}{\nano\tesla} per \SI{0.1}{\milli\ampere}, the lowest settable current, an additional \SI{10}{\kilo\ohm} resistor was used to reduce the current by a factor of 1000. The source was not usable in constant current mode, thus the voltage was set introducing a larger error to the current, but allowing for very precise adjustments to the current. Results that show the highly linear dependence of current (or voltage, ohmsch dep.) and magnetic field are shown in figures \ref{} and \ref{figures:results:helmholtzCoilsCenterField}. The slope of the voltage-field line is steeper for the solenoid coil as shown in the inset of figure \ref{}. $B_{xy}$ is small compared to $B_z$ over the complete range displayed. This leads to a dependence between voltage and field of
+        \begin{equation}
+            B(U) = 111.3\pm 0.1 \si{\nano\tesla\per\volt} - 79.1 \si{\nano\tesla}
+        \end{equation}
+        for the Helmholtz coil and
+        \begin{equation}
+            B(U) = 333.3 \frac{\si{\nano\tesla}}{\si{\volt}} - 168 \si{\nano\tesla}
+        \end{equation}
+        for the solenoid coil. The slope for the solenoid coil is larger 
             \begin{figure}
                 \centering
                 \label{figures:results:helmholtzCoilsCenterField}
@@ -189,14 +204,51 @@
         The results of cell culture solution and human blood addition to a working, hyperpolarized sample suggested that other approaches were necessary to achieve hyperpolariation in biologically relevant surroundings. The previously described method of encapsulation of substrate and catalyst in double layered liposomes. While the liposomes formed, the size distribution according to the lipochemists was broader than usual. \todo{plot results if available} The experiments trying to hyperpolarize the liposomal structures failed and it showed that the addition of the components used in the generation of liposomes into a working hyperpolarized solution already depleted the signal to a non-detectabel level. Different solvents and substrates were tested in combinations but did not yield any observable signal.
     \subsection{15N Sabre}
         $^{15}\mathrm{N}$ labeled substances were used to generate high polarization on the substrate in \si{\nano\tesla} fields. Results are shown here and include spectroscopic as well as imaging experiments.
+    \subsubsection{$\mathrm{T_1}$ and $\mathrm{T_2}$ measurements}
+        Results for $T_1$ measurements are shown in figure . Fit parameters are given in table .
+        The relaxation times are relevant to subsequent measurements of spectra and images and were measured for both 15N-Glycine phantom and a neat, thermally polarized 15N-Pyridine sample. $\mathrm{T}_1$ was found to be \SI{55\pm 3}{\second} whereas $\mathrm{T}_2$ was only \SI{250\pm 20}{\milli\second}.
+        \begin{table}
+            \begin{tabular}{ccccc}
+                    & time constant / s & error / s & scaling factor \\
+                $\mathrm{T_1}$ MeOD & 55 & 3\\
+                $\mathrm{T_1}$ MeOH &  \\
+                $\mathrm{T_2}$ MeOD &  \\
+                glycine phantom $\mathrm{T_1}$& \\
+                glycine phantom $\mathrm{T_2}$& \\
+            \end{tabular}
+        \end{table}
+        \begin{figure}
+            \includegraphics[width = 0.99\textwidth]{/figures/experiments/15NSabre/relaxation/T1_T2.pdf}
+            \caption{$T_1$and $T_2$ relaxation times for a hyperpolarized Pyridine sample. $T_1$ was measured in MeOH and MeOD. Both solvents show similar relaxation times while the deuterated solvent's is slightly longer. $T_2$ is a lot shorter than $T_1$.}
+        \end{figure}
     \subsubsection{Pressure dependence}
         To see the influence of the pH2 pressure during bubbling, the same experiment was repeated multiple times at different pressures. The results of these measurements are shown in figure \ref{}. A mostly linear pressure dependence can be estimated from the data indicating that the catalytic reaction is still in the low concentration regime.
+        \begin{figure}
+            \label{fig:results:15N:pressureDependence}
+            \includegraphics[width = 0.99\textwidth]{/figures/experiments/15NSabre/pressureDependence/pressureDependence.pdf}
+            \caption{Signal area of integrals at different parahydrogen pressures used for polarization. Higher pressures lead to higher signal over the pressure range shown here. A linear behavior can be estimated from the data in the range provided.}
+        \end{figure}
+    \subsubsection{Concentration dependence}
+        The concentration and concentration ratio have an influence on the overall signal, i.e. magnetization of the sample. Here, the concentration of pyridine is lowered over the course of the measurements while the concentration of the catalyst is kept constant. The signal of the solution increases over the course of the measurements, i.e. with falling concentration but at constant amount of substance for $^{15}$N-pyridine, i.e. the polarization increased.
+        \begin{figure}
+            \label{fig:results:15N:concentrationDependence}
+            \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/concentrationDependence/concentrationDependence.pdf}
+            \caption{The signal of a solution of IrIMes that is diluted from left to right. Signal rises with rising dilution, i.e. with lower concentration. Concentration of catalyst is kept constant throughout the measurement.}
+        \end{figure}
     \subsubsection{Flow dependence}
-        Similar to pressures, flow rates have been varied to estimate their effect on the reaction's efficiency. Here, other than for the pressure measurements, flow was not a parameter linearly connected to signal intensity. As flow showed to change bubble sizes as well as the number of flow channels building, a more complex behaviour is expected and shown in figure \ref{}.
+    Similar to pressures, flow rates have been varied to estimate their effect on the reaction's efficiency. Here, other than for the pressure measurements, flow was not a parameter linearly connected to signal intensity. As flow showed to change bubble sizes as well as the number of flow channels building, a more complex behaviour is expected and shown in figure \ref{fig:results:15N:flowDependence}. Two pressures are shown for different flow rates set at the needle valve. For both pressures, the higher flows cause higher signal up to a certain point. At \SI{10}{\bar} signal remains at constant levels from \SI{5}{\litre\per\hour}, for \SI{20}{\bar}, from a flow setting of \SI{4}{\litre\per\hour} the same effect is observable.
+        \begin{figure}
+            \label{fig:results:15N:flowDependence}
+            \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/flowDependence/flowDependence.pdf}
+            \caption[Flow dependence]{The signal depending on the flow of parahydrogen through the sample at nanotesla fields. \SI{10}{\bar} and \SI{20}{\bar} pressure were measured at different needle valve settings. Higher flows first lead to higher signal, but note the flattening of the signal at high flows for both pressures.}
+        \end{figure}
     \subsection{Magnetic field dependence}
-        Magnetic field dependence of the polarization was measured by adjusting the field using the solenoid coil and dual helmholtz pair mounted inside the shields. The currents necessary for optimum fields were a function of the residual magnetization of the shield. Measurements of polarization and current-field correlation were conducted separately. The result shows that the field reduction generated by the shielding is large enough to surpass the optimal polarization fields as the signal drops between the two maxima that show up for two current flow directions. The asymmetry of the distribution is due to residual magnetic field of the shield, it generates both a shift of the 'mirror axis' and an overall deformation of the distribution depending on the field homogeniety.
-    \subsection{$\mathrm{T_1}$ and $\mathrm{T_2}$ measurements}
-        The relaxation times are relevant to subsequent measurements of spectra and images and were measured for both 15N-Glycine phantom and a neat, thermally polarized 15N-Pyridine sample. $\mathrm{T}_1$ was found to be \SI{55\pm 3}{\second} whereas $\mathrm{T}_2$ was only \SI{250\pm 20}{\milli\second}.
+        Magnetic field dependence of the polarization was measured by adjusting the field using the solenoid coil and dual helmholtz pair mounted inside the shields. The currents necessary for optimum fields were a function of the residual magnetization of the shield. Measurements of polarization and current-field correlation were conducted separately. The result shows that the field reduction generated by the shielding is large enough to surpass the optimal polarization fields as the signal drops between the two maxima that show up for two current flow directions.
+        \begin{figure}
+            \label{fig:results:15N:fieldDependence}
+            \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/fieldDependence/fieldDependenceCombined.pdf}
+            \caption[Magnetic field dependence]{Signal over polarization field for solenoid coil and helmholtz assembly. Both coils show two distinct peaks at slightly different field strengths, the symmetry axis for the helmholtzCoil is at around \SI{30}{\nano\tesla} whereas it is around \SI{210}{\nano\tesla} for the helmholtz assembly.}
+        \end{figure}
     \subsection{Polarization measurements}
         The scheme used in the first, preliminary tests provided polarizations in the range of \todo{range}. This value was drastically improved by using a more sophisticated approach, i.e. an automated high pressure shuttling system to generate high polarizations reproducibly and even at high concentrations to generate high magnetization.
         Polarizations in high concentration regimes and under otherwise optimal parameters (i.e. high flow of \SI{50}{\litre\per\minute}, high pressures of \SI{50}{\bar}, field at \SI{340}{\nano\tesla}) the maximum polarization measured was $\mathrm{P} = 4\% \pm 0.2 \%$. The paramter that was not controllable in this setup but does have a substantial influence on the magnetizatioin yield was the temperature of the sample that decreased while parahydrogen flowed through the volatile methanol used as solvent, see \ref{cd:sabreShuttling:tempControl} for a closer discussion.
@@ -222,7 +274,7 @@
         \begin{figure}
             \centering
             \includegraphics[width=0.99\textwidth]{/figures/simulations/B0/helmholtzCoil/optimizationSteps.pdf}
-            \caption{Optimization steps of the two distances of inner and outer coil pair. Note the small range in the lower graph that is probably already inside the margin of error of manufacture and actual positioning.}
+            \caption[Helmholtz coil optimization]{Optimization steps of the two distances of inner and outer coil pair. Note the small range in the lower graph that is probably already inside the margin of error of manufacture and actual positioning.}
             \label{fig:results:optimizationSteps}
         \end{figure}
         Note that the figures shown here do not include the optimization of the current ratio between the two coil pairs. The simulation results concerning the positions of the coils are shown in figure \ref{fig:results:distanceVariation}. A closeup of the central region is plotted in figure \ref{figure:results:fieldSpread}. The optimal result is marked, and the field homogeniety is plotted for this result (figure \todo{ref, fig}). Comparing the field map to figure \ref{} shows a factor \todo{nn} improvement.
@@ -230,10 +282,10 @@
            \centering
            \includegraphics[width = \textwidth]{/figures/simulations/B0/helmholtzCoil/distanceVariation.pdf}
            \label{fig:results:distanceVariation}
-           \caption{Optimization of the coils distances by 'fminsearchbnd'. Note that the current ratio of the coils was also varied in the simulations, but kept constant for the recording of the data shown here. The value displayed is the ratio of the field spread in the active volume of the coil and the absolute field strength. The black area in the center is where field homogeniety is highest.}
+           \caption[Optimization steps]{Optimization of the coils distances by 'fminsearchbnd'. Note that the current ratio of the coils was also varied in the simulations, but kept constant for the recording of the data shown here. The value displayed is the ratio of the field spread in the active volume of the coil and the absolute field strength. The black area in the center is where field homogeniety is highest.}
         \end{figure}
         \begin{figure}
-            \includegraphics[width = 0.9\textwidth]{/figures/simulations/B0/helmholtzCoil/fieldSpread.eps}
+            \includegraphics[width = 0.99\textwidth]{/figures/simulations/B0/helmholtzCoil/fieldSpread.pdf}
             \label{fig:results:fieldSpread}
             \caption{3D plot of the central region of high homogeniety shown in \ref{fig:results:distanceVariation}. Note that the distance variation of the inner coil has a more prominent effect on field homogeniety than the outer one. The minimum value found is a relative spread of $5\cdot 10^{-5}$.}
         \end{figure}
