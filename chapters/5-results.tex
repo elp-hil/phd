@@ -1,31 +1,32 @@
 % !TEX root = ../thesis_main.tex
 \chapter{Results}\label{chap:results}
-    As a large part of this work consisted of hardware design and manufacturing, I will split the results section into sole hardware results and results of measurements \textit{with} that hardware as well as commercially available machines. Additionally, simulation results will be added as a separate section.
+    As a large part of this work consisted of hardware design and manufacturing, I will split the results section into sole hardware results and results of measurements \textit{with} that hardware as well as commercially available machines. Additionally, simulation results will be added as a separate section in the end of this chapter.
 \section{Hardware}
+    This section will cover the results concerning the hardware built in the course of this thesis. This covers calibration results as well as performance measurements of single components. If results were acquired by the workshop, this will be clearly indicated.
     \subsection{Low field NMR}
+        The setup used mostly in the beginnning of the thesis work was the low field spectrometer. It needed to be calibrated and shimmed and experiments with various substances and in various settings were performed.
         \subsubsection{Receive coils}
-            Receive circuits provided a Q-factor of \SI{128}{} as shown in figure \ref{fig:results:networkAnalysis}.  An additional, higher order resonance with worse Q factor can be seen to the right in the same plot at around \SI{460}{\kilo Hz}. The second graph shows the same measurement performed with the untuned saddle coil. The latter shows no significant dips and is thus considered broadband, i.e. as long as the RF-amplifiers power is sufficient, it can be used at arbitrary frequencies. Note that additional impedances are introduced into the system through the connection to the NI DAQ interface that cannot be neglected especially in the higher frequency range above $\SI{100}{\kilo\hertz}$ where the coil's intrinsic capacities are comparatively small. A measurement similar to the network analyzer measurement is shown in figure \ref{fig:results:niNetworkAnalysis}. A slight frequency shift can be obsereved, the signal amplitude does not provide a decent measure though and cannot provide a Q-factor as input voltages depend on the configuration of the TRX circuit.
+        Receive circuits provided a Q-factor of 128 as shown in figure \ref{fig:results:networkAnalysis}.  An additional, higher frequency resonance with Q-factor of 32 can be seen to the right in the same plot at around \SI{460}{\kilo Hz}. The second graph shows the same measurement performed with the untuned saddle coil. The latter shows no significant dips and is thus considered broadband, i.e. as long as the RF-amplifiers power is sufficient, it can be used at arbitrary frequencies. Note that additional impedances are introduced into the system through the connection to the NI DAQ interface that cannot be neglected especially in the higher frequency range above $\SI{100}{\kilo\hertz}$ where the coil's intrinsic capacities are comparatively small. A measurement similar to the network analyzer measurement is shown in figure \ref{fig:results:niNetworkAnalysis}. A frequency shift can be obsereved, the peak previously visible at slightly above \SI{200}{\kilo\hertz} is now visible at \SI{70}{\kilo\hertz}. The Q-factor calculated from this data is different - 30 and 440 - from the one measured in the external measurement with the network analyzer.
             \begin{figure}
-                \label{fig:results:networkAnalysis}
                 \centering
                 %\includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
                 \includegraphics[width = 0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
-                \caption{Network analysis Frequency of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was used to receive the NMR signal. The braodband transmit coil shows a flat frequency response.}
+            \caption{Network analysis Frequency of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was intended to receive the NMR signal as well as the second, lower and braoder resonance at around \SI{470}{\kilo\hertz}. In contrast to that, the broadband transmit coil displayed in blue shows a flat frequency response.}
+                \label{fig:results:networkAnalysis}
             \end{figure}
             \begin{figure}
+                \includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/niNetworkAnalysis.pdf}
+                \caption{ADC result of a pulse transmitted to the tuned receive coil. the central peak shows the resonance frequency of the coil. Similar to the actual network analysis measurement, the lower  order resonance can be seen to the right at around \SI{70}{\kilo\hertz}. Note the stron frequency shift due to the different downstream receive circuit.}
                 \label{fig:results:niNetworkAnalysis}
-                %\includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/niNetworkAnalysis.pdf}
-                \caption{ADC result of a pulse transmitted to the tuned receive coil. the central peak shows the resonance frequency of the coil. Similar to the actual network analysis measurement, a higher order resonance can be seen to the right at around \SI{500}{\kilo\hertz}.}
             \end{figure}
-            Dual resonant coils for 1H and 13C signal reception did show a less prominent dip in both channels, while the additional channel (1H in most cases) \todo{ref methods} was affected more strongly by the changed circuitry.
+            For the measurement with the National Instruments card, a string frequency shift of the two peaks is observed. The peak intended for singnal reception is shifted to frequencies of around \SI{70}{\kilo\hertz} while the peak to its right is shifted to \SI{240}{\kilo\hertz}. This resonance was then used for subsequent measurements. Dual resonant coils for 1H and 13C signal reception showed a less prominent dip in both channels, while the additional channel (1H in most cases) \todo{ref methods} was affected more strongly by the adapted circuitry.
         \subsubsection{$\mathbf{B_0}$ coils}
-            The manufactured $\mathrm{B_0}$ coils show fields (i.e. frequencies) as well as  linewidths in the order of magnitude the simulations predicted (section \ref{sec:results:sim}). Through manufacturing errors, and changes to the coil in long term use cases, the linewidths deteriorated. It is important to note that, at currents above $\SI{1}{\ampere}$, the $\mathrm{B_0}$ coil heated noiticabely. while the heating itself is unproblematic, the resulting exansion of the materials leads to an overall longer coil and thus lower fields \ref{fieldSolenoid}. To avoid field shifts during measurements, the setup should therefore be in thermal equilibrium. This is especially relevant when switching fields during measurements using the programmable power supply.
-    \subsection{Shims and programmable power supply}
+        The manufactured $\mathrm{B_0}$ coils show fields (i.e. frequencies) as well as  linewidths in the order of magnitude the simulations predicted (section \ref{sec:results:sim}). Through manufacturing errors, and changes to the coil in long term use cases, the linewidths deteriorated. It is important to note that, at currents above $\SI{1}{\ampere}$, the $\mathrm{B_0}$ coil heated noiticabely. While the heating itself is unproblematic, the resulting exansion of the materials leads to an overall longer coil and thus lower fields \ref{fieldSolenoid}.     \subsection{Shims and programmable power supply}
         The three linear shims are adjustable via the programmable power supply and show their expected effect. The rotational position of the receive coil is relevant to the shims indicating they're working as intended (i.e. x- and y-shim currents need to be exchanged while z shim remains unchanged on a \SI{90}{\degree} rotation) . Manual shimming results are shown in figure \ref{chap:MaterialsAndMethods:lowFieldSpectrometer:shims}. The optimal results were achieved for currents of \SI{0}{\milli\ampere},  \SI{0}{\milli\ampere} and \SI{0}{\milli\ampere} for x-, y- and z-shim respectively. Using the added shim tool \todo{methRef}, line widths were reduced from $\approx \SI{250}{\hertz}$ to $\approx \SI{30}{\hertz}$ in the case of large samples of $\approx $\SI{40}{\milli\litre}. If the initial field was generated by a less homogeneous, more asymmetric coil in which no signal was visible without shims, signal was discovered and linewidths went down to $\approx \SI{50}{\hertz}$.
         \begin{figure}
-            \label{fig:results:lowFieldSpectrometer:shims}
             \includegraphics[width=0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/shims/shimXY.pdf}
             \caption[Manual low field shimming]{Linear shimming in x- and y-directions. Shimming was done manually: 1H spectra of water were recorded and evaluated as to their linewidth. Later, automatic shimming was implemented (see section \ref{chap:MaterialsAndMethods:lowFieldSpectrometer:shims}). Black dots indicate actual measuremet points, the red mesh is a spline interpolation of the measurement data. The same interpolation is shown as a colormap on the bottom of the graph where black color corresponds to narrowest lines and thus highest homogeniety.}
+            \label{fig:results:lowFieldSpectrometer:shims}
         \end{figure}
         The automatic discovery of the linewidth of a given measurement works well and yields results similar to the ones of a manual adjustment with a lot less user interaction. The fast fittingless linewidth detection based on interpolation yields linewidths within \SI{10}{\percent} of the fitted result if the SNR is sufficient, i.e. the maximum value can clearly be attributed to the water resonance.
     \subsection{Sabre shuttling system}
@@ -35,13 +36,18 @@
         sample. The bubbling system works well and provides pH2 to the solution in amounts large enough to generate
         polarization levels in the single digit percent range \ref{fig:results:highlyPolarized15Nspectrum}.
         \subsubsection{15N coil}
-            The coil for 15N signal reception was matched and tuned to fit the requirements of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}. Clear signal was visible using the 15N glycine phantom in a single shut measurement. Shimming reduced linewidths of the phantom to \SI{10}{\hertz}. Linewidths of the hyperpolarized 15N pyridine signal were in the range of \SI{30}{\hertz}.
+        The coil for 15N signal reception was matched and tuned to fit the requirements of the system. The network analyzer showed a q-factor of \todo{n} and a width of nn. Inside the small animal NMR, similar resonance widths of nn were observed while the attenuation was \SI{1}{\deci\bel}. Clear signal was visible using the 15N glycine phantom in a single shot measurement. Shimming reduced linewidths of the phantom to \SI{10}{\hertz}. Linewidths of the hyperpolarized 15N pyridine signal were in the range of \SI{30}{\hertz} without explicit shimming for its geometry and content.
+            \begin{figure}
+                \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/15Ncoil.pdf}
+                \caption[15N coil network analysis]{The range of frequencies covered by the 15N solenoid coil built for the hyperpolarized experiments. Due to the large range of the tune capacitor, the range was large enough to cover \SI{100}{\mega\hertz} with matching capacities in the \SI{40}{\deci\bel} range.}
+                \label{fig:results:15N:networkAnalysisCoil}
+            \end{figure}
         \subsubsection{Flip angle calibration}
             The flip angle for the $^{15}N$ coil was not automatically calibratable which is why it was manually calibrated. The example shown here uses a 
             \begin{figure}
-                \label{fig:results:15N:flipAngle}
                 \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/flipAngle/faDiss.pdf}
                 \caption{Signal area of the $^{15}N$-Glycine phantom measured in the $^{15}N$ coil plotted over relative voltage and attenuation. The plot over relative voltageis fit with a sine to find the \SI{90}{\degree} flip angle. The \SI{90}{\degree} angle is marked by a vertical line for both the voltage and attenuation plot.}
+                \label{fig:results:15N:flipAngle}
             \end{figure}
         \subsubsection{Parahydrogen supply - bubbling}
             The newly constructed bubbling disk showed to provide hydrogen more homogenously than the previously used single hole supply. Different hole sizes provide similar flow for samples of different viscosities. The widening cylinder provides enough spcae for bubbles to burst and reduce losses due to fluid splashing into the venting line.
@@ -54,7 +60,7 @@
                 \subfloat[X displacement\label{fig:results:sim:pressure:xDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/xDisplacement200.eps}}\\
                 \subfloat[Y displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/yDisplacement200.eps}}
                 \hfill
-                \subfloat[Z displacement\label{fig:results:sim:pressure:yDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/zDisplacement200.eps}}
+                \subfloat[Z displacement\label{fig:results:sim:pressure:zDisplacement}]{\includegraphics[width = 0.49\textwidth]{/figures/simulations/15NSabre/zDisplacement200.eps}}
                 \caption[Reactor wall stress simulations]{Wall stress of the low field reactor for pressure levels at \SI{200}{\bar}. (a) shows the overall displacement while (b), (c) and (d) show the displacement in X-, Y-, and Z-direction.  The yellow arrows shown in pairs of four indicate the areas pressure was applied to in the simulation.}
                 \label{fig:results:bubblingReactorPressure}
             \end{figure}
@@ -196,9 +202,10 @@
             \label{chap:MaterialsAndMethods:bloodInjection}
         \end{figure}
         \begin{figure}
+            \centering
             \includegraphics[width=0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/inSituSabreWater/signalVariation.pdf}
             \label{chap:MaterialsAndMethods:bloodInjection2}
-            \caption[Blood addition to hyperpolarized signal]{Signal drop during the injection of \SI{0.5}{\milli\liter} of blood into the solution providing hyperpolarized signal which was permanently provided with fresh pH2.}
+            \caption[Blood addition to hyperpolarized signal]{Signal drop during the injection of \SI{0.5}{\milli\liter} of blood into the solution providing hyperpolarized signal which was permanently provided with fresh pH2. First measurements show a slight drop until a steady state is reachd. The steady state then loses signal intensity as the amount of substance injected is increased.}
         \end{figure}
     \subsection{Liposomes and Sabre}
         The results of cell culture solution and human blood addition to a working, hyperpolarized sample suggested that other approaches were necessary to achieve hyperpolariation in biologically relevant surroundings. The previously described method of encapsulation of substrate and catalyst in double layered liposomes. While the liposomes formed, the size distribution according to the lipochemists was broader than usual. \todo{plot results if available} The experiments trying to hyperpolarize the liposomal structures failed and it showed that the addition of the components used in the generation of liposomes into a working hyperpolarized solution already depleted the signal to a non-detectabel level. Different solvents and substrates were tested in combinations but did not yield any observable signal.
@@ -206,17 +213,20 @@
         $^{15}\mathrm{N}$ labeled substances were used to generate high polarization on the substrate in \si{\nano\tesla} fields. Results are shown here and include spectroscopic as well as imaging experiments.
     \subsubsection{$\mathrm{T_1}$ and $\mathrm{T_2}$ measurements}
         Results for $T_1$ measurements are shown in figure . Fit parameters are given in table .
-        The relaxation times are relevant to subsequent measurements of spectra and images and were measured for both 15N-Glycine phantom and a neat, thermally polarized 15N-Pyridine sample. $\mathrm{T}_1$ was found to be \SI{55\pm 3}{\second} whereas $\mathrm{T}_2$ was only \SI{250\pm 20}{\milli\second}.
+        The relaxation times are relevant to subsequent measurements of spectra and images and were measured for both 15N-Glycine phantom and a neat, thermally polarized 15N-Pyridine sample. $\mathrm{T}_1$ was found to be \SI{52.6\pm 2.7}{\second} for MeOH as a solvent and \SI{76.9\pm 5.6}{\second} for MeOD. $\mathrm{T}_2$ was measured to be \SI{435\pm 38}{\milli\second}.
         \begin{table}
-            \begin{tabular}{ccccc}
-                    & time constant / s & error / s & prefactor \\
-                $\mathrm{T_1}$ MeOH & 52.6 & 2.7\\
-                $\mathrm{T_1}$ MeOD & 76.9 & 5.9\\
-                $\mathrm{T_2}$ MeOD &  0.435 & 0.038\\
-                glycine phantom $\mathrm{T_1}$& \\
-                glycine phantom $\mathrm{T_2}$& \\
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                    & time constant / s & error / s & scaling factor & error\\
+                    \hline
+                $\mathrm{T_1}$ MeOH & 52.6 & 2.7 & & \\
+                $\mathrm{T_1}$ MeOD & 76.9 & 5.9 & & \\
+                $\mathrm{T_2}$ MeOD &  0.435 & 0.038 & &\\
+                glycine phantom $\mathrm{T_1}$& & &  & \\
+                glycine phantom $\mathrm{T_2}$& & & &  \\
+                \hline
             \end{tabular}
-        \caption[Relaxation times]{Relaxation times T1 and T2 of hyperpolarized pyridine. MeOD as a solvent increases T1 slightly and was used for subsequent measurements.}
+            \caption[Relaxation times]{Relaxation times T1 and T2 of hyperpolarized pyridine. MeOD as a solvent increases T1 slightly and was used for subsequent measurements.}
         \end{table}
         \begin{figure}
             \includegraphics[width = 0.99\textwidth]{/figures/experiments/15NSabre/relaxation/T1_T2.pdf}
@@ -227,14 +237,14 @@
         \begin{figure}
             \label{fig:results:15N:pressureDependence}
             \includegraphics[width = 0.99\textwidth]{/figures/experiments/15NSabre/pressureDependence/pressureDependence.pdf}
-            \caption{Signal area of integrals at different parahydrogen pressures used for polarization. Higher pressures lead to higher signal over the pressure range shown here. A linear behavior can be estimated from the data in the range provided.}
+            \caption[Pressure dependence]{Signal area of integrals at different parahydrogen pressures used for polarization. Higher pressures lead to higher signal over the pressure range shown here. A linear behavior can be estimated from the data in the range provided.}
         \end{figure}
     \subsubsection{Concentration dependence}
         The concentration and concentration ratio have an influence on the overall signal, i.e. magnetization of the sample. Here, the concentration of pyridine is lowered over the course of the measurements while the concentration of the catalyst is kept constant. The signal of the solution increases over the course of the measurements, i.e. with falling concentration but at constant amount of substance for $^{15}$N-pyridine, i.e. the polarization increased.
         \begin{figure}
             \label{fig:results:15N:concentrationDependence}
             \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/concentrationDependence/concentrationDependence.pdf}
-            \caption{The signal of a solution of IrIMes that is diluted from left to right. Signal rises with rising dilution, i.e. with lower concentration. Concentration of catalyst is kept constant throughout the measurement.}
+            \caption[Concentration dependence]{The signal of a solution of IrIMes that is diluted from left to right. Signal rises with rising dilution, i.e. with lower concentration. Concentration of catalyst is kept constant throughout the measurement.}
         \end{figure}
     \subsubsection{Flow dependence}
     Similar to pressures, flow rates have been varied to estimate their effect on the reaction's efficiency. Here, other than for the pressure measurements, flow was not a parameter linearly connected to signal intensity. As flow showed to change bubble sizes as well as the number of flow channels building, a more complex behaviour is expected and shown in figure \ref{fig:results:15N:flowDependence}. Two pressures are shown for different flow rates set at the needle valve. For both pressures, the higher flows cause higher signal up to a certain point. At \SI{10}{\bar} signal remains at constant levels from \SI{5}{\litre\per\hour}, for \SI{20}{\bar}, from a flow setting of \SI{4}{\litre\per\hour} the same effect is observable.
@@ -252,13 +262,19 @@
         \end{figure}
     \subsection{Polarization measurements}
         The scheme used in the first, preliminary tests provided polarizations in the range of \todo{range}. This value was drastically improved by using a more sophisticated approach, i.e. an automated high pressure shuttling system to generate high polarizations reproducibly and even at high concentrations to generate high magnetization.
-        Polarizations in high concentration regimes and under otherwise optimal parameters (i.e. high flow of \SI{50}{\litre\per\minute}, high pressures of \SI{50}{\bar}, field at \SI{340}{\nano\tesla}) the maximum polarization measured was $\mathrm{P} = 4\% \pm 0.2 \%$. The paramter that was not controllable in this setup but does have a substantial influence on the magnetizatioin yield was the temperature of the sample that decreased while parahydrogen flowed through the volatile methanol used as solvent, see \ref{cd:sabreShuttling:tempControl} for a closer discussion.
-        The two methods used for quantification - compariso to thermal signal, the more reliable, but very slow method, and comparison to the 15N glycine phantom, less reliable per se but fast - yield similar results if match and tune of the coil are readjusted after echanging the sample for the phantom. This ensures a similar flip angle used in the phantom measurement and thus a decent estimate of polarization.
+    Polarizations in high concentration regimes and under otherwise optimal parameters (i.e. high flow of \SI{6}{\litre\per\minute}, high pressures of \SI{50}{\bar}, field at \SI{340}{\nano\tesla}) the maximum polarization measured was $\mathrm{P} = 4\% \pm 0.2 \%$. The parameter that was not controllable in this setup but does have a substantial influence on the magnetizatioin yield was the temperature of the sample that decreased while parahydrogen flowed through the volatile methanol used as solvent, see \ref{cd:sabreShuttling:tempControl} for a closer discussion.
+        The two methods used for quantification - compariso to thermal signal, the more reliable, but very slow method, and comparison to the 15N glycine phantom, less reliable per se but fast - yield similar results if match and tune of the coil are readjusted after exchanging the sample for the phantom. This ensures a similar flip angle used in the phantom measurement and thus a decent estimate of polarization.
+        \begin{figure}
+            \label{fig:results:15N:polarization}
+            \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/polarization/highPolarization.pdf}
+            \caption{15N spectra of the hyperpolarized 15N pyridine sample, the sample in its thermal state and the 15N glycine phantom. Note the frequency shift due to the different chemical shift properties of the two molecules. The relative signal intensity of the hyperpolarized sample is 38.2, additionally, the thermal signal was averaged 250 times. Note the high noise levels on the thermal measurement due to signal averaging.}
+        \end{figure}
     \subsection{High field Sabre}
         High field sabre results from the IMTEK \SI{600}{\mega\hertz} spectrometer were obtained. These results show that small amounts of substrate can be hyperpolarized in situ both through the less efficient spontaneous hyperpolarization as well as through pulsed hyperpolarization (Light-Sabre, \todo{ref}).
 \section{Simulations}
         \label{sec:results:sim}
         \subsection{Static magnetic field calculations}
+        \label{sec:results:sim:B0}
             Using the Biot Savart law, a Matlab program to calculate the fields of current carrying conductors was implemented. Structural elements were mostly solenoids, but also saddle and helmholtz coils were considered.
             \subsubsection{Solenoid Coil}
             The magnetic field of the coil used in the low field NMR system was calculated and the length of the compensation windings was optimized for field homogeniety.
@@ -292,4 +308,8 @@
         \end{figure}
         The lowest value found is a relative spread of $4.6 \cdot 10^{-5}$ corresponding to a linewidth of \SI{12.5}{\hertz}. Experimentally, similar values were observed (see chapter \ref{chap:results:lowFieldNMR}). Small variations in the distances lead to strong decrease in homogeniety especially for the inner coil pair - \SI{0.1}{\milli\meter} variations already make up for a decrease of 3 in homogeniety in the inner coil pair while for the outer pair, the same variation makes up for an increase by a factor of 0.2 only. Overall, exact positioning is thus crucial, going especially for the inner pair. The dual helmholtz design has thus increased homogeniety to linewidths smaller than those of the solenoid with compensation windings and linear shims. Adding shims to the helmholtz array is possible and encouraged for future work and will probably further improve homogeniety.
         \subsubsection{Nicotinamide level anti crossings using the spin framework}
-        The spin framework developed in this group was used to calculate level anti crossings for nicotinamide and IR-IMes as a spin system. The results obtained are similar to results previously published concerning pyridine and IR-IMes \todo{ref}. In figure \ref{figure:results:simulation:nicotinamideSpinSystem} the polarization levels are plotted against field and contact time of the complex (i.e. spin evolution time). These results indicate highest polarizations at \SI{4.9}{\milli\tesla} which is close to the fields obtained in the pyridine simulations. A contact time of \SI{10}{\milli\second} seems best to generate high polarizations and needs to be adjusted indirectly via sample temperatures. These results were used to adjust experimental parameters in the best possible way and were confirmed through field and temperature variations (section \ref{chapter:results:lowFieldNMR})
+        The spin framework developed in this group \todo{ref} was used to calculate level anti crossings for nicotinamide and IR-IMes as a spin system. The results obtained are similar to results previously published concerning pyridine and IR-IMes \todo{ref}. In figure \ref{figure:results:simulation:nicotinamideSpinSystem} the polarization levels are plotted against field and contact time of the complex (i.e. spin evolution time). These results indicate highest polarizations at \SI{4.9}{\milli\tesla} which is close to the fields obtained in the pyridine simulations. A contact time of \SI{10}{\milli\second} seems best to generate high polarizations and needs to be adjusted indirectly via sample temperatures. These results were used to adjust experimental parameters in the best possible way and were confirmed through field and temperature variations (section \ref{chapter:results:lowFieldNMR})
+        \begin{figure}
+            \includegraphics[width=0.99\textwidth]{/figures/simulations/15NSabre/spinFramework/fieldContactTimeDependence.pdf}
+            \caption[Spin density matrix calculations]{The }
+        \end{figure}
