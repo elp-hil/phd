@@ -3,20 +3,24 @@
     As a large part of this work consisted of hardware design and manufacturing, I will split the results section into sole hardware results and results of measurements \textit{with} that hardware as well as commercially available machines. Additionally, simulation results will be added as a separate section in the end of this chapter.
 \section{Hardware}
     This section will cover the results concerning the hardware built in the course of this thesis. This covers calibration results as well as performance measurements of single components. If results were acquired by the workshop, this will be clearly indicated.
+    \subsection{Parahydrogen generator}
+    The rebuild of the parahydrogen generator with more fixed lines and less dangling connections works more reliably with one leak in the course of this work compared to one every few months before. The whole setup was moved to another building without any loss in performance or reliability despite complete dis- and reassembly.
+    Performance of the helium recondenser was unchanged over the years cooling the system down in \SI{2\pm0.3}{\hour}. Filling a \SI{1.5}{\l} to \SI{50}{\bar} takes \SI{1.5}{\hour} setting the needle valve to flows of \SI{2}{\liter\per\hour}. The smaller \SI{0.5}{\liter} bottle takes only about \SI{0.9}{\hour} to fill.
+    Parahydrogen was quantified and showed an enrichment of \SI{95\pm3}{\%} directly after production. The decay constant inside the high pressure aluminium bottles was in the range of days: $\mathrm{T}_{1/2} = \SI{5.4\pm 0.8}{\day}$
     \subsection{Low field NMR}
         The setup used mostly in the beginnning of the thesis work was the low field spectrometer. It needed to be calibrated and shimmed and experiments with various substances and in various settings were performed.
-        \subsubsection{Receive coils}
+        \subsubsection{Receive coil and $\mathrm{B_1}$ coil}
         Receive circuits provided a Q-factor of 128 as shown in figure \ref{fig:results:networkAnalysis}.  An additional, higher frequency resonance with Q-factor of 32 can be seen to the right in the same plot at around \SI{460}{\kilo Hz}. The second graph shows the same measurement performed with the untuned saddle coil. The latter shows no significant dips and is thus considered broadband, i.e. as long as the RF-amplifiers power is sufficient, it can be used at arbitrary frequencies. Note that additional impedances are introduced into the system through the connection to the NI DAQ interface that cannot be neglected especially in the higher frequency range above $\SI{100}{\kilo\hertz}$ where the coil's intrinsic capacities are comparatively small. A measurement similar to the network analyzer measurement is shown in figure \ref{fig:results:niNetworkAnalysis}. A frequency shift can be obsereved, the peak previously visible at slightly above \SI{200}{\kilo\hertz} is now visible at \SI{70}{\kilo\hertz}. The Q-factor calculated from this data is different - 30 and 440 - from the one measured in the external measurement with the network analyzer.
             \begin{figure}
                 \centering
                 %\includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
                 \includegraphics[width = 0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/networkAnalysis.pdf}
-            \caption{Network analysis Frequency of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was intended to receive the NMR signal as well as the second, lower and braoder resonance at around \SI{470}{\kilo\hertz}. In contrast to that, the broadband transmit coil displayed in blue shows a flat frequency response.}
+                \caption[Network analysis receive coil]{Network analysis Frequency of a receive coil (orange) and saddle transmit coil (blue) commonly used in the low field experiments and a correspinding transmit coil. Note the strong dip in the syringe receive coil at around \SI{210}{\kilo\hertz} that was intended to receive the NMR signal as well as the second, lower and braoder resonance at around \SI{470}{\kilo\hertz}. In contrast to that, the broadband transmit coil displayed in blue shows a flat frequency response.}
                 \label{fig:results:networkAnalysis}
             \end{figure}
             \begin{figure}
                 \includegraphics[width = 0.95\textwidth]{/figures/experiments/lowFieldSpectrometer/niNetworkAnalysis.pdf}
-                \caption{ADC result of a pulse transmitted to the tuned receive coil. the central peak shows the resonance frequency of the coil. Similar to the actual network analysis measurement, the lower  order resonance can be seen to the right at around \SI{70}{\kilo\hertz}. Note the stron frequency shift due to the different downstream receive circuit.}
+                \caption[Network analysis NI card]{ADC result of a pulse transmitted to the tuned receive coil. the central peak shows the resonance frequency of the coil. Similar to the actual network analysis measurement, the lower  order resonance can be seen to the right at around \SI{70}{\kilo\hertz}. Note the stron frequency shift due to the different downstream receive circuit.}
                 \label{fig:results:niNetworkAnalysis}
             \end{figure}
             For the measurement with the National Instruments card, a string frequency shift of the two peaks is observed. The peak intended for singnal reception is shifted to frequencies of around \SI{70}{\kilo\hertz} while the peak to its right is shifted to \SI{240}{\kilo\hertz}. This resonance was then used for subsequent measurements. Dual resonant coils for 1H and 13C signal reception showed a less prominent dip in both channels, while the additional channel (1H in most cases) \todo{ref methods} was affected more strongly by the adapted circuitry.
@@ -46,7 +50,7 @@
             The flip angle for the $^{15}N$ coil was not automatically calibratable which is why it was manually calibrated. The example shown here uses a 
             \begin{figure}
                 \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/flipAngle/faDiss.pdf}
-                \caption{Signal area of the $^{15}N$-Glycine phantom measured in the $^{15}N$ coil plotted over relative voltage and attenuation. The plot over relative voltageis fit with a sine to find the \SI{90}{\degree} flip angle. The \SI{90}{\degree} angle is marked by a vertical line for both the voltage and attenuation plot.}
+                \caption[Flip angle calibratin 15N]{Signal area of the $^{15}N$-Glycine phantom measured in the $^{15}N$ coil plotted over relative voltage and attenuation. The plot over relative voltageis fit with a sine to find the \SI{90}{\degree} flip angle. The \SI{90}{\degree} angle is marked by a vertical line for both the voltage and attenuation plot.}
                 \label{fig:results:15N:flipAngle}
             \end{figure}
         \subsubsection{Parahydrogen supply - bubbling}
@@ -81,7 +85,7 @@
                 \centering
                 \label{figures:results:helmholtzCoilsCenterField}
                 \includegraphics[width=0.99\textwidth]{/figures/experiments/helmholtzCoils/fieldHelmholtzCoils.pdf}
-                \caption{Calibration of the voltage (and thus current) to reference actual fields using the fluxgate sensor and ramping trough the voltages in both polarities. In the insert, the fields of the previously used solenoid coil can be seen in comparison to the helmholtz coils' field in the central region. Its slope is steeper than the helmholtz coils'. oltage applied to the inner Helmholtz coil pair via a \SI{10}{\kilo\ohm} resistor to limit currents to values below the power supply's resolution.}
+                \caption[Helmholtz fields]{Calibration of the voltage (and thus current) to reference actual fields using the fluxgate sensor and ramping trough the voltages in both polarities. In the insert, the fields of the previously used solenoid coil can be seen in comparison to the helmholtz coils' field in the central region. Its slope is steeper than the helmholtz coils'. oltage applied to the inner Helmholtz coil pair via a \SI{10}{\kilo\ohm} resistor to limit currents to values below the power supply's resolution.}
             \end{figure}
             
         \subsubsection{Shuttling reproducibility}
@@ -147,7 +151,7 @@
             %\includegraphics{/home/philipp/Documents/thesis/figures/experiments/fluxgate/spatial2dProjection.eps}
             \includegraphics{/figures/experiments/fluxgate/spatial2dProjection.pdf}
             \includegraphics{/figures/experiments/fluxgate/spatial3d.pdf}
-            \caption{Results of the fluxgate calibration visualized: on top, the two projected views are shown that visualize the absolute field values in the x-y-plane and the field's direction. The field reaches a maximum in the center of the shield at around \SI{8}{\centi\meter}. The angle of the field remains fairly constant within an angle of $\approx$ \SI{30}{\degree}. In the lower part, the same data is shown as a 3d plot for a better overview.}
+            \caption[Fluxgate calibration]{Results of the fluxgate calibration visualized: on top, the two projected views are shown that visualize the absolute field values in the x-y-plane and the field's direction. The field reaches a maximum in the center of the shield at around \SI{8}{\centi\meter}. The angle of the field remains fairly constant within an angle of $\approx$ \SI{30}{\degree}. In the lower part, the same data is shown as a 3d plot for a better overview.}
         \end{figure}
 \section{Measurements}
     \subsection{Low field NMR}
@@ -160,12 +164,12 @@
                 $\mathrm{V}_{\SI{90}{\degree}}$ [V] & & & & 
             \end{tabular} 
             \label{table:results:FA}
-            \caption{Results of the manual flip angle calibration using the saddle excitation coil and the syringe receive coil for pulse durations ranging from 200 to 1200 ms and block pulse shape.}
+            \caption[Flip angle calibration results]{Results of the manual flip angle calibration using the saddle excitation coil and the syringe receive coil for pulse durations ranging from 200 to 1200 ms and block pulse shape.}
         \end{table}
             \begin{figure}
                 \centering
                 \includegraphics[width = 0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/helmholtzNarrowLine.pdf}
-                \caption{A $_1\mathrm{H}$ line of a Magnevist doped water sample inside the 'syringe coil'. Linewidth is down to \SI{21}{\hertz} in this example without the use of shim coils.}
+                \caption[Thin line helmholtz coils]{A $_1\mathrm{H}$ line of a Magnevist doped water sample inside the 'syringe coil'. Linewidth is down to \SI{21}{\hertz} in this example without the use of shim coils.}
                 \label{results:lowFieldSpectrometer:thinLine}
             \end{figure}
     \subsection{Sabre in water}
@@ -181,14 +185,14 @@
                 \hline
             \end{tabular}
             \label{table:results:TRvariation}
-            \caption{Average signal of each TR measurement series excluding the dummy scan destroying previously accumulated polarization. Standard deviation is additionally given.}
+            \caption[TR-variation results]{Average signal of each TR measurement series excluding the dummy scan destroying previously accumulated polarization. Standard deviation is additionally given.}
         \end{table}
         \begin{figure}
             \includegraphics[width=0.99\textwidth]{/figures/experiments/lowFieldSpectrometer/inSituSabreWater/combinedInsert.pdf}
-        \caption{Variation of the TR in continuously hyperpolarized sample of IR-IMes, nicotinamide and D$_2$O. Each TR was measured 10 times, resulting in varying cumulative measurement times. Note that one 'dummy scan' was necessary to reach the steady state for each TR, to be seen at timepoint 0. Average values increase with TR and correspongdingly longer buildup rates. Bottom: The average values except for the first, which is out of steady state equilibrium, for each TR over TR. An exponential function was fit to the data revealing a buildup rate, i.e. an effective $T_1$ of \SI{5.4\pm 0.2}{\second}}
+            \caption[TR variation]{Variation of the TR in continuously hyperpolarized sample of IR-IMes, nicotinamide and D$_2$O. Each TR was measured 10 times, resulting in varying cumulative measurement times. Note that one 'dummy scan' was necessary to reach the steady state for each TR, to be seen at timepoint 0. Average values increase with TR and correspongdingly longer buildup rates. Bottom: The average values except for the first, which is out of steady state equilibrium, for each TR over TR. An exponential function was fit to the data revealing a buildup rate, i.e. an effective $T_1$ of \SI{5.4\pm 0.2}{\second}}
         \end{figure}
     \subsection{Imaging of contiuously hyperpolarized solution}
-    Using the Magritek Terranova, images of continuously hyperpolarized solutions were acquired. Using the watery Sabre solutions, imaging at low fields, specifically even at earth magnetic field, were possible, if previous to imaging prepolarization or, in this case, hyperpolarization fields of $\approx$ \SI{5}{\milli\tesla} were used. The results of such an image at earth magnetic field is shown in figure \ref{fig:results:earthFieldImage}. For the image, a polarization of \todo{calc} was calculated. The SNR of the much lower conscentrated nicotinamide \SI{1.3}{\milli\Molar} corresponding to \SI{12}{\milli\gram} nicotinamide in \SI{5}{\milli\litre} D2O) was higher than that of a much higher consentrated and larger volume doped water sample (\SI{20}{\milli\litre} of \SI{55}{\Molar} water) which showed SNR of 4.7.  \begin{figure}
+    Using the Magritek Terranova, images of continuously hyperpolarized solutions were acquired. Using the watery Sabre solutions, imaging at low fields, specifically even at earth magnetic field, were possible, if previous to imaging prepolarization or, in this case, hyperpolarization fields of $\approx$ \SI{5}{\milli\tesla} were used. The results of such an image at earth magnetic field is shown in figure \ref{fig:results:earthFieldImage}. For the image, a polarization of \todo{calc} was calculated. The SNR of the much more lowly concentrated nicotinamide \SI{1.3}{\milli\Molar} corresponding to \SI{12}{\milli\gram} nicotinamide in \SI{5}{\milli\litre} D2O) was higher than that of a much higher consentrated and larger volume doped water sample (\SI{20}{\milli\litre} of \SI{55}{\Molar} water) which showed SNR of 4.7.  \begin{figure}
             \label{fig:results:earthFieldImage}
             \includegraphics[width=0.9\textwidth]{/figures/experiments/earthFieldImaging/2dImagePlusOutline}
             \caption[Earth field Sabre image]{An image of a continuously hyperpolarized sample and a Gadolinium doped water reference acquired at earth magnetic field after prepolarization for \SI{30}{\second}. The much lower concentrated nicotinamide sample (\SI{1.3}{\milli\Molar}) shows higher signal than the thermally polarized water (\SI{55}{\Molar}), though water is also prepolarized at \SI{5}{\milli\tesla}. Resolution is (\SI{1.6}{\milli\meter})$^2$ with an acquisition time of \SI{5}{\minute} \SI{20}{\second}.}
@@ -230,7 +234,7 @@
         \end{table}
         \begin{figure}
             \includegraphics[width = 0.99\textwidth]{/figures/experiments/15NSabre/relaxation/T1_T2.pdf}
-            \caption{$T_1$and $T_2$ relaxation times for a hyperpolarized pyridine sample. $T_1$ was measured in MeOH and MeOD. Both solvents show similar relaxation times while the deuterated solvent's is slightly longer. $T_2$ is a lot shorter than $T_1$.}
+            \caption[T1/T2 of 15N]{$T_1$and $T_2$ relaxation times for a hyperpolarized pyridine sample. $T_1$ was measured in MeOH and MeOD. Both solvents show similar relaxation times while the deuterated solvent's is slightly longer. $T_2$ is a lot shorter than $T_1$.}
         \end{figure}
     \subsubsection{Pressure dependence}
         To see the influence of the pH2 pressure during bubbling, the same experiment was repeated multiple times at different pressures. The results of these measurements are shown in figure \ref{}. A mostly linear pressure dependence can be estimated from the data indicating that the catalytic reaction is still in the low concentration regime.
@@ -267,7 +271,7 @@
         \begin{figure}
             \label{fig:results:15N:polarization}
             \includegraphics[width=0.99\textwidth]{/figures/experiments/15NSabre/polarization/highPolarization.pdf}
-            \caption{15N spectra of the hyperpolarized 15N pyridine sample, the sample in its thermal state and the 15N glycine phantom. Note the frequency shift due to the different chemical shift properties of the two molecules. The relative signal intensity of the hyperpolarized sample is 38.2, additionally, the thermal signal was averaged 250 times. Note the high noise levels on the thermal measurement due to signal averaging.}
+            \caption[High 15N polarization]{15N spectra of the hyperpolarized 15N pyridine sample, the sample in its thermal state and the 15N glycine phantom. Note the frequency shift due to the different chemical shift properties of the two molecules. The relative signal intensity of the hyperpolarized sample is 38.2, additionally, the thermal signal was averaged 250 times. Note the high noise levels on the thermal measurement due to signal averaging.}
         \end{figure}
     \subsection{High field Sabre}
         High field sabre results from the IMTEK \SI{600}{\mega\hertz} spectrometer were obtained. These results show that small amounts of substrate can be hyperpolarized in situ both through the less efficient spontaneous hyperpolarization as well as through pulsed hyperpolarization (Light-Sabre, \todo{ref}).
@@ -304,7 +308,7 @@
         \begin{figure}
             \includegraphics[width = 0.99\textwidth]{/figures/simulations/B0/helmholtzCoil/fieldSpread.pdf}
             \label{fig:results:fieldSpread}
-            \caption{3D plot of the central region of high homogeniety shown in \ref{fig:results:distanceVariation}. Note that the distance variation of the inner coil has a more prominent effect on field homogeniety than the outer one. The minimum value found is a relative spread of $5\cdot 10^{-5}$.}
+            \caption[Distance variation homogeniety]{3D plot of the central region of high homogeniety shown in \ref{fig:results:distanceVariation}. Note that the distance variation of the inner coil has a more prominent effect on field homogeniety than the outer one. The minimum value found is a relative spread of $5\cdot 10^{-5}$.}
         \end{figure}
         The lowest value found is a relative spread of $4.6 \cdot 10^{-5}$ corresponding to a linewidth of \SI{12.5}{\hertz}. Experimentally, similar values were observed (see chapter \ref{chap:results:lowFieldNMR}). Small variations in the distances lead to strong decrease in homogeniety especially for the inner coil pair - \SI{0.1}{\milli\meter} variations already make up for a decrease of 3 in homogeniety in the inner coil pair while for the outer pair, the same variation makes up for an increase by a factor of 0.2 only. Overall, exact positioning is thus crucial, going especially for the inner pair. The dual helmholtz design has thus increased homogeniety to linewidths smaller than those of the solenoid with compensation windings and linear shims. Adding shims to the helmholtz array is possible and encouraged for future work and will probably further improve homogeniety.
         \subsubsection{Nicotinamide level anti crossings using the spin framework}
