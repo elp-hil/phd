@@ -92,16 +92,12 @@
     % prevents floating objects from being placed ahead of their section
     \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
     \let\mySubSection\subsection\renewcommand{\subsection}{\suppressfloats[t]\mySubSection}
-
-
     % ------------------- marker commands -------------------
     % ToDo command
     \newcommand{\todo}[1]{\textbf{\textcolor{red}{(TODO: #1)}}}
     \newcommand{\extend}[1]{\textbf{\textcolor{darkgreen}{(EXTEND: #1)}}}
     % Lighter color to note down quick drafts
     \newcommand{\draft}[1]{\textbf{\textcolor{NavyBlue}{(DRAFT: #1)}}}
-
-
     % ------------------- math formatting commands -------------------
     % define vectors to be bold instead of using an arrow
     \renewcommand{\vec}[1]{\mathbf{#1}}
@@ -118,6 +114,12 @@
                 pdfkeywords={hyperpolarization, sabre, NMR, MRI, 15N},
                 pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
 
+    % ------------------- siunitx settings -------------------------
+    \sisetup{
+            quotient-mode=fraction,
+            per-mode=fraction,
+            fraction-function=\tfrac
+            }
 
     %==========================================
     % You might not need the following commands, I only included them as they
