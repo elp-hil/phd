@@ -1,256 +1,249 @@
 % !TEX root = ../thesis_main.tex
 \chapter{Theory}\label{chap:theory}
-	\section{NMR}
-		Nuclear Magnetic Resonance (NMR) is a technique that emerged in 1946 with the discovery
-		of the absortion properties of nuclei irradiated with electromagnetic waves resonant to their
-		larmor frequencies.\cite{ResonanceAbsorption} The subsequent observation of signal from those
-		previously excited nuclei, known as free induction decay (FID) paved the road to the now well
-		established method which in the beginning was primarily used in chemistry for structural
-		analysis of Molecules and chemical kinetics.
-		\subsection{Larmor frequency}
-			Inside an external magnetic field $B_0$, a magnetic dipole $\mu$ will precess with a frequency
-			proportional to $B_0\cdot \mu$. This also applies to charged particles with a spin $S\neq0$ and thus
-			a magnetic moment $\mu\neq0$. The precession is a result of the torque $\mu\times\vec B$
-			excerted on the magnetic dipole moment.
-		\subsection{Chemical shift}
-			The larmor frequency of nuclei in NMR is largely governed by $B_0$ and $\mu$, but other factors do
-			influence it on a more subtle scale. The most prominent effect is the chemical shift which
-			originates in the shielding of $B_0$ by the electrons' magnetic dilpoles surrounding the nucleus or molecule.
-			The shielding thus generally leads to a decrease of precession frequency, the chemical shift
-			though is calculated as the relative frequency quota towards another known sample's
-			reference frequency:
-			\begin{equation}
-				\delta = \frac{\nu_{sample} - \nu_{reference}}{\nu_{reference}}
-			\end{equation}
-		\subsection{J-coupling}
-			In addition to the change in field by the electrons dipoles, the nucleis' magnetic
-			dipoles inside one molecule will also interact. The interaction can be conveyed either
-			directly or via the electrons' spins. The direct interaction is neglectable in liquids
-			due to fastly rotating spins that average to zero. The indirect interaction via the
-			electrons can also lead to a frequency shift resulting in multiplets usually on scales
-			smaller than the chemical shifts, i.e. in the $\SI{}{\hertz}$ range.
-		\subsection{Flip angle}
-			An external, on-resonant magnetic field will cause the magnetization of an ensemble of
-			spins to flip by an angle $\alpha$ known as the flip angle (FA). An FA of $\mathrm n\cdot 180
-			\deg + 90 \deg$ will rotate the magnetization to the transverse plane perpendicular to the magnetic field
-			resulting in an FID. Pulses of $\mathrm n\cdot 180 \deg$ will keep the magnetization aligned
-			with the magnetic field or invert it, therefore not resulting in a FID. All other FAs
-			will produce a linear combination of the two cases.
-		\subsection{A simple NMR experiment}
-		The most basic experiment in NMR is the exposure of a spin ensemble to a $\SI{90}{\degree}$
-		RF pulse and subsequent readout. This will flip the magnetization by $\SI{90}{\degree}$
-		which will subsequently precess around the z axisi with its Larmor frequency. Using a coil\ref{materialsMethods:coils}
-		mounted around the sample, the alternating field caused by the rotating magnetization will induce a
-		current driving the resonant circuit. That signal - or free induction decay - can be
-		recorded as the voltage over the resonant circuit.
-		\subsection{Relaxation}
-		After being deflected from its thermal equilibrium, the magnetization tends to return to
-		that equilibrium state. That process is called $T_1$ relaxation or spin-lattice relaxation
-		and is an exponential decay. In addition, the transverse magnetization decays with a time
-		constant called $T_2$ that is usually much smaller than $T_1$. $T_2$ relaxation is because
-		of different magnetic fields experienced by the individual spins leading to a dephasing of
-		the signal.
-		\begin{figure}{h}
-			\todo{T1/T2 figure}
-		\end{figure}
-		\subsection{Field Gradients}
-		For different purposes it is beneficial to not only have the homogeneous $B_0$ field, but
-		also field gradients. Generally, these are additional z-fields that change linearly with one
-		of the spatial dimentions. Generation of these fields is usually achieved by thermal
-		conductors of specifically tailored geometries.
-		\subsection{2D-NMR}
-		
-	\section{Nuclei and Spins}
-	The postulation of an electron spin in 1926 \ref{} and later in 1928 of a proton spin \ref{} opened
-	up new areas of research.\todo{more history}
-	Individual spins can be described by their angular momentum operators $\hat{I}$,
-	$\hat{I}_y$ and $\hat{I}_z$ that return the eigenvalue of the state in its respective
-	direction.
-	\begin{equation}
-		\hat I_z \ket{I, S} = S \ket{I,S}
-	\end{equation}
-	Considering a spin-1/2 particle in a magnetic field along the z-axis (e.g. the proton as a prominent particle in NMR), these
-	eigenstates are
-	\begin{equation}
-	\ket\alpha = \begin{pmatrix}1\\0\end{pmatrix} \hspace{2 cm} \ket\beta =
-	\begin{pmatrix}0\\1\end{pmatrix}
-	\end{equation}
-	with the eigenvalues of $\pm 1/2$.
-	Generally, every spin-1/2 particle can be in any superposition of those two eigenstates:
-	\begin{equation}
-		\ket\psi = c_\alpha \ket\alpha + c_\beta \ket \beta = \begin{pmatrix} c_\alpha \\
-		c_\beta\end{pmatrix}
-	\end{equation}
-	Th;lkjsdfljk:
-	thtlth:wqa
-	:ese superposition states evolve under external conditions until a eigenstate of the particle
-	is reached.
-	Generally, a sample does not consist of one, but of many nuclei and thus many spins need to be
-	described to describe the system. To do so, usually the density matrix formalism is introduced.
-	It onsiders an ensembe of spins that do not interact with each other. In this case, the
-	expectation value of an operator for a single spin $\braket{\hat Q}$ is given by
-	\begin{equation}
-	\bra\psi\hat Q\ket\psi = \left( c_\alpha^*, c_\beta^*\right)
-	\begin{pmatrix}
-		Q_{\alpha\alpha} Q_{\alpha\beta}\\
-		Q_{\beta\alpha} Q_{\beta\beta}
-	\end{pmatrix}
-	\begin{pmatrix}
-		c_\alpha\\
-		c_\beta
-	\end{pmatrix}
-	\end{equation}
-	It can be shown that this is equal to the trace of the density operator
-	$\ket\psi\bra\psi$multiplied with said operator
-	\begin{equation}
-		\braket{\hat Q} = \Tr \left\{\ket\psi\bra\psi\hat Q\right\}
-	\end{equation}
-	For multiple spins, it follows that the observable becomes the sum of their individual
-	observables:
-	\begin{equation}
-		\braket{\hat Q_{all}}= \bra{\psi_1}\hat Q\ket{\psi_1} + \bra{\psi_2}\hat Q\ket{\psi_2} + \hdots =
-		\Tr{\left\{\left(\ket{\psi_1}\bra{\psi_1} + \bra{\psi_2}\ket{\psi_2}+ \hdots \right) \hat Q\right\}}
-	\end{equation}
-	This means that the system of spins can be described by the sum of the density operators called
-	the density matrix
-	\begin{equation}
-		\hat\rho = \overline{\ket\psi\bra\psi}.
-	\end{equation}
-	For a spin-1/2 ensemble, the density matrix in thermal equilibrium is
-	\begin{equation}
-		\hat \rho = \begin{pmatrix} \frac{1}{2}+\frac{1}{4}\mathbb{B}& 0\\ 0&
-		\frac{1}{2}-\frac{1}{4}\mathbb{B}\end{pmatrix} = \frac {1}{2} \hat1 + \frac{1}{2} \mathbb{B}
-		\hat I_z
-	\end{equation}
-	with $\mathbb{B} = \frac{\hbar\gamma B_0}{k_b T}$. That means that in thermal equilibrium, the
-	non-diagonal elements are zero, i.e. the socalled coherences (off-diagonal elements) are all
-	equally populated while there is a slight overpopulation of one of the two states. Through deflection from that
-	equilibrium, coherences are populated as described in the following section.
-		\subsection{Radiofrequency pulses}
-		Using the density matrix formalism, radiofrequency pulses described by rotational operators can be
-		applied to the whole ensemble. A pulse $\hat R_\phi(\beta)$ of phase $\phi$ (corresponding
-		to the axis around which magnetization is rotated) and angle $\beta$ where
-		$\beta=\omega_{nut} \cdot \tau_p$ exerting on a state $\ket\psi$ is described by 
-		\begin{equation}
-			\ket{\psi_\tau}= \hat R_\phi(\beta)\ket\psi
-		\end{equation}
-		Calculating the density matrix now leads to
-		\begin{equation}
-			\hat {\rho_\tau} = \overline{\ket{\psi_\tau}\bra{\psi_\tau}} = \overline{\hat
-				R_{\phi}(\beta)\ket\psi\bra\psi \hat R_\phi(-\beta)}
-		\end{equation}
-		where the overbar describes the averaging over all spins in the ensemble.
-		Finally, as we are considering the same flip angle for every single spin in the ensemble,
-		the formula can be reduced to
-		\begin{equation}
-			\hat\rho_\tau = \hat R_\phi(\beta) \hat \rho \hat R_\phi(-\beta)
-		\end{equation}
-		meaning a rotation of the magnetization corresponds to a rotation of the desity matrix.
-		If we consider a $\SI{90}{\degree}$ pulse around the x axis on the previously described
-		equilibrium for a spin-1/2 ensemble it follows:
-		\begin{equation}
-			\begin{split}
-				\hat\rho_\tau = \hat R_x(\pi/2)\hat\rho\hat R_x(-\pi/2) &= \frac{1}{2} \hat 1 +
-				\frac{1}{2} \mathbb{B}\hat R_x(\pi/2) \hat I_z \hat R_x(-\pi/2)\\
-				&=
-				\begin{pmatrix}
-					\frac{1}{2} & -\frac{1}{4i}\mathbb{B}\\
-					\frac{1}{4i}\mathbb{B}\ & \frac{1}{2}
-				\end{pmatrix}
-			\end{split}
-		\end{equation}
-		It can be equally shown that a $\SI{180}{\degree}$ pulse inverts the populations of the
-		diagonal elements while the coherences are untouched.
-		If the system is not in thermal equilibrium, the states will evolve and generally relax back
-		into the original equilibrium state. If one neglects said relaxation at first, the evolution
-		can be described by \todo{ref formula rotationg frame}
-		\begin{equation}
-			\begin{split}
-				\ket\psi_\upsilon &= \hat R_z(\Omega^0\upsilon)\ket\psi_\tau ~ \mathrm{and} \\
-				\hat\rho_\upsilon &= \hat R_z(\Omega^0\upsilon)\hat\rho_\tau\hat
-				R_z(-\Omega^0\upsilon)
-			\end{split}
-		\end{equation}
-		which shows that only a time dependent phase $\exp{i\Omega^0 \upsilon}$ is added to the coherences and the populations
-		stay constant. This confirms the macroscopic observation that the ensemble of spins behaves like a rotating vector of
-		magnetization in the x-y-plane (w\textbackslash o relaxation).
-		If relaxation is added to the scheme, we can differentiate between relaxation of the
-		coherences ($T_2$ relaxation) and that of the states ($T_1$ relaxation). The former affects
-		the non diagonal elements only which will deacy to zero while the latter brings the populations of the states back to
-		thermal equilibrium. That can be expressed by
-		\begin{equation}
-			\rho_{ij, \upsilon} = \rho_{ij, \tau} \exp{(\pm
-				i\Omega^0-\lambda)\upsilon},~\mathrm{i,j~=~
-			1,2(+)~or~2,1(-)}
-		\end{equation}
-		for the non diagonal elements and
-		\begin{equation}
-			\rho_{ii,\upsilon} = (\rho_{ii,\tau} - \rho_{ii}^{eq})\exp(-\tau/T_1)+\rho_{ii}^{eq}
-		\end{equation}
+    \section{NMR}
+        Nuclear Magnetic Resonance (NMR) is a technique that emerged in 1946 with the discovery
+        of the absortion properties of nuclei irradiated with electromagnetic waves resonant to their
+        larmor frequencies.\cite{ResonanceAbsorption} The subsequent observation of signal from those
+        previously excited nuclei, known as free induction decay (FID) paved the road to the now well
+        established method which in the beginning was primarily used in chemistry for structural
+        analysis of Molecules and chemical kinetics.
+        \subsection{Larmor frequency}
+            Inside an external magnetic field $B_0$, a magnetic dipole $\mu$ will precess with a frequency
+            proportional to $B_0\cdot \mu$. This also applies to charged particles with a spin $S\neq0$ and thus
+            a magnetic moment $\mu\neq0$. The precession is a result of the torque $\mu\times\vec B$
+            excerted on the magnetic dipole moment.
+        \subsection{Chemical shift}
+            The larmor frequency of nuclei in NMR is largely governed by $B_0$ and $\mu$, but other factors do
+            influence it on a more subtle scale. The most prominent effect is the chemical shift which
+            originates in the shielding of $B_0$ by the electrons' magnetic dilpoles surrounding the nucleus or molecule.
+            The shielding thus generally leads to a decrease of precession frequency, the chemical shift
+            though is calculated as the relative frequency quota towards another known sample's
+            reference frequency:
+            \begin{equation}
+                \delta = \frac{\nu_{sample} - \nu_{reference}}{\nu_{reference}}
+            \end{equation}
+        \subsection{J-coupling}
+            In addition to the change in field by the electrons dipoles, the nucleis' magnetic
+            dipoles inside one molecule will also interact. The interaction can be conveyed either
+            directly or via the electrons' spins. The direct interaction is neglectable in liquids
+            due to fastly rotating spins that average to zero. The indirect interaction via the
+            electrons can also lead to a frequency shift resulting in multiplets usually on scales
+            smaller than the chemical shifts, i.e. in the $\SI{}{\hertz}$ range.
+        \subsection{Flip angle}
+            An external, on-resonant magnetic field will cause the magnetization of an ensemble of
+            spins to flip by an angle $\alpha$ known as the flip angle (FA). An FA of $\mathrm n\cdot 180
+            \deg + 90 \deg$ will rotate the magnetization to the transverse plane perpendicular to the magnetic field
+            resulting in an FID. Pulses of $\mathrm n\cdot 180 \deg$ will keep the magnetization aligned
+            with the magnetic field or invert it, therefore not resulting in a FID. All other FAs
+            will produce a linear combination of the two cases.
+        \subsection{A simple NMR experiment}
+        The most basic experiment in NMR is the exposure of a spin ensemble to a $\SI{90}{\degree}$
+        RF pulse and subsequent readout. This will flip the magnetization by $\SI{90}{\degree}$
+        which will subsequently precess around the z axisi with its Larmor frequency. Using a coil\ref{materialsMethods:coils}
+        mounted around the sample, the alternating field caused by the rotating magnetization will induce a
+        current driving the resonant circuit. That signal - or free induction decay - can be
+        recorded as the voltage over the resonant circuit.
+        \subsection{Relaxation}
+        After being deflected from its thermal equilibrium, the magnetization tends to return to
+        that equilibrium state. That process is called $T_1$ relaxation or spin-lattice relaxation
+        and is an exponential decay. In addition, the transverse magnetization decays with a time
+        constant called $T_2$ that is usually much smaller than $T_1$. $T_2$ relaxation is because
+        of different magnetic fields experienced by the individual spins leading to a dephasing of
+        the signal.
+        \begin{figure}{h}
+            \todo{T1/T2 figure}
+        \end{figure}
+        \subsection{Field Gradients}
+        For different purposes it is beneficial to not only have the homogeneous $B_0$ field, but
+        also field gradients. Generally, these are additional z-fields that change linearly with one
+        of the spatial dimentions. Generation of these fields is usually achieved by thermal
+        conductors of specifically tailored geometries.
+        \subsection{2D-NMR}
+        
+    \section{Nuclei and Spins}
+    The postulation of an electron spin in 1926 \ref{} and later in 1928 of a proton spin \ref{} opened
+    up new areas of research.\todo{more history}
+    Individual spins can be described by their angular momentum operators $\hat{I}$,
+    $\hat{I}_y$ and $\hat{I}_z$ that return the eigenvalue of the state in its respective
+    direction.
+    \begin{equation}
+        \hat I_z \ket{I, S} = S \ket{I,S}
+    \end{equation}
+    Considering a spin-1/2 particle in a magnetic field along the z-axis (e.g. the proton as a prominent particle in NMR), these
+    eigenstates are
+    \begin{equation}
+    \ket\alpha = \begin{pmatrix}1\\0\end{pmatrix} \hspace{2 cm} \ket\beta =
+    \begin{pmatrix}0\\1\end{pmatrix}
+    \end{equation}
+    with the eigenvalues of $\pm 1/2$.
+    Generally, every spin-1/2 particle can be in any superposition of those two eigenstates:
+    \begin{equation}
+        \ket\psi = c_\alpha \ket\alpha + c_\beta \ket \beta = \begin{pmatrix} c_\alpha \\
+        c_\beta\end{pmatrix}
+    \end{equation}
+    Th;lkjsdfljk:
+    thtlth:wqa
+    :ese superposition states evolve under external conditions until a eigenstate of the particle
+    is reached.
+    Generally, a sample does not consist of one, but of many nuclei and thus many spins need to be
+    described to describe the system. To do so, usually the density matrix formalism is introduced.
+    It onsiders an ensembe of spins that do not interact with each other. In this case, the
+    expectation value of an operator for a single spin $\braket{\hat Q}$ is given by
+    \begin{equation}
+    \bra\psi\hat Q\ket\psi = \left( c_\alpha^*, c_\beta^*\right)
+    \begin{pmatrix}
+        Q_{\alpha\alpha} Q_{\alpha\beta}\\
+        Q_{\beta\alpha} Q_{\beta\beta}
+    \end{pmatrix}
+    \begin{pmatrix}
+        c_\alpha\\
+        c_\beta
+    \end{pmatrix}
+    \end{equation}
+    It can be shown that this is equal to the trace of the density operator
+    $\ket\psi\bra\psi$multiplied with said operator
+    \begin{equation}
+        \braket{\hat Q} = \Tr \left\{\ket\psi\bra\psi\hat Q\right\}
+    \end{equation}
+    For multiple spins, it follows that the observable becomes the sum of their individual
+    observables:
+    \begin{equation}
+        \braket{\hat Q_{all}}= \bra{\psi_1}\hat Q\ket{\psi_1} + \bra{\psi_2}\hat Q\ket{\psi_2} + \hdots =
+        \Tr{\left\{\left(\ket{\psi_1}\bra{\psi_1} + \bra{\psi_2}\ket{\psi_2}+ \hdots \right) \hat Q\right\}}
+    \end{equation}
+    This means that the system of spins can be described by the sum of the density operators called
+    the density matrix
+    \begin{equation}
+        \hat\rho = \overline{\ket\psi\bra\psi}.
+    \end{equation}
+    For a spin-1/2 ensemble, the density matrix in thermal equilibrium is
+    \begin{equation}
+        \hat \rho = \begin{pmatrix} \frac{1}{2}+\frac{1}{4}\mathbb{B}& 0\\ 0&
+        \frac{1}{2}-\frac{1}{4}\mathbb{B}\end{pmatrix} = \frac {1}{2} \hat1 + \frac{1}{2} \mathbb{B}
+        \hat I_z
+    \end{equation}
+    with $\mathbb{B} = \frac{\hbar\gamma B_0}{k_b T}$. That means that in thermal equilibrium, the
+    non-diagonal elements are zero, i.e. the socalled coherences (off-diagonal elements) are all
+    equally populated while there is a slight overpopulation of one of the two states. Through deflection from that
+    equilibrium, coherences are populated as described in the following section.
+        \subsection{Radiofrequency pulses}
+        Using the density matrix formalism, radiofrequency pulses described by rotational operators can be
+        applied to the whole ensemble. A pulse $\hat R_\phi(\beta)$ of phase $\phi$ (corresponding
+        to the axis around which magnetization is rotated) and angle $\beta$ where
+        $\beta=\omega_{nut} \cdot \tau_p$ exerting on a state $\ket\psi$ is described by 
+        \begin{equation}
+            \ket{\psi_\tau}= \hat R_\phi(\beta)\ket\psi
+        \end{equation}
+        Calculating the density matrix now leads to
+        \begin{equation}
+            \hat {\rho_\tau} = \overline{\ket{\psi_\tau}\bra{\psi_\tau}} = \overline{\hat
+                R_{\phi}(\beta)\ket\psi\bra\psi \hat R_\phi(-\beta)}
+        \end{equation}
+        where the overbar describes the averaging over all spins in the ensemble.
+        Finally, as we are considering the same flip angle for every single spin in the ensemble,
+        the formula can be reduced to
+        \begin{equation}
+            \hat\rho_\tau = \hat R_\phi(\beta) \hat \rho \hat R_\phi(-\beta)
+        \end{equation}
+        meaning a rotation of the magnetization corresponds to a rotation of the desity matrix.
+        If we consider a $\SI{90}{\degree}$ pulse around the x axis on the previously described
+        equilibrium for a spin-1/2 ensemble it follows:
+        \begin{equation}
+            \begin{split}
+                \hat\rho_\tau = \hat R_x(\pi/2)\hat\rho\hat R_x(-\pi/2) &= \frac{1}{2} \hat 1 +
+                \frac{1}{2} \mathbb{B}\hat R_x(\pi/2) \hat I_z \hat R_x(-\pi/2)\\
+                &=
+                \begin{pmatrix}
+                    \frac{1}{2} & -\frac{1}{4i}\mathbb{B}\\
+                    \frac{1}{4i}\mathbb{B}\ & \frac{1}{2}
+                \end{pmatrix}
+            \end{split}
+        \end{equation}
+        It can be equally shown that a $\SI{180}{\degree}$ pulse inverts the populations of the
+        diagonal elements while the coherences are untouched.
+        If the system is not in thermal equilibrium, the states will evolve and generally relax back
+        into the original equilibrium state. If one neglects said relaxation at first, the evolution
+        can be described by \todo{ref formula rotationg frame}
+        \begin{equation}
+            \begin{split}
+                \ket\psi_\upsilon &= \hat R_z(\Omega^0\upsilon)\ket\psi_\tau ~ \mathrm{and} \\
+                \hat\rho_\upsilon &= \hat R_z(\Omega^0\upsilon)\hat\rho_\tau\hat
+                R_z(-\Omega^0\upsilon)
+            \end{split}
+        \end{equation}
+        which shows that only a time dependent phase $\exp{i\Omega^0 \upsilon}$ is added to the coherences and the populations
+        stay constant. This confirms the macroscopic observation that the ensemble of spins behaves like a rotating vector of
+        magnetization in the x-y-plane (w\textbackslash o relaxation).
+        If relaxation is added to the scheme, we can differentiate between relaxation of the
+        coherences ($T_2$ relaxation) and that of the states ($T_1$ relaxation). The former affects
+        the non diagonal elements only which will deacy to zero while the latter brings the populations of the states back to
+        thermal equilibrium. That can be expressed by
+        \begin{equation}
+            \rho_{ij, \upsilon} = \rho_{ij, \tau} \exp{(\pm
+                i\Omega^0-\lambda)\upsilon},~\mathrm{i,j~=~
+            1,2(+)~or~2,1(-)}
+        \end{equation}
+        for the non diagonal elements and
+        \begin{equation}
+            \rho_{ii,\upsilon} = (\rho_{ii,\tau} - \rho_{ii}^{eq})\exp(-\tau/T_1)+\rho_{ii}^{eq}
+        \end{equation}
 
-	\section{MRI}
-		A huge addition to the world of NMR was the invention of spatially resolved sample maps,
-		i.e. imaging. It was made possible through the clever use of gradients and largely resembles
-		2D-NMR sequences.
-		\subsection{MRI in Medicine}
-			As a non-invasive, non-ionizing imaging method, MRI has become important in many parts
-			of the medical field for example neurology, oncology, cardiology or urology. While the
-			low polarization of nuclei make its sesitivity inferior to other imaging methods such as
-			computed tomography, the nature of the signal generation allow for contrasts that differ
-			vastly from other established mehtods. This uniqueness allows for superior imaging power
-			in many cases despite the smaller sensitvity.
-		\subsection{Slice selection}
-			The first step in most imaging methods is to excite a slice of the sample to perform the
-			first spatial selection. To do so, a gradient - mostly in z direction - is aplied to the
-			sample. The following pulses which usually have a limited frequency bandwidth will
-			affect only the nuclei within a slice of the thickness defined by the gradient strength
-			usually given in $\SI{}{\milli\tesla\per\meter}$ and the pulse's bandwith. It has to be
-			kept in mind that this does not necessarily guarantee that nuclei outside the prepared
-			slice do not contribute to the signal. Movement of parts of the sample such as flow or
-			diffusion can lead to signal artifacts. Furthermore, the following pulses in the
-			sequence have to be carefully designed to not generate FIDs or echos of their own that
-			are not related to the originally selected slice.
-		\subsection{Frequency encoding}
-			During readout, a field gradient can be turned on to encode the second spatial
-			dimension. Considering a positive x-gradient, the nuclei at higher x values will then
-			generate a higher frequency than the ones at lower x values and thus show up further
-			right in a 1D-FT.
-		\subsection{Phase encoding}
-			Generating an encoding for the third spatial dimension is not quite as straightforward.
-			To do so, a third gradient in a third dimension perpendicular to the two others is necessary.
-			Due to redundancy issues, that gradient cannot simply be turned on during readout though
-			but is used to change the phase of the signal the nuclei generate depending on the
-			position in the sample. That means that the gradient strength needs to be varied to
-			satisfy the sampling conditions for the frequencies generated, i.e. the freuquency
-			encoding scheme is run multiple times with a different phase encoding gradient strengths running
-			before it. That way, if the fourier transformed data for each phase encoding step is
-			sorted by gradient strength and fourier transformed in the second dimension, the
-			frequency generated by the more or less quickly changing phase will define the position
-			in y direction.
-	\section{Hyperpolarization}
-		The main limitation of NMR and MRI is the low thermal polarization.
-		For each energy state $E_i$ the Boltzmann distribution dictates
-		\begin{equation}
-			N_i = \exp{\frac{E_i}{k_B T}}
-		\end{equation}
-		For energy differences between two states that are small compared to
-		the thermal Energy, the polarization can be expressed as follows:
-		\begin{equation}
-			P = {N_+-N_-}{N} = \tanh\left(\frac{\hbar \gamma B}{2 k T }\right)
-		\end{equation}
-		\subsection{Dynamic nuclear polarization}
-			As the gyromagnetic ratio of electrons is much higher than that of any nucleus (factor
-			of $10^{3}$ compared to protons), dynamic nuclear polarization (DNP) uses electrons at
-			low temperatures and high fields to generate large initial polarization. The
-			polarization is then transferred to specific nuclei by microwave irradiation that
-			induces transitions in the spin system of nucleus and electron that is generated by the
-			addition of free radicals. The low temperatures lead to a freezing of the sample and
-			microwaves are applied in that frozen state. For administration, the frozen sample then
-			needs to be quickly melted and transferred, usually in controlled magnetic environments
-			to prevent fast relaxation. The samples can show high polarizations close to unity but
-			are usually limited by decay during the relatively long delivery times. Efforts building
-			faster transport mechanisms have greatly reduced these times but they stay in the range
-			of tens of seconds.
-		\subsection{Hyperpolarization of Noble Gases}
-		\subsection{Brute Force Hyperpolarization}
-		\subsection{Parahydrogen induced Hyperpolarization}
+    \section{MRI}
+        A huge addition to the world of NMR was the invention of spatially resolved sample maps,
+        i.e. imaging. It was made possible through the clever use of gradients and largely resembles
+        2D-NMR sequences.
+        \subsection{MRI in Medicine}
+            As a non-invasive, non-ionizing imaging method, MRI has become important in many parts
+            of the medical field for example neurology, oncology, cardiology or urology. While the
+            low polarization of nuclei make its sesitivity inferior to other imaging methods such as
+            computed tomography, the nature of the signal generation allow for contrasts that differ
+            vastly from other established mehtods. This uniqueness allows for superior imaging power
+            in many cases despite the smaller sensitvity.
+        \subsection{Slice selection}
+            The first step in most imaging methods is to excite a slice of the sample to perform the
+            first spatial selection. To do so, a gradient - mostly in z direction - is aplied to the
+            sample. The following pulses which usually have a limited frequency bandwidth will
+            affect only the nuclei within a slice of the thickness defined by the gradient strength
+            usually given in $\SI{}{\milli\tesla\per\meter}$ and the pulse's bandwith. It has to be
+            kept in mind that this does not necessarily guarantee that nuclei outside the prepared
+            slice do not contribute to the signal. Movement of parts of the sample such as flow or
+            diffusion can lead to signal artifacts. Furthermore, the following pulses in the
+            sequence have to be carefully designed to not generate FIDs or echos of their own that
+            are not related to the originally selected slice.
+        \subsection{Frequency encoding}
+            During readout, a field gradient can be turned on to encode the second spatial
+            dimension. Considering a positive x-gradient, the nuclei at higher x values will then
+            generate a higher frequency than the ones at lower x values and thus show up further
+            right in a 1D-FT.
+        \subsection{Phase encoding}
+            Generating an encoding for the third spatial dimension is not quite as straightforward.  To do so, a third gradient in a third dimension perpendicular to the two others is necessary.  Due to the redundancy that would occur if both x- and y-gradients were switched on at once, that gradient cannot simply be turned on during readout though.  It is instead used to change the phase of the signal the nuclei generate depending on the position in the sample. That means that the gradient strength needs to be varied to satisfy the sampling conditions for the frequencies generated, i.e. the freuquency encoding scheme is run multiple times with different phase encoding gradient field strengths set upto be running before it. That way, if the fourier transformed data for each phase encoding step, i.e. each frequency encoded line, is sorted by gradient strength and fourier transformed in the second dimension, the frequency generated by the changing phase will indicate the position in y direction.
+    \section{Hyperpolarization}
+        The main limitation of NMR and MRI is the low thermal polarization.  For each energy state $E_i$ the Boltzmann distribution dictates
+        \begin{equation}
+            N_i = \exp{\frac{E_i}{k_B T}}
+        \end{equation}
+        For energy differences between two states that are small compared to the thermal Energy, the polarization can be expressed as follows:
+        \begin{equation}
+            P = {N_+-N_-}{N} = \tanh\left(\frac{\hbar \gamma B}{2 k T }\right)
+            \label{equation:theory:polarization}
+        \end{equation}
+        \subsection{Dynamic nuclear polarization}
+            As the gyromagnetic ratio of electrons is much higher than that of any nucleus (factor of $10^{3}$ compared to protons), dynamic nuclear polarization (DNP) uses electrons at low temperatures and high fields to generate large initial polarization. The polarization is then transferred to specific nuclei by microwave irradiation that induces transitions in the spin system of nucleus and electron that is generated by the addition of free radicals. The low temperatures lead to a freezing of the sample and microwaves are applied in that frozen state. For administration, the frozen sample then needs to be quickly melted and transferred, usually in controlled magnetic environments to prevent fast relaxation. The samples can show high polarizations close to unity but are usually limited by decay during the relatively long delivery times. Efforts building faster transport mechanisms have greatly reduced these times but they stay in the range of tens of seconds.
+        \subsection{Hyperpolarization of Noble Gases}
+            Noble gases such as 3He or 129Xe can be hyperpolarized by optical pumping. To do so, usually lasers are focused onto an optical cell through which the gas flows. Hyperpolarized gases are primarily used in lung imaging, but other uses e.g. in liquid state NMR or MRI are not precluded.
+            The hyperpolarization is induced via the polarization of electron spins. An alkali metal, often Rubidium, serves as a receptor for the optical pumping and subsequently hyperpolarizes the nuclei of the noble gas by hyper fine interactions.
+        \subsection{Brute Force Hyperpolarization}
+            As equation \ref{equation:theory:polarization} indicates, there are two main factors influencing polarizatoin: Magnetic field and temperature. It is not an option to freeze the objects to be measured of course, as strong polarization effects occur only close to absolute zero temperatures at the magnetic fields we can currently generate effectively. A viable alternative is to hyperpolarize a frozen tracer at high fields, thawing it and administering it to the subject. Here, in contrast to DNP, no free radicals are necessary to generate the HP. This makes a faster and mor lossles transfer of the sample to the subject possible.
+        \subsection{Parahydrogen induced Hyperpolarization}
+            Parahydrogen is the singlet state of the hydrogen molecule, i.e. the antisymmetric mixed up/down state. Hydrogen molecules occur in one of the four states
+            \begin{equation}
+            \begin{aligned}
+                T_+ &= |\uparrow\uparrow\rangle\\
+                T_0 &= \frac{1}{\sqrt{2}}\left(|\uparrow\downarrow\rangle + |\downarrow\uparrow\rangle\right)\\
+                T_- &= |\downarrow\downarrow\rangle\\
+                S &= \frac{1}{\sqrt{2}}\left(|\uparrow\downarrow\rangle - |\downarrow\uparrow\rangle\right)
+            \end{aligned}
+        \end{equation}
+        where T indicates the triplet state with overall spin I = 1 and S the singlet state with I = 0. At room temperature, the four states are almost equally occupied as thermal Energy is large compared to rotational energies of the molecule\todo{better wording}. The para-state can be enriched by lowering the thermal energy, i.e. by cooling the hydrogen. As the conversion is a forbidden quantum dynamically, a catalyst changing the magnetic environment needs to be added or elste the conversion would be very slow. Ironoxide is a cheap and easily available molecule that fulfils the catalytic requirements.
+        \subsubsection{Pasadena / Altadena}
+        \subsubsection{Sabre}
