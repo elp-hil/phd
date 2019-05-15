@@ -19,7 +19,8 @@
             \end{equation}
             where $E_Z$ is the zeeman energy difference to the non-split state and m is the magnetic quantum number. The negative sign implies that a antiparallel orientation with the field for particle with positive $\gamma$ is energetically favorable. For example, $^1$H and $^{15}$N, the two main nuclei considered in this work, show energy splittings into two levels ($2\cdot\tfrac{1}{2}+1$), but of about a factor of 10 stronger for $^1$H due to the by that factor larger gyromagnetic ratio. (see figure \ref{}).
             \begin{figure}
-                \includegraphics[width=0.99\textwidth]{/figures/theory/zeemanPlot.pdf}
+                \centering
+                \includegraphics[width=0.9\textwidth]{/figures/theory/zeemanPlot.pdf}
                 \caption[Zeeman energy splitting]{The Zeeman energy splittings of three nuclei over magnetic field. Note the difference in slopes for the spin $\tfrac{1}{2}$ nuclei 1H and 15N caused by the different gyromagnetic ratios. Arbitraily, 17O, a spin $\tfrac{5}{2}$ nucleus, was plotted to visualize higher order splittings with $2 \cdot\tfrac{5}{2}+1 = 6$ energy levels. }
             \end{figure}
             Individual spins can be described by their angular momentum operators $\hat{I}$,
@@ -189,20 +190,20 @@
             \end{equation}
             where $\delta$ is the average over all angles of the chemicalshift tensors z component $\bar{\delta = \vec{ \delta}_{zz}(\Theta)}$. \todo{deltas all thin despite vec}. 
         \subsubsection{Spin-Spin- and J-couplings}
-        The direct spin-spin couplings between different nuclei show to average out in the hamiltonian, but couplings are still to be seen in the recorded spectra. These are indirect couplings transduced through the electrons that are called J-couplings. The hamiltonian is formed with the coupling tensor, $J_{nm}$ and the corresponding angular momentum Operators
-        \begin{equation}
-        \mathcal{H}^J_{nm} = \hat{\vec I}_n \vec J_{nm} \hat{\vec I}_m
-        \end{equation}
-        As for the chemical shift before, this can be simplified for isotropic liquids where the tensor can be reduced to a scalar coupling constant. This means that the J coupling is independent of the magnetic field applied, i.e. the line splittings in the spectra are always of the same size. In the case of homonuclear fluids, two cases must be differentiated: coupling between nuclei of the same kind (homonuclear coupling) and that of nuclei of different kinds (heteronuclear coupling).
-        \begin{equation}
-            H_{nm} = 2\pi J_{nm} \vec{\hat{I_n}} \vec{\hat{I_m}} (heteronuclear case)
-        \end{equation}
-        \begin{equation}
-            H_{nm} = 2\pi J_{nm} \vec{\hat{I_n}} \vec{\hat{I_m}} (heteronuclear case)
-        \end{equation}
-        \todo{correct boldness, weird latex bahavior}
-        This term can be further simplified if the coupling is waek compared to the energy difference of the states, i.e. $\Delta E >> J_{nm}$, the 
-        
+            The direct spin-spin couplings between different nuclei show to average out in the hamiltonian, but couplings are still to be seen in the recorded spectra. These are indirect couplings transduced through the electrons that are called J-couplings. The hamiltonian is formed with the coupling tensor, $J_{nm}$ and the corresponding angular momentum Operators
+            \begin{equation}
+                \mathcal{H}^J_{nm} = \hat{\vec I}_n \vec J_{nm} \hat{\vec I}_m
+            \end{equation}
+            As for the chemical shift before, this can be simplified for isotropic liquids where the tensor can be reduced to a scalar coupling constant. This means that the J coupling is independent of the magnetic field applied, i.e. the line splittings in the spectra are always of the same size. In the case of homonuclear fluids, two cases must be differentiated: coupling between nuclei of the same kind (homonuclear coupling) and that of nuclei of different kinds (heteronuclear coupling).
+            \begin{equation}
+                H_{nm} = 2\pi J_{nm} \vec{\hat{I_n}} \vec{\hat{I_m}} (heteronuclear case)
+            \end{equation}
+            \begin{equation}
+                H_{nm} = 2\pi J_{nm} \vec{\hat{I_n}} \vec{\hat{I_m}} (heteronuclear case)
+            \end{equation}
+            \todo{correct boldness, weird latex bahavior}
+            This term can be further simplified if the coupling is waek compared to the energy difference of the states, i.e. $\Delta E >> J_{nm}$, the 
+            
         \subsection{Level anti crossings}
         The basis of the later used Sabre method lies in a special form of energy level distribution that occurs when coupling of two or more nuclei occurs, the so called level anti crossings (LACs) or avoided crossings. In the uncoupled case, the energies of states energies can cross at a certain point. If the nuclei are coupled though, there is a certain energy difference between the nuclei's states that cannot occur\todo{change wording}. An avoided crossing forms as shown in figure \ref{figure:theory:LAC}. If the coupling is small compared to the states energies, the hamiltonian is 
         \begin{equation}
@@ -221,7 +222,8 @@
             \ket{-} = -\sin{\frac{\theta}{2}}\exp{i\phi}\ket{0} + \sin{\frac{\theta}{2}}\exp{i\phi}\ket{1}
         \end{equation*}
             \begin{figure}
-                \includegraphics[width=0.99 \textwidth]{/figures/theory/LACs.pdf}
+                \centering
+                \includegraphics[width=0.9 \textwidth]{/figures/theory/LACs.pdf}
                 \caption[Leval anti crossings]{A generic example of level anti crossings. In red, the uncoupled states can be seen while in black, the energy states including the coupling are shown.}
                 \label{figure:theory:LAC}
             \end{figure}
@@ -274,7 +276,8 @@
         \label{chapter:theory:relaxation}
         After being deflected from its thermal equilibrium, the magnetization tends to return to that equilibrium state. That process is called $T_1$ relaxation or spin-lattice relaxation and is an exponential decay (figure \ref{theory:figure:relaxation}, middle). In addition, the transverse magnetization decays with a time constant called $T_2$ (figure \ref{theory:figure:relaxation}, left) that is usually much smaller than $T_1$. $T_2$ relaxation occurs because of different magnetic fields experienced by the individual spins leading to a dephasing of the signal. That can be due to direct or indirect interaction between the spins ($T_2$) and also due to magnetic field inhomogenieties of different kinds. Both effects are combined are described by an effective relaxation constant $T_2^*$.
             \begin{figure}
-                \includegraphics[width=0.99\textwidth]{/figures/theory/relaxation.pdf}
+                \centering
+                \includegraphics[width=0.9\textwidth]{/figures/theory/relaxation.pdf}
                 \caption[Relaxation in NMR]{Exemplary plots of the T1 and T2 relaxation after a \SI{90}{\degree} FA shown via the magnetization and its temporal development. On te left, the magnetization in the xy-plane is shown with six arrows indicating equal timesteps. In the center, equal timesteps for the z-magnetization are shown. On the right, both cases are combined to show the overall magnetization. Note that generally, T1 is larger than T2 (here a factor of 40 difference). There are only few special cases where this won't hold.}
                 \label{theory:figure:relaxation}
             \end{figure}
@@ -330,14 +333,14 @@
             \end{equation}
             That means that the gradient strength needs to be varied to satisfy the sampling conditions for the frequencies generated, i.e. the freuquency encoding scheme is run multiple times with different phase encoding gradient field strengths set up to be running before it. That way, if the fourier transformed data for each phase encoding step, i.e. each frequency encoded line, is sorted by gradient strength and fourier transformed in the second dimension, the frequency generated by the changing phase will indicate the position in y direction. That means that each phase encoding step generates a k-space line that is shifted in the $k_y$ direction.
             \begin{figure}
-                %\includegraphics[width=0.99\textwidth]{/figures/theory/kSpaceEncoding.pdf}
+                %\includegraphics[width=0.9\textwidth]{/figures/theory/kSpaceEncoding.pdf}
+                \centering
                 \caption[k-space Graph]{The usual display of the encoding steps in k-space in a spin-echo sequence.}
             \end{figure}
-
         \subsection{Adiabatic field switching}
             To generate more signal while keeping some advantages of a low field like higher absolute homogeniety, prepolarization can be used. A field that is larger than the field used in readout is switched on for a certain time before readout. The timing is largely influenced by T1 as the relaxation constant defines how long it takes for the sample to be in its new thermal equilibrium. The switching of the field can be performed quickly or slowly. \ref{defineAdiabatic}
     \section{Hyperpolarization}
-        The main limitation of NMR and MRI is the low thermal polarization.  For each energy state $E_i$ the Boltzmann distribution dictates
+    The main limitation of NMR and MRI is the low thermal polarization at room temperature and the currently generatable magnetic fields. For each energy state $E_i$ the Boltzmann distribution dictates
         \begin{equation}
             N_i = \exp{\frac{E_i}{k_B T}}
         \end{equation}
@@ -348,7 +351,8 @@
         \end{equation}
         This means, that even at the relatively high fieed strengths now generated by the spectrometers and MR imagers, only a small fraction of the spins effectively contribute to the overall signal. Figure \ref{} shows this by 
         \begin{figure}
-            \includegraphics[width=0.99\textwidth]{/figures/theory/hyperpolarizationScheme.pdf}
+            \centering
+            \includegraphics[width=0.9\textwidth]{/figures/theory/hyperpolarizationScheme.pdf}
             \caption[Hyperpolarization scheme]{Hyperpolarization can provide the means to drop all, or at least a lot more than in the thermally polarized case, of the spins to the lower energy level. That way, the overall magnetization and thus the signal observed is a lot higher than in ther thermally polarized case. The graph shows the case of perfect hyperpolarization, that of course does not exit in reality. At the fields currently generatable, only about one in 100000 spins effectively contributes to the signal.}
         \end{figure}
         \subsection{Dynamic nuclear polarization}
@@ -376,7 +380,8 @@
             The conversion of oH2 to pH2 and back is forbidden quantum mechanically due to the change in angular momentum that would change the symmetry of the wavefunction. Therefore, conversions are only possible if different molecules collide and the nuclei interact or the rotational magnetic momentum interacts with one of the nuclei, which is both improbable and thus slow. To be able to generate pH2 in fast and in large quantities, additional interaction needs to be introduced that catalyzes the conversion. Both charcoal catalysts and ironoxide have been proposed \cite{}. The catalyst creates field gradients on the scale of the hydrogen molecule which enables spin mixing of ortho and para states\cite{spinCatalysisOfOrthoParaHydrogenConversion} and thus a much faster conversion. This means that at liquid helium temperatures which were used in this work, parahydrogen can be enriched to almost \SI{100}{\%}, a liquid nitrogen generator would enrich it to about \SI{65}{\%}.
             As parahydrogen itself is a spin 0 particle, it is MR-invisible. Its ordered state can be used though to polarize other molecules, often referred to as substrate molecules.
             \begin{figure}
-                \includegraphics[width=0.99\textwidth]{/figures/theory/parahydrogenFraction.pdf}
+                \centering
+                \includegraphics[width=0.9\textwidth]{/figures/theory/parahydrogenFraction.pdf}
                 \caption[Parahydrogen fraction]{The equilibrium poplulation of the para hydrogen state. The dashed line shows the high temperature limit of 3:1. The green line indicates room temperature, where the limit is almost reached. The red line indicates the temperature at which parahydrogen was generated in this work, \SI{21}{\kelvin}.}
                 \label{figure:theory:ph2Fraction}
             \end{figure}
@@ -385,7 +390,8 @@
         \subsubsection{Sabre}
         In Sabre, the molecule to be hyperpolarized is not hydrogenated, but is in contact with the parahydrogen via a catalyst for a certain contact time. The transfer of spin order can happen spontaneously at the right fields where socalled level-anti-crossings occur. In addition hyperpolarized susbtrate can also be generated at other fields using RF-irradiation. The system can be described by time evolution in bound and unbound state where the bound state implies non zero couplings between ph2 and at least some of the substrate spins.
         \begin{figure}
-            \includegraphics[width=0.99\textwidth]{/figures/theory/sabreScheme.pdf}
+            \centering
+            \includegraphics[width=0.9\textwidth]{/figures/theory/sabreScheme.pdf}
             \caption[Sabre scheme]{The mechanism used in Sabre using nicotinamide as an exemplary molecule. On the left, parahydrogen is converted to its ortho state, thus spin order is lost. On the right, nicotinamide is hyperpolarized using that order.}
         \end{figure}
         \section{Hardware}
@@ -455,6 +461,7 @@
                 \end{equation}
             where the arrangement of the components defines whether it is a low or a high pass filter.
             \begin{figure}
-                %\includegraphics[width=0.99\textwidth]{/figures/theory/frequencyFilters}
+                \centering
+                %\includegraphics[width=0.9\textwidth]{/figures/theory/frequencyFilters}
                 \caption[Frequency filters]{Attenuation over frequency for the different types of filters mentioned in the text. cutoff frequencies are shown for each filter. Note that even these low order filters do not have \SI{100}{\percent} transmission in the transmissive frequency range.}
             \end{figure}
