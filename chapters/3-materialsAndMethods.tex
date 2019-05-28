@@ -41,14 +41,13 @@
         \subsubsection{Helmholtz coil}
             As in the solenoid case, before building the dual helmholtz array, simulations were performed.  As space was limited inside the Mu metal shield the coil was also supposed to be used in, the coils' diameters were predetermined and only the coils distances and currents were optimized (see \ref{simulations:B0} for details). As the general setup, a PVC tube onto which four coil holders were mounted was chosen. Using the simulation results, a layout for the coil holders was designed. To keep unwanted fields due to connecting wires to a minimum, these wires were kept as short as possible. Holders were lathed and then processed further by hand. Winding of the wire was also done by hand. To keep the wire form sliding into the gouges of the previous layer, PVC foil was lasercut to fit the dimensions of the coil holders. Due to the limited size of the foil used (Din A4) and the relatively large diameter of the coils, three stripes of foil were connected with one of the three parts employing a feedthrough for the wire transversing from one layer to the next. 
         \subsection{Radiofrequency excitation}
-            To irradiate samples with radiofrequency pulses, a rounded saddle coil of \SI{200}{\mm} length and \SI{100}{\mm} width was used. The manufacturing process consisted of winding the coil inside a wire holder at first. The holder was a rectangular, two parted slitted aluminum plate. The wire was wound into the slit and formed a stacked design. Then the wire layers were glued together to construct a solid connection between them.  Finally, the assembly is bent into shape using a smaller diameter PVC tube that after relaxation, the radius compares to that of the larger PVC tube. The coil was operated untuned and unmatched as a broadband resonator. The pulse generation was performed using a National Instruments data acquisition crate (NI DAQ ) which's signal was amplyfied with an audio amplifier (Onkyo ).
+            To irradiate samples with radiofrequency pulses, a rounded saddle coil of \SI{200}{\mm} length and \SI{100}{\mm} width was used. The manufacturing process consisted of winding the coil inside a wire holder at first. The holder was a rectangular, two parted slitted aluminum plate. The wire was wound into the slit and formed a stacked design. Then the wire layers were glued together to construct a solid connection between them.  Finally, the assembly is bent into shape using a smaller diameter PVC tube so that, after relaxation, the radius compares to that of the larger PVC tube. The coil was operated untuned and unmatched as a broadband coil. The pulse generation was performed using a National Instruments data acquisition crate (NI DAQ ) which's signal was amplified with an audio amplifier (Onkyo ).
             The pulse was constructed using the hypercontrol software described later (\ref{}). Generally, block pulses were used but arbitrary pulseforms are possible with the card as long as the contained frequencies are below \SI{500}{\kilo\hertz} (Nyquist-Shannon). 
             \begin{figure}
                 \centering
                 \includegraphics[width=0.99\textwidth]{/figures/materialsMethods/lowFieldSpectrometer/amplifierResponse.pdf}
                 \caption[Amplifier response]{The response of the Onkyo audio amplifier at different frequencies as used in the low field spectrometer. Note the saturation at input voltages above 3 to 5 \si{\volt}. Also note that for higher frequencies, the cutoff output voltage is lower than that for lower frequencies, as the amplifier was designed for frequencies below \SI{150}{\kilo\hertz}. }
             \end{figure}
-
         \subsection{Receive coil}
         For signal reception, multiple coils of different resonance frequencies were built for use at different fields and for different purposes. The two most used coild in the low field spectrometer were a larger diameter coil used in field homogeniety testing and for 13C experiments and a coil wound around a syringe that also featured tubing for hydrogen in- and outlet in hyperpolarizatoin experiments. The diameter of the sirynge, and thus the coils diameter was \SI{3}{\cm}, the total volume was \SI{20}{\milli\liter}. It consisted of two layer of \SI{0.5}{\milli\meter} copper wire wound around the syringe in close packing. A \ref{how big} \SI{100}{\nano\farad} capacitor was soldered to the wire endings of the coil formed that way. 
         Receive surcuits were ususally kept simple and were tuned once and then kept at that frequency, so no adjustable capacitors were used. Also, no matchning was performed as it was very difficult to perform and improvements weren't observable. The dual resonant circuits consisted of a second resonant circuit in parallel to the first.
@@ -68,6 +67,8 @@
                 \mathrm{U}_{90} = (\frac{\pi}{2}-c)/b
             \end{equation}
             The \SI{180}{\degree} pulse was double that, accordingly.
+        \subsection{Inversion recovery}
+            When the magnetization is deflected from its thermal equilibrium, it relaxes back to that equilibrium as described before. A sequence to monitor that process is the inversion recovery sequence that uses a \SI{1808}{\degree} pulse to generate complete inversion followed by \SI{90}{\degree} pulses after a certain waiting time $t_{ir}$. Sampling multiple $t_{ir}$ yields the relaxation rate $T_1$ as the signal follows an exponential buildup.
         \subsection{Fitting tools}
             To evaluate the recorded data, often, the signal area was relevant. It was calculated using one of the two programs mentioned below. To eliminate the rf-pulse and its ringdown that was usually included in the recording, a scecific number of samples, usually in the range of 2000, was dropped from the beginning of the dataset. A preimplemented FFT algorithm was used to generate the spectral representation of the data.
             \subsubsection{Matlab tool}
@@ -107,11 +108,6 @@
         \subsection{Imaging sequence}
         The sequence used for imaging was a standard gradient echo sequence (\ref{}).A single slice was recorded in \SI{5}{\minute} \SI{20}{\second}. Resolution was 64 x 64 with a field of view of \SI{10}{\cm}x\SI{10}{\cm} which resulted in a (\SI{1.6}{\mm})$^2$. The echo time $\mathrm{T_E}$ was set to \SI{150}{\milli\second}. The two imaged tubes contained \SI{20}{\milli\liter} H2O and the sample solution respectively. The latter consisted of \SI{6.7}{\micro\mole} IrIMes and \SI{0.3}{\milli\mole} nicotinamide dissolved in \SI{5}{\milli\liter} $\mathrm{D_20}$. The tubes had a length of \SI{100}{\milli\meter} and an inner diameter of \SI{24}{\milli\meter}. The prepolarization coil was switched on for \SI{5}{\second} before each phase encoding step generating a prepolarization field of \SI{5}{\milli\tesla} during that time. 
         %\subsection{
-    \section{Bruker Low Field MRI}
-        \subsection{Gradient Coil Setup}
-        \subsection{Signal mixer}
-        \subsection{Receive coil}
-        \subsection{Paravision and Topspin software}
     \section{High field MRI}
         The most well known application of NMR is the high field MRI of human antomy with its widespread use in clinics around the world. Not as common, but equally important are preclinical scanners for research purposes. These preclinical scanner, primarily built for animal experiments, were used in most of the high field experiments shown in this work.  \subsection{MRI hardware}
             For the acquisition of spectra and images, hardware for different purposes is required:
@@ -204,14 +200,48 @@
             This cycle can be repaeted infinitly, limited of course by the fluid losses through bubbling and the flow towards ambient air and the overall stability of the catalyst in solution. 
             To perform these cycles in a reprducible manner, an automated system has been built controlling as much of the fluid handling system as possible.
         \subsection{Automatic shuttling system}
-        To handle the probes in a reprodicible manner and to produce reliable results, a system had to be designed that kept all timings and other parameters under control. A microcontroller was chosen that can be operated independent of other PCs or scanners and is quite flexible that way, i.e. can be adapted to perform different tasks.
-        The system connects to the fluid handling system and provides it with gas pressure for fluid transport as well as gas for hyperpolarization, pH2. The system is built mostly from copper tubing (except for the low pressure vent lines). Connections are made via brass ferrule fittings and metal seals. The choise of materials provided long term stability of the system. Te solenoid valves chosen were 2/2 way valves (A5241/1002/.023, GSR Ventiltechnik) of which only four were necessary for basic operation. They can handle pressures up to \SI{85}{\bar} and are operated by \SI{230}{\volt} AC. These valves were supposed to be automatically actuated.
-        To do so, a relay card (Relay ISO9002, Songle Relay) was connected to all the valves to handle switching with a microcontroller. The relay can handle currents up to \SI{7}{\ampere} at voltages up to \SI{240}{\volt} AC (or \SI{10}{\ampere}, \SI{28}{\volt} DC) for resistive loads. The automation concerned the solenoid valves (that were previously actuatet by flipping a switch), but also the automated handvalve and its servo motor. The microcontroller of choice was, as in many cases in this work, a teensy 3.6 (PJRC, 3.3v). All components were installed inside a box (relay box) that featured eight female IEC sockets enabling a safe operation of the \SI{230}{\volt} valve supply voltage.  Internally, eight digital outputs of the teensy were connected to the relaycard.  For galvanic isolation, a optocoupled design was chosen (see figure \ref{fig:materialsMethods:relaySchematics} for details).
-        \begin{wrapfigure}{r}{0.5\textwidth}
+            To handle the probes in a reprodicible manner and to produce reliable results, a system had to be designed that kept all timings and other parameters under control. A microcontroller was chosen that can be operated independent of other PCs or scanners and is quite flexible that way, i.e. can be adapted to perform different tasks.
+            \begin{wrapfigure}{rb}{0.6\textwidth}
                 \includegraphics{/figures/materialsMethods/15NSetup/optoRelayScheme.pdf}
                 \caption[Relay schematics]{One relay module of which 8 were mounted onto a single PCB board in this case. Note the galvanic isolation through the optocoupler in the top center of the schematics.}
                 \label{fig:materialsMethods:relaySchematics}
             \end{wrapfigure}
+            The system connects to the fluid handling system and provides it with gas pressure for fluid transport as well as gas for hyperpolarization, pH2. The system is built mostly from copper tubing (except for the low pressure vent lines). Connections are made via brass ferrule fittings and metal seals. The choise of materials provided long term stability of the system. Te solenoid valves chosen were 2/2 way valves (A5241/1002/.023, GSR Ventiltechnik) of which only four were necessary for basic operation. They can handle pressures up to \SI{85}{\bar} and are operated by \SI{230}{\volt} AC. These valves were supposed to be automatically actuated.
+            To do so, a relay card (Relay ISO9002, Songle Relay) was connected to all the valves to handle switching with a microcontroller. The relay can handle currents up to \SI{7}{\ampere} at voltages up to \SI{240}{\volt} AC (or \SI{10}{\ampere}, \SI{28}{\volt} DC) for resistive loads. The automation concerned the solenoid valves (that were previously actuatet by flipping a switch), but also the automated handvalve and its servo motor. The microcontroller of choice was, as in many cases in this work, a Teensy 3.6 (PJRC, 3.3 V). All connections made are shown in table \ref{table:matMeth:connectionsRelaisBox}. The code operating the microcontroller can be found in the appendix. All components were installed inside a box (relay box) that featured eight female IEC sockets enabling a safe operation of the \SI{230}{\volt} valve supply voltage.  Internally, eight digital outputs of the teensy were connected to the relaycard.  For galvanic isolation, a optocoupled design was chosen (see figure \ref{fig:materialsMethods:relaySchematics} for details). The workflow of the system is described in table \ref{table:matMeth:shuttlingCycle} where a activation step is followed by the hyperpolarization scheme that can be repeated over and over.
+            \begin{table}
+                \centering
+                \begin{tabular}{|c|c|c|}
+                    \hline
+                    function & teensy pin & connection\\
+                    \hline
+                    relay switching & 25 & valve 1\\
+                    of valves       & 26 & valve 2\\
+                                    & 27 & valve 3\\
+                                    & 28 & valve 4\\
+                                    & 29 & valve 5\\
+                                    & 30 & valve 6\\
+                                    & 31 & valve 7\\
+                                    & 32 & valve 8\\
+                    \hline
+                    buttons for     & 22 &button 1 \\
+                    execution of                & 21 &button 2 \\
+                    tasks                & 20 &button 3 \\
+                                    & 19 &button 4 \\
+                                    & 36 &button 5 \\
+                                    & 35 &button 6 \\
+                                    & 34 &button 7 \\
+                                    & 33 &button 8 \\
+                    \hline
+                                    & 23 & servo pins \\
+                    \hline
+                    & 39 (A20) & pressure sensor\\
+                    \hline
+                                    & 0 & trigger out\\
+                    \hline
+                \end{tabular}
+                \caption[Shuttling system pin layout]{The pins of the Teensy microcontroller used in the automatic shuttling setup. All pins are used as digital I/O pins (buttons/valves,servo,trigger) except for the pressure sensor that is a analog input.}
+                \label{table:matMeth:connectionsRelaisBox}
+            \end{table}
             The relay board and the teensy were supplied by a \SI{230}{\volt} AC powered \SI{5}{\volt} DC power supply.  To execute valve sequences, eight buttons were installed in the cover of the box.  Additionally, eight switches were added.  That way, depending on the program run on the teensy, switches and buttons can control either single valves directly or execute valve sequences for shuttling sample into and out of the scanner.
             \begin{table}
                 \centering
@@ -248,8 +278,9 @@
                     \end{scope}
                 \end{tikzpicture}
                 \caption[15N hyperpolarization steps]{A standard shuttling circuit as used in most of the experiments. The activation step is performed once per sample. The shuttling procedure can be repeated as often as necessary as long as the sample is still working and fluid losses are within bounds. The pressure release can optionally be performed up to a certain pressure value only.}
+                \label{table:matMeth:shuttlingCycle}
             \end{table}
-            In addition to the solenoid valve sockets, two low voltage parallel ports were installed.  They were used to control the servo motor of the automated hand valve and to read out the pressure sensor of the setup.  More sensors or controllers can easily be added as about $\frac{3}{4}$ of the parallel port pins are still blank.
+            In addition to the solenoid valve sockets, two low voltage parallel ports were installed.  They were used to control the servo motor of the automated hand valve and to read out the pressure sensor of the setup. More sensors or controllers can easily be added as about $\frac{3}{4}$ of the parallel port pins are still blank.
             a last outgoing connection was a coaxial jack for scanner triggering.  As described in the results section, hf-feedback from the relay made a two staged low-pass frequency filter necessary to prevent accidental scanner triggering.
     \section{Magnetic fluxgate field probe}\label{sec:methodsfluxgate}
         To measure fields very precisely, the most common hall sensor mehtod is not sensible enough. Therefore other principles such as Squids or fluxgates have to be used at very low fields. In our case, a three-axis fluxgate was purchased.
@@ -267,6 +298,34 @@
                 \caption[Fluxgate board layout]{The board layout of the fluxgate electronics as designed in eagle CAD. On the left, in red, the front with all the main components, i.e. ICs mounted to its surface. On the right, in blue, the back side with the supply voltage capacitors opposite of each IC. The top left three analog switches are for changing the channel, the tree next to them constitute the first amplification stage. Below is the second amplification stage that is finally read out by the teensy indicated on top.}
                 \label{fig:materialsMethods:fluxgateBoard}
             \end{figure}
+            \begin{table}
+                \centering
+                \begin{tabular}{|c|c|c|c|}
+                    \hline
+                    function & teensy pin & functional pin& PCB connection  \\
+                    \hline
+                    display&0 & sclk&\\
+                    &1 & mosi&\\
+                    &2 & dc&\\
+                    &3 & cs&\\
+                    &4 & rst&\\
+                    \hline
+                    channel switching&15 & & switch Z\\
+                    &16 & & switch Y\\
+                    &17 & & switch X\\
+                    \hline
+                    amplification stage 1&18 & & switch amp 1 3\\
+                    &19 & & switch amp 1 2\\
+                    &20 & & switch amp 1 1\\
+                    \hline
+                    amplification stage 2&21 & & switch amp 2 3\\
+                    &22 & & switch amp 2 2\\
+                    &23 & & switch amp 2 1\\
+                    &A21 & & analog out\\
+                    \hline
+                \end{tabular}
+                \caption[Fluxgate connections]{Fluxgate electronic connections as produced in the final PCB.}
+            \end{table}
         \subsection{Teensy programming}
         Programs were uploaded to the microcontroller via a standard micro usb cable using the arduino software environment. I recommend using external editors such as vim or emacs as the internal text editing functions of the arduino environment are quide rudimentary. The program runnning on the teensy microcontroller reads out the three channels of the fluxgate serially with a delay of \ref{}. This delay was added manually to prevent switching artifacts. Each individual channel receives an amplification that is automatically adapted on the fly. Magnetic fields are calculated from the measured values using bit depth and amplification. All sensors' individual readings, the corresponding magnetic fields and the calculated total magnetic field are displayed on a simple 160x128 pixel display (1.8" mini serial SPI, IC ST7735B) driven by the adafruit libraries (Adafruit\_ST7735.h). Note that, due to the different voltage levels of teensy and display, either a \SI{3.3}{\volt} to \SI{5}{\volt} bidirectional converter needs to be used or \SI{10}{\kilo\ohm} resistors need to be added to the data lines of the display. In addition to the final software version, several testing programs have been written: A "boardTest" program that switches the amplifications in a predefined manner to test analogue switches, a "testAmplifications" program that switches amplifications to test those and the operational amplifiers and a tftTest program to see whether the display is connected properly and displays the expected data due to initial problems with the tft libraries. All the testing programs use the serial I/O of the microcontroller to display data, a usb serial connection is necessary to use the full range of features.
         \subsection{Cabling and boxing}

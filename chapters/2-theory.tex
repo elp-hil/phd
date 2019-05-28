@@ -1,6 +1,6 @@
 % !TEX root = ../thesis_main.tex
 \chapter{Theory}\label{chap:theory}
-    This chapter will provide a basis for understanding the principles on which this work is based as well as the phenomena used in the different builds. It will cover many aspects, but of course, a deeper understanding can be gained by also consulting the references mentioned.
+This chapter will provide a basis for understanding the principles on which this work is based as well as the phenomena used in the different builds. It will cover many aspects, but of course, a deeper understanding can be gained by also consulting the references mentioned. At first, the quantum mechanical approach describing nuclei and spin systems will be given followed by a more 
     \section{Nuclei and Spins}
         \label{theory:section:nucleiSpins}
         The postulation of an electron spin in 1926 \ref{} and later, in 1928, of a proton spin \ref{} opened
@@ -23,27 +23,22 @@
                 \includegraphics[width=0.9\textwidth]{/figures/theory/zeemanPlot.pdf}
                 \caption[Zeeman energy splitting]{The Zeeman energy splittings of three nuclei over magnetic field. Note the difference in slopes for the spin $\tfrac{1}{2}$ nuclei 1H and 15N caused by the different gyromagnetic ratios. Arbitraily, 17O, a spin $\tfrac{5}{2}$ nucleus, was plotted to visualize higher order splittings with $2 \cdot\tfrac{5}{2}+1 = 6$ energy levels. }
             \end{figure}
-            Individual spins can be described by their angular momentum operators $\hat{I}$,
-            $\hat{I}_y$ and $\hat{I}_z$ that return the eigenvalue of the state in its respective
-            direction.
+            Individual spins can be described by their angular momentum operators $\hat{I}_x$, $\hat{I}_y$ and $\hat{I}_z$ that return the eigenvalue of the state in its respective direction.
             \begin{equation}
                 \hat I_z \ket{I, S} = S \ket{I,S}
             \end{equation}
-            Considering a spin-1/2 particle in a magnetic field along the z-axis (e.g. the proton as a prominent particle in NMR), these
-            eigenstates are
+            Considering a spin-1/2 particle in a magnetic field along the z-axis (e.g. the proton as a prominent particle in NMR), these eigenstates are
             \begin{equation}
             \ket\alpha = \begin{pmatrix}1\\0\end{pmatrix} \hspace{2 cm} \ket\beta =
             \begin{pmatrix}0\\1\end{pmatrix}
             \end{equation}
-            with the eigenvalues of $\pm 1/2$.
-            Generally, every spin-1/2 particle can be in any superposition of those two eigenstates:
+            with the eigenvalues of $\pm 1/2$.  Generally, every spin-1/2 particle can be in any superposition of those two eigenstates:
             \begin{equation}
                 \ket\psi = c_\alpha \ket\alpha + c_\beta \ket \beta = \begin{pmatrix} c_\alpha \\
                 c_\beta\end{pmatrix}
             \end{equation}
             These superposition states evolve under external conditions until a eigenstate of the particle
-            is reached.
-            Generally, a sample does not consist of one, but of many nuclei and thus many spins need to be
+            is reached. Generally, a sample does not consist of one, but of many nuclei and thus many spins need to be
             described to describe the system. To do so, usually the density matrix formalism is introduced.
             It onsiders an ensembe of spins that do not interact with each other. In this case, the
             expectation value of an operator for a single spin $\braket{\hat Q}$ is given by
@@ -59,10 +54,18 @@
             \end{pmatrix}
             \end{equation}
             It can be shown that this is equal to the trace of the density operator
-            $\ket\psi\bra\psi$multiplied with said operator
+            $\ket\psi\bra\psi$ multiplied with said operator
             \begin{equation}
                 \braket{\hat Q} = \Tr \left\{\ket\psi\bra\psi\hat Q\right\}
             \end{equation}
+            The states of the single spin can be described fully by the Pauli matrices $\vec{I} = \left\{ \hat{I_x}, \hat{I_y}, \hat{I_z}\right\}$
+            \begin{align*}
+                \vec I^2 \ket{j,m} &= j(j+1)\ket{j,m}\\
+                \hat{I}_z \ket{j,m} &= m\ket{j,m}\\
+                \hat{I}_\pm \ket{j,m} &= \sqrt{j(j+1)-m(m+1)}\ket{j,m\pm1}
+            \end{align*}
+            where $ \hat{I}_\pm = \hat{I}_x\pm i \hat{I}_y$.
+
             For multiple spins, it follows that the observable becomes the sum of their individual
             observables:
             \begin{equation}
@@ -145,7 +148,12 @@
             \begin{equation}
                 \rho_{ii,\upsilon} = (\rho_{ii,\tau} - \rho_{ii}^{eq})\exp(-\tau/T_1)+\rho_{ii}^{eq}
             \end{equation}
-        \subsection{Ensemble of spin ensembles}
+        \subsubsection{Signal detection}
+        The signal induced into the receive coil of a scanner (sec. \ref{} for details) is described by the expectation value of the $\hat{I}_+$ operator:
+        \begin{equation}
+            S(t) = \left< \hat{I}_+ \right> = tr\left(\sigma(t)\hat{I}_+\right)
+        \end{equation}
+        \subsection{Multiple spin ensembles}
             The description above was all related to a single kind of spin, but can - and has to - be extended to describe more complex systems containing multiple, interacting spins. To do so, the product operators, product states and product density matrices of all operators and states need to be calculated. This can be done by expanding the operators up to the necessary dimenion that is given by the N operators:
             \begin{equation*}
                 A^p_n = \mathbb{I}_0\otimes\mathbb{I}_1\cdots \mathbb{I}_{n-1} \otimes A_n \otimes \mathbb{I}_{n+1}\cdots \mathbb{I}_N
@@ -202,10 +210,59 @@
                 H_{nm} = 2\pi J_{nm} \vec{\hat{I_n}} \vec{\hat{I_m}} (heteronuclear case)
             \end{equation}
             \todo{correct boldness, weird latex bahavior}
-            This term can be further simplified if the coupling is waek compared to the energy difference of the states, i.e. $\Delta E >> J_{nm}$, the 
-            
+            The coupling constant $J_nm$ is calculated using the gyromagnetic ratios of the nuclei, in case of hydrogen usually 
+            \begin{equation}
+                J_{HH} = \gamma_H \gamma_H A
+            \end{equation}
+            is used to estimate the coupling, where $A$ is calculated through known electron densities and nucleus distances.
+            For other nuclei such as $^{15}N$ or $^{13}C$, the coupling that is calcuated for $^1H$ can be reused:
+            \begin{equation}
+            J_{HX} = J_{HH} \frac{\gamma_X}{\gamma_H} \mathrm{and} J_{XX} = J_{HH} \left(\frac{\gamma_X}{\gamma_H} \right)^2
+            \end{equation}
+
+
+            Knowing all relevantly contributing effects, the overall hamiltonian can be constructed. This can be done in the laboratory frame
+            \begin{align}
+                \mathcal{H} &= \sum_n\left(\mathcal{H}_n^z + \mathcal{H}_n^J/2\right)\\
+                            &= \sum_{n}\omega_N\hat{I}_{nz} + \sum_{n<m}2\pi J_{ij} \hat{\mathbf{I}}_n\hat{\mathbf{I}}_m
+            \end{align}
+            or the rotating frame where the center frequency $\omega_{ref}$ is zero, i.e. frequencies relative to the center frequency are considered:
+            \begin{equation}
+                \mathcal{H} = \sum_n{\Omega_n\hat{\mathbf{I}}_{nz}} + \sum_{n<m}{2\pi J_{nm}\hat{mathbf{I_n}}\hat{\mathbf{I_m}}}
+            \end{equation}
+            with $\Omega_i = \omega_i - \omega_{ref}$ in the rotating frame of reference.
+
+            If the coupling is weak compared to the energy difference of the states, i.e. $\Delta E >> J_{nm}$, the secular approximation can be considered valid. 
+        \subsubsection{Free time evolution}
+        States that are not eigenstates of the system will evolve over time. If relaxation and external influences suchas pulses or gradients are zero, the time evolution of the density matrix and thus the states is described by 
+        \begin{equation}
+            \frac{d}{dt} \sigma(t) = -i \left[\mathcal{H}, \sigma(t)\right]
+        \end{equation}
+        which, because of the time independent Hamiltonian is solved by
+        \begin{equation*}
+            U(t-t_0) = \exp(-i\mathcal{H}(t-t_0))
+        \end{equation*}
+        which means that
+        \begin{equation}
+            \sigma(t-t_0) = U(t-t_0) \sigma(t_0) U^\dagger(t-t_0)
+        \end{equation}
+        is the density matrix at time $t$ for a given $\sigma(t_0)$.
+        \subsubsection{Relaxation}
+        In addition to the time evolution of the states, the longitudinal magnetization will decay back to thermal equilibrium once deflected from it. Two types of intrinsic relaxation are differentiated:
+        Spin-lattice relaxation or T1 relaxation is the relaxation of the spin system and its magnetization towards thermal equilibrium magnetization. The main contribution to this relaxation comes from dipolar couplings, i.e. couplings between the nuclei in solution and microscopic field changes in magnitude and direction due to motion of the electron distributions around them. These slight changes interfere with the otherwise uniform precession of the spins around the magnetic field. That way, every spin takes different orientations towards the external field and will, on average, align (or anti-align, depending on $\gamma$) with the magnetic field with a slightly higher probability. The relaxation can be described via the evolution of its magnetization:
+        \begin{equation}
+            M_L(t) = M_0(1 - \exp{-t/T1})
+        \end{equation}
+        Spin-spin relaxation or transversal relaxation is a usually faster process that describes the dephasing of the single nuclei's spins by exposure to different magnetic field strengths. Macroscopically, it is a simple exponential signal decay described by its time constant $T_2$:
+        \begin{equation}
+            M_T(t) = M_0\exp{\frac{-t}{T_1}}
+        \end{equation}
         \subsection{Level anti crossings}
-        The basis of the later used Sabre method lies in a special form of energy level distribution that occurs when coupling of two or more nuclei occurs, the so called level anti crossings (LACs) or avoided crossings. In the uncoupled case, the energies of states energies can cross at a certain point. If the nuclei are coupled though, there is a certain energy difference between the nuclei's states that cannot occur\todo{change wording}. An avoided crossing forms as shown in figure \ref{figure:theory:LAC}. If the coupling is small compared to the states energies, the hamiltonian is 
+        The effect the later used Sabre method is based on lies in a special form of energy level progression that occurs when coupling of two or more nuclei occurs, the so called level anti crossings (LACs) or avoided crossings. In the uncoupled case, the energies of states energies can cross at a certain point, i.e. two states would have the same Energy at that point:
+        \begin{equation}
+            E_0 = E_1 \mathrm{~~\rightarrow~~} \bra{0}H\ket{0} = \bra{1}H\ket{1}
+        \end{equation}
+        If the nuclei are coupled though, there is a defined energy difference between the nuclei's states that cannot occur; the size correlates with the strength of the coupling.\todo{change wording}. consequentially, an avoided crossing forms as shown in figure \ref{figure:theory:LAC}. If the coupling is small compared to the states energies, the hamiltonian is 
         \begin{equation}
             H = \left [
                 \begin{array}{ll}
@@ -214,7 +271,12 @@
                 \end{array}
             \right ]
         \end{equation} 
-        which gives new Eigenstates of the form
+        which leads to new Eigenenergies
+        \begin{align*}
+            E_+ &= \frac{1}{2} \left[(E_0+ E_1) + \sqrt{(E_0-E_1)^2+4|W_{12}|^2}\right]\\
+            E_- &= \frac{1}{2} \left[(E_0+ E_1) - \sqrt{(E_0-E_1)^2+4|W_{12}|^2}\right]
+        \end{align*}
+        which, for $W_{12}=0$ falls back into the Eigenstates of the uncoupled system, $E_1$ and $E_2$. The correspinding new Eigenstates are of the form
         \begin{equation*}
             \ket{+} = \cos\frac{{\theta}}{2}\exp{i\phi}\ket{0} + \sin{\frac{\theta}{2}}\exp{i\phi}\ket{1}\\
         \end{equation*}
@@ -227,9 +289,7 @@
                 \caption[Leval anti crossings]{A generic example of level anti crossings. In red, the uncoupled states can be seen while in black, the energy states including the coupling are shown.}
                 \label{figure:theory:LAC}
             \end{figure}
-            This coupling leads to a mixing of the states if the magnetic field is in the region of the LAC changing occupatinal numbers of the states over time. See section \ref{HPSabre} for how this effect can be used to hyperolarize samples.
-            \subsection{Time developent}
-            The static hamiltonian does not suffice to describe the time development of the states e.g. during hyperpolarization in a Sabre experiment.
+            This means that the coupling leads to a mixing of the states if the magnetic field is in the region of the LAC. Effectively, the coupling thus changes the occupatinal numbers of the uncoupled states over time. See section \ref{HPSabre} for how this effect can be used to hyperolarize samples.
     \section{NMR}
         Nuclear Magnetic Resonance (NMR) is a technique that emerged in 1946 with the discovery
         of the absortion properties of nuclei irradiated with electromagnetic waves resonant to their
@@ -281,7 +341,8 @@
                 \caption[Relaxation in NMR]{Exemplary plots of the T1 and T2 relaxation after a \SI{90}{\degree} FA shown via the magnetization and its temporal development. On te left, the magnetization in the xy-plane is shown with six arrows indicating equal timesteps. In the center, equal timesteps for the z-magnetization are shown. On the right, both cases are combined to show the overall magnetization. Note that generally, T1 is larger than T2 (here a factor of 40 difference). There are only few special cases where this won't hold.}
                 \label{theory:figure:relaxation}
             \end{figure}
-        \subsection{Echos}
+        \subsection{Inversion recovery and spin echos}
+
         The dephasing of the signal can be fast, but a part, defined by the difference between T2 and T2* can be regained through inversion of the magnetization. The inversion pulse can be a \SI{180}{\degree} pulse, in steady state measurements, often smaller pulses are used. The "resurrected" signal is called "echo". Multiple echos can be recorded if multiple inversion pulses are applied, but different effects effectively reduce the signal in the course of the recording:
         \begin{itemize}
             \item Diffusion and convection will reduce the efficiency of the signal recovery because both coupling environments and external fields will change due to the change in position.
@@ -301,15 +362,15 @@
         \subsection{Magnetic field gradients}
             As described before, magnetic field gradients are used for shimming, but also for spatial encoding of the NMR signal. The latter is described in more detail in the following.
         \subsection{Spin echo sequence}
-        A spin echo sequence consists of a n\SI{}{\degree} FA followed by a train of 2n\SI{}{\degree} pulses. Every 2n\SI{}{\degree} pulse leads to a inversion of the magnetization along the z-axis (as soon as the steady state is reached). Thus, the pulse train induces an echo train that can be recorded by the receive coils.
+        A spin echo sequence consists of a n\SI{}{\degree}(conventionally \SI{90}{\degree}) FA followed by a train of 2n\SI{}{\degree} (conventionally \SI{180}{\degree}) pulses. Every 2n\SI{}{\degree} pulse leads to a inversion of the magnetization along the z-axis (as soon as the steady state is reached). Thus, the pulse train induces an echo train that can be recorded by the receive coils as each inversion causes the spins of the ensemble to rephase according to the specifications in the relaxation section. This means that the limiting time factor for signal acquisition is $T_2$.
         \subsection{Gradient echo sequence}
-        A gradient echo sequence uses an excitation pulse to generate the initial x-y-magnetization, but relies on additional gradients to actively de- and rephase the magnetization in the following. The pulses with double the FA of the initial pulse are dropped.
+        A gradient echo sequence uses an excitation pulse to generate the initial x-y-magnetization, but relies on additional gradients to actively de- and rephase the magnetization in the following. The pulses with double the FA of the initial pulse are dropped. This has the disadvantage that $T_2^*$ decay is the signal limiting factor. This is compensated by a generally faster acquisition because the dephasing itself can be faster than the intrinsic relaxation. This reduces echo times and thus overall acquisition time.
         \subsection{Slice selection}
             The first step in most imaging methods is to excite a slice of the sample to select the first spatial dimension. To do so, a magnetic field gradient - mostly in z direction - is applied to the sample. 
             \begin{equation}
                 B_z(z) = B_{z,max} * \frac{z}{z_{max}}
             \end{equation}
-            Ususally, not the field, but the frequency difference is relevant and for a slice thickness of $\Delta Z$ is given by 
+            This means that the frequency bandwidth together with the gradient strength are relevant parameters for the slice thickness $\Delta z$. It is given by 
             \begin{equation}
                 \Delta f = \gamma G_z \Delta z
             \end{equation}
@@ -333,12 +394,12 @@
             \end{equation}
             That means that the gradient strength needs to be varied to satisfy the sampling conditions for the frequencies generated, i.e. the freuquency encoding scheme is run multiple times with different phase encoding gradient field strengths set up to be running before it. That way, if the fourier transformed data for each phase encoding step, i.e. each frequency encoded line, is sorted by gradient strength and fourier transformed in the second dimension, the frequency generated by the changing phase will indicate the position in y direction. That means that each phase encoding step generates a k-space line that is shifted in the $k_y$ direction.
             \begin{figure}
-                %\includegraphics[width=0.9\textwidth]{/figures/theory/kSpaceEncoding.pdf}
+                \includegraphics[width=0.9\textwidth]{/figures/theory/imagingScheme.pdf}
                 \centering
-                \caption[k-space Graph]{The usual display of the encoding steps in k-space in a spin-echo sequence.}
+                \caption[k-space Graph]{An abstract visualization of an imaging sequence. On the left, the gradients in frequency and phase encoding gradients are displayed over the course of one phase encoding step. For each of these steps, the pahse encoding gradient's strength ist varied. The usual display of the encoding steps in k-spaceis displayed on the right. Each repetition of the scheme on the left corresponds to one line in $k_x$ direction on the right.}
             \end{figure}
         \subsection{Adiabatic field switching}
-            To generate more signal while keeping some advantages of a low field like higher absolute homogeniety, prepolarization can be used. A field that is larger than the field used in readout is switched on for a certain time before readout. The timing is largely influenced by T1 as the relaxation constant defines how long it takes for the sample to be in its new thermal equilibrium. The switching of the field can be performed quickly or slowly. \ref{defineAdiabatic}
+        To generate more signal while keeping some advantages of a low field like higher absolute homogeniety, prepolarization can be used. A field that is larger than the field used in readout is switched on for a certain time before readout. The timing is largely influenced by T1 as the relaxation constant defines how long it takes for the sample to be in its new thermal equilibrium. The switching of the field can be performed quickly or slowly where quick switching means at switching times $t_s << T_1$ (adiabatically). 
     \section{Hyperpolarization}
     The main limitation of NMR and MRI is the low thermal polarization at room temperature and the currently generatable magnetic fields. For each energy state $E_i$ the Boltzmann distribution dictates
         \begin{equation}
@@ -385,17 +446,37 @@
                 \caption[Parahydrogen fraction]{The equilibrium poplulation of the para hydrogen state. The dashed line shows the high temperature limit of 3:1. The green line indicates room temperature, where the limit is almost reached. The red line indicates the temperature at which parahydrogen was generated in this work, \SI{21}{\kelvin}.}
                 \label{figure:theory:ph2Fraction}
             \end{figure}
+            The initial density matrix of parahydrogen can be described by
+            \begin{equation}
+                \sigma_0^{pH_2} = \frac{1}{4} \hat 1 - c_0(\hat{I}_1\hat{I}_2)
+            \end{equation}
+            with the individual spins' operators denoted by 1 and 2 and the constant $c_0$ scaling with the fraction of $pH_2$ in the initial gas mixture:
+            \begin{equation*}
+                c_0=(4f_p-1)/3.
+            \end{equation*}
+            The evolution of the states is then described by the evolution of the density matrix under the J couplings with the target nuclei and other surrunding nuclei. 
         \subsubsection{Pasadena / Altadena}
         The first hyperpolarization experiments were performed at the CIT in Pasadena, and later named after it. These first experiments used parahydrogen to hydrogenate a molecule first and then used pulse sequences or field shuttling to transfer the hydrogens spin order to other nuclei. Mostly, 13C nuclei were used as recipients. of the spin order and susequent polarization. Figure \ref{} visualizes the hyperpolarization procedure. To make hyperpolarization possible, the parahydrogen needs to be added to the molecule pairwise. Furthermore, after the addition, the symmetry of the added hydrogen molecule must be broken to be able to transfer the spin order. This usually happens alredy through the asymmetry of the receptor molecule and the different couplings of each added hydrogen atom to the nuclei of the molecule.
         \subsubsection{Sabre}
-        In Sabre, the molecule to be hyperpolarized is not hydrogenated, but is in contact with the parahydrogen via a catalyst for a certain contact time. The transfer of spin order can happen spontaneously at the right fields where socalled level-anti-crossings occur. In addition hyperpolarized susbtrate can also be generated at other fields using RF-irradiation. The system can be described by time evolution in bound and unbound state where the bound state implies non zero couplings between ph2 and at least some of the substrate spins.
+        \label{HPSabre}
+        In Sabre, the molecule to be hyperpolarized is not hydrogenated, but is in contact with the parahydrogen via a catalyst for a certain contact time $t_c$. The transfer of spin order can happen spontaneously at the right fields where socalled level-anti-crossings (LACs) occur. In addition, hyperpolarized susbtrate can also be generated at fields far from these LACs using RF-irradiation. The system can be described by time evolution in bound and unbound state where the bound state implies non zero couplings between ph2 and at least some of the substrate spins.
         \begin{figure}
             \centering
             \includegraphics[width=0.9\textwidth]{/figures/theory/sabreScheme.pdf}
-            \caption[Sabre scheme]{The mechanism used in Sabre using nicotinamide as an exemplary molecule. On the left, parahydrogen is converted to its ortho state, thus spin order is lost. On the right, nicotinamide is hyperpolarized using that order.}
+            \caption[Sabre scheme]{The mechanism used in Sabre using nicotinamide as an exemplary molecule. On the left, parahydrogen is converted to its ortho state, thus spin order is lost. On the right, nicotinamide is hyperpolarized by the transfer of that order.}
         \end{figure}
+    To describe the time evolution of the system, the density matrix has to be evolved under the couplings present in the complex that forms when both parahydrogen and substrate are bound to the catalyst. The necessary hamiltonian is formed by the Zeeman term and all the relevant couplings (in the rotating frame notation):
+    \begin{equation}
+        \begin{aligned}
+            \mathcal{H}& = \mathcal{H}_z + \mathcal{H}_J \\
+                   & =\-2\pi\gamma B_0 \sum_n{(1-\delta_n)\hat{I}_{nz}} + \sum_{n<m} -2\pi J_{nm}(\hat{I}_{nx}\hat{I}_{mx} + \hat{I}_{nx}\hat{I}_{mx}+ \hat{I}_{ny}\hat{I}_{my} + \hat{I}_{nx}\hat{I}_{mx})
+        \end{aligned}
+    \end{equation}
+    Additionally, the binding time that depends on temperature and diffusion constants of the solvent has a strong influence on the effective coupling the nuclei experience.
+        Hyperpolarized signal occurs at different points: The substrate itself is hyperpolarized, and that is both in bound and free form, i.e. after detatching from the catalyst. The forms can be differentiated by hteir different chemical shifts. At usual concentrations, where a surplus of target substrate is present, the free form will exceed the bound form drastically. Additionally, the hydrogen will be in a ortho state and hyperpolarized after polarization has been transferred to the target molecule. It can also be seen in the $^1H$ spectrum.
+        For $^{15}N$, only one resonance is observed for free and bound form, respectively. Here, as with $^1H$, the free form prevails the bound form under the concentrations used in the usual experiments and so do the respective signals.
         \section{Hardware}
-            As hardware plays an important role in this work, I also want to provide some theoretical insight into some of the technologies used in this work.
+            As hardware plays an important role in this work, I also want to provide a bit of theoretical insight into some of the technologies used in this work.
             \subsection{Field generation}
                 Fields are generated by either current flown conductors or superconductors. Both have ad- and disadvantages and are chosen according to requirements (see ref{methods}). Magnetic field is generated according to the fourth Maxwell equation
                 \begin{equation}
@@ -406,8 +487,19 @@
                 A normal conductor has the great advantage of room temperature operatiion simplifying its setup and operation enormously. The disadwantage is that the conductor will heat due to its finite resistance. That heating can be so large that melting of the conductor occurs or, in the less dramatic case, deformations happen due to heat expansion. Usually copper is chosen for its low electric resistance of \SI{1.72e-8}{\ohm\meter}\ref{}(reducing heat generation) and at the same time high thermal conductivity \SI{380}{\watt\per\m\per\kelvin}\ref{DIN 4108}(increasing heat dissipation). 
                 \subsubsection{Superconductors}
                 Superconductors are a special form of conductors that show electric resistances of exactly zero below a certain critical temperature $T_c$. Generally, the superconductors need to be cooled from room temperature to a few \SI{}{\kelvin} to show this property, so called high temperature superconductors raised that limit to about \SI{200}{\kelvin}. Superconductors can be made of different, exotic materials but also more common substances such as graphene can show superconducting properties.Different superconductors show different critical Temperatures and mechanical properties often restricting their use to certain areas. Microscopically, inside the superconductors, so called cooper pairs are forming if the thermal energy is below \todo{finish}
+            \subsection{Magnetic susceptibility and shielding}
+            The magnetic field generated by a current flow or a changing electric field is described by the magnetic field strength $\mat H$ which describes the magnetic field with no material present. The actually relevant size for experimental purposes is the magnetic flux density $B$ which adds to the magnetic field strength the magnetization $M$ of materials exposed to the magnetic field strength $H$.
+            \begin{equation}
+                \vec{B} = \mu \vec{H} = \mu_0 \mu_r \vec{H} = \mu_0(1+\chi) \vec{H}
+            \end{equation}
+            where $\chi$ is the magnetic susceptibility, the quantity mostly mentioned in NMR and MRI. Ususally $B$ is the unit intended when talking about magnetic fields. 
+            In many cases, as for example for air, $B$ and $H$ are almost the same as the relative permeability $\mu_r$ is only 0.35 ppm\cite{CullityGrahamIntroductionToMagneticMaterials}. For water, it is already about a factor 10 higher, i.e. $\mu_r$ = 2~ppm . 
+            This means that, where susceptibility changes occur in materials, magnetization and thus magnetic field change. These changes cause field inhomogenieties posing a problem for NMR and MRI where a more homogenous field $B_0$ is always preferred. Materials are grouped by their susceptibilities:
+            Substances with a large, positive $\chi$ are called ferromagnetic, they get magnetized in the direction of the external field and the magnetization can surpass the field strength of the external field. External field and magnetization aren't usually linearly correlated for ferromagnets, when all magnetic moments in the material are aligned a plateau is reached. Usually, these materials follow a magnetization hysteresis when the external field changes value and sign. Furthermore, ferromagnets do not necessarily return to their unmagnetized state if H returns to 0 (remanence).
+            Paramagnetic and diamegnetic substances show a much smaller magnetization, where paramgnetic substances nuclear momenta, as ferromagnetic ones align parallel to the magnetic field ($\chi>0$) and diamagnetic antiparallel ($\chi$ < 0).
+            Shielding of external magnetic fields can make use of the fact that the high susceptibility of some materials leads to a bundling of magnetic field lines, i.e. a volume surrounded by that material can have a strongly reduced magnetic flux density and thus a lower magnetic field.
             \subsection{Oscillating circuit}
-                A coil usually consists of oscillatory circuits made up of a capacitor and a coil. Inside a resonsnt circuit, Energy can be stored in the form of electric field and electric current. The two forms of energy are constantly converted into each other, i.e. the capacitor is charged by the current from the coil and in turn generates a phase shifted countering current. The freuqency of this coversion can be calculated considering the following differential equations:
+                A coil for usage in NMR or MRI usually consists of oscillatory circuits made up of a capacitor and an inductance. Inside a ascillatory circuit, energy can be stored in the forms of electric field and electric current. The two forms of energy are constantly converted into each other, i.e. the capacitor is charged by the current coming from the coil and in turn generates a phase shifted countering current. The freuqency of this coversion can be calculated considering the following differential equations:
                 \begin{equation}
                     \begin{aligned}
                         -L\frac{dI}{dt} &= \frac{Q}{C} \\
@@ -419,28 +511,47 @@
                     I(t) =  A \cdot \cos(\omega t) + \phi 
                 \end{equation}
                 where $f= \frac{1}{\omega} = \frac{1}{2\pi\sqrt{LC}}$ which means that by changing capacitance and inductance in a resonant circuit, the resulting resonance frequency can be changed. Moreover, capacitance and inductance sizes can be adapted in opposite directions depending on the purpose of operation.
-                Of course, in realistic cases, the oscillation is dampened by ohmic resistance of the components and radiation losses. 
+                Of course, in realistic cases, the oscillation is dampened by ohmic resistance of the components and radiation losses.
+            \subsection{Nyquist theorem}
+                Especially in the low field spectrometer case, where no frequency mixing was performed as is usually the case at the MRI's much higher frequencies, one had to keep in mind sampling theorems to ensure a proper signal coverage. A signal needs to be sampled at a minimum sampling frequency
+                \begin{equation}
+                    f_{s} = 2 f_{sig}
+                \end{equation}
+                if signals with a maximum frequency of $f_{sig}$ are expected. If the sampling frequency is lower than that, aliasing effects will occur, i.e. fold ins in the fourier transform will show up.
+                Another option would be to limit the bandwidth towards the lower end by a high pass filter and use this a priori knowledge to prevent the aliasing.
             \subsection{Operational amplifiers}
-                Operational amplifiers are used to amplify the signal of the fluxgate magnetic field sensor. The ideal operational amplifier amplifies the incoming signal to infinity on the positive input, to $-\inf$ on the nageative input and has an infinite input impedance as well. This is not true in practice, but very high voltages are produced at the output if a small voltage is applied to the input. That is why operational amplifiers need to be driven in feedback mode (figure \ref{figure:theory:opAmp}). In this mode, the output is connected to the input, most of the time via resistors, to generate a defined output voltage that depends on the input. The socalled inverting opamp was used in this work, is shown in figure \ref{figure:theory:opAmp} and will be described in more detail now.
+            Operational amplifiers have been used to amplify the signal of the fluxgate magnetic field sensor. Amplification is necessary because of the large output range of $\pm$ \SI{10}{\volt} in combination with the high resolution in the low field regime. Operational amplifiers are a rather complex network of transistors that show a behavior similar to what is described in the following. The ideal operational amplifier amplifies the incoming signal to infinity on the positive input, to $-\inf$ on the negative input and has an infinite input impedance as well. This is not true in practice, but very high voltages (limited by the supply voltage) are produced at the output if a small voltage is applied to either of the inputs. With the gain $A_{opa}$, the output voltage is thus described by
+            \begin{equation}
+                    \label{equation:theory:OPAvoltage}
+                U_{out} = A_{opa}(V_+ - V_-)
+            \end{equation}
+            That is why operational amplifiers need to be driven in some kind of feedback mode (figure \ref{figure:theory:opAmp}) as otherwise even very small voltage differences on the input cause a saturation of the output. In this mode, the output is fed back to one of the inputs, most of the time via resistors, to generate a defined output voltage that depends on the input voltage of the complete setup, $U_{in}$. The socalled inverting opamp was used in this work, is shown in figure \ref{figure:theory:opAmp} and will be described in more detail now.
+            \begin{figure}
+                \includegraphics[width=0.9\textwidth]{/figures/theory/opAmp.pdf}
+                \caption[Operational amplifier]{An operational amplifier in an inverting setup. The amplification of the input voltage $U_{in}$ is directly given by the ratio of the resistors, $R_2/R_1$.}
+            \end{figure}
                 By connecting the output to the negative input, a loop is formed in which the voltages add to zero. This tells us that
                 \begin{equation*}
-                    \label{equation:theory:OPAvoltage}
-                    U_{opa} = U_a - U_- = U_R
+                    U_{opa} = U_{out} - U_- = U_{R_2}
                 \end{equation*}
-                and, with the additional knot marked \ref{wie?} we know that the currents $I_{R1}$ and $I_{R2}$ are the same to a very good approximation with very little current flowing through the op-amp. 
+                Additionally, as, as soon as the negative input starts to differ from the positive one, the output reacts and drives it back. That way, there is a virtual ground on the negative input (marget with a red dot in figure \ref{figure:theory:opAmp}).
+                This can also be shown by calculating the voltage $U_-$:
                 \begin{equation}
-                    \label{equation:theory:OPAcurrent}
-                    I_{R_1} = I_{R_2} = \frac{U_2}{R_2}= \frac{U_a - U_-}{R_2}.
+                    U_- = U_{in} + U_{R_1} = U_{R_2} + U_{out}
                 \end{equation}
-                \todo{error in formulas, check literature}
-                By this setup, output voltage $U_a$ and input voltage $U_-$ are kept at the same level which, if combining this with equations \ref{equation:theory:OPAcurrent} and \ref{equation:theory:OPAvoltage} leads to an output voltage 
+                which, considering $R_1$ and $R_2$ are a voltage divider due to the lack of current trough the opamp, this can be written as
                 \begin{equation}
-                    U_a = 
+                    U_{-} = U_{out} \frac{R_1}{R_1+R_2} + U_{in} \frac{R_2}{R_1+R_2}
                 \end{equation}
-                meaning that the input voltage is inverted and amplified by a factor defined by the resistor ratio
+                and, if combined with equation \ref{equation:theory:OPAvoltage}, gives the output voltage
                 \begin{equation}
-                    A=\frac{R_2}{R_1}
+                    U_{out} = -U_{in} \frac{A_{opa}R_2}{R_1+R_2 + A_{opa}R_1}
                 \end{equation}
+                which, for large $A_{opa}$ present in all operational amplifiers simplifies to the Resistor ratio.
+                \begin{equation}
+                    U_{out} = -U_{in}\frac{R_2}{R_1}
+                \end{equation}
+                This also makes sense phenomenologically: by this setup, $U_{+}$ and $U_{-}$ are kept at the same level, i.e. the negative input is a virtual ground, as the output is fed back to the negative input and any pertubance that causes a differential voltage between the two inputs will regulate itsself by applying a corresponding voltage to the negative input until equilibrium is restored.
                 This is especially helpful as the accuracy of the resistors is the limiting factor of the amplification's accuracy, i.e. by choosing the resistors carefully, the aplification can be set very accurately.
 
             \subsection{Frequency filters}
@@ -451,6 +562,10 @@
                 \begin{equation*}
                     Z_L = {i\omega L}
                 \end{equation*} 
+                The output voltage $U_o$can then be described as a function of input voltage $U_{i}$ and these two impedances:
+                \begin{equation}
+                    U_o = \frac{Z_c}{Z_R + Z_C} U_i
+                \end{equation}
                 with the signal frequency $\omega$. The cutoff frequency of the filter $f_0$ can then be described for both the RC-filter by
                 \begin{equation}
                     f_0^{RC} = \frac{1}{2\pi R C}
@@ -459,9 +574,21 @@
                 \begin{equation}
                     f_0^{RL} = \frac{R}{2\pi L}
                 \end{equation}
-            where the arrangement of the components defines whether it is a low or a high pass filter.
+                where the arrangement of the components defines whether it is a low or a high pass filter. These filters are the simplest form of frequency filters of first order and show a boundary drop of \SI{20}{\deci\bel} per frequency decade. Higher order filters can be used where more sharply defined cutoff frequencies are necessary but usually come with drawbacks in the linearity of the transmit band especially close to the cutoff frequency (ripple). These can be constructed by combining multiple frequency filters serially or by designing more complex filters such as the Chebyshev filter, a LC filter wih n stages. Figure \ref{figure:theory:frequencyFilter} demonstrates the effect of first and second order filters on the signal at different frequencies.
             \begin{figure}
+                \label{figure:theory:frequencyFilter}
                 \centering
-                %\includegraphics[width=0.9\textwidth]{/figures/theory/frequencyFilters}
-                \caption[Frequency filters]{Attenuation over frequency for the different types of filters mentioned in the text. cutoff frequencies are shown for each filter. Note that even these low order filters do not have \SI{100}{\percent} transmission in the transmissive frequency range.}
+                \includegraphics[width=0.9\textwidth]{/figures/theory/frequencyFilters.pdf}
+                \caption[Frequency filters]{Transfer function over frequency for the different types of filters mentioned in the text. Cutoff frequencies are shown for the filters. At the frequency value of 10, a first order high and low pass filter are shown for the same cutoff frequency (i.e. same L/C and R values) in purple colors. Further to the right, a shifted first order filter (C/L * 10) and a second order filter are shown in shades of red.}
             \end{figure}
+            \subsection{Flow and flow resistance}
+                Pressure differences above liqids or in gases create flow from high to low pressure area. These flows are important in the setups used here and will be shortly described as a function of the pressure creating them under simplified conditions.
+                Flowing speeds are generally limited by the flow resistance. This resistance is easily described if the flow is through a tube and can be considered laminar. Generally, the flow rate Q is given by
+                \begin{equation}
+                    Q=\frac{p_2-p_1}{R}
+                \end{equation}
+                where R is the reynolds number that depends on $\eta$, the viscosity of the fluid and the flow resistance of the connecting vessel. For example, for a solid tube of radius r and length l, the reynolds number is given by
+                \begin{equation}
+                    R=\frac{8\eta l}{\pi r^4}
+                \end{equation}
+                Because of the much lower viscosity of gases that stems from their lower density, gas flow is generally higher than fluid flow at otherwise unchanged conditions.
