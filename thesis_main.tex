@@ -1,4 +1,3 @@
-
 % documentclass options:
 % ngerman is needed for hyphenation if the thesis contains parts written in German
 % BCOR is binding correction
@@ -36,17 +35,13 @@
     \include{chapters/6-conclusions}
     \include{chapters/7-acknowledgments}
     \include{chapters/8-appendix}
-
     % bibliography is not in the table of contents per default, add it manually
     % enable the \renewcommand for german header
     % \renewcommand{\bibname}{Literaturverzeichnis}
     \addcontentsline{toc}{chapter}{Bibliography}
-    
     \bibliographystyle{ieeetr}
-    \bibliography{bib/topic1, bib/nucleiSpins}
-
+    \bibliography{bib/topic1,bib/general.bib,bib/nucleiSpins,bib/parahydrogen.bib,bib/HP.bib,bib/MRI.bib,bib/NMR.bib,bib/hardware.bib}
     \newpage
     \thispagestyle{empty}
     \mbox{}
-
 \end{document}
