@@ -3,9 +3,9 @@
 This chapter will provide a basis for understanding the principles of this work as well as the phenomena and effects exploited in the later chapters. It will cover the most important aspects, and, of course, for a more detailed description, the cited literature may be consulted. At first, the quantum mechanical approach describing nuclei and spin systems will be given followed by a more application oriented description of the effects occurring and used in NMR and MRI.
     \section{Nuclei and Spins}
         \label{sec:theory:nucleiSpins}
-        The postulation of an electron spin in 1926 \ref{} and later, in 1928, of a proton spin \ref{} opened
-        up new areas of research.\todo{more history}
-        Each particle has magnetic properties to which both electrons and the nucleus, i.e. protons and neutrons, contribute. We consider the electrons' contributions to be of a static nature because of the fast movement (see \ref{chemical shif, kann man so sagen?}) and instead turn to the nucleus' magnetic properties. As we want to manipulate nuclei electromagnetically, their magnetic momentum is the relevant physical property in this case.
+        The postulation of an electron spin in 1926 \cite{uhlenbeck_ersetzung_1925, goudsmit_ontdekking_1971} and later, in 1927, of a proton spin \cite{dennison_note_1927} opened up new areas of research. The discovery opened up numerous new research topics both in basic research, especially in high energy physics, but also in directions leading to applied sciences making use of the spin properties of the nuclei. Nuclear magnetic resonance (NMR, \cite{purcell_resonance_1946-1} ) and Magnetic Resonance Imaging (MRI, \cite{mansfield_medical_1977}) are two sprouts of that development and are the basis of this thesis.
+
+        Each atom or molecule has magnetic properties to which both electrons and the nucleus, i.e. protons and neutrons, contribute. We consider the electrons' contributions to be of a static nature because of their, compared to usual acquisition times, fast movement (see \ref{sec:theory:chemicalShift}) and instead turn to the nucleus' magnetic properties. As we want to manipulate nuclei electromagnetically, their magnetic momentum is the relevant physical property in this case.
         The magnetic momentum $\vec M$ of a nucleus is connected to the spin $\vec S$ by the gyromagnetic ratio $\gamma$, a nucleus specific proportionality factor \cite{balanis_advanced_nodate}:
         \begin{equation}
             \vec M = \gamma \vec S
@@ -125,7 +125,7 @@ This chapter will provide a basis for understanding the principles of this work 
                     \end{pmatrix}
                 \end{split}
             \end{equation}
-            It can be equally shown that a $\SI{180}{\degree}$ pulse inverts the populations of the diagonal elements while the coherences are untouched.  If the system is not in thermal equilibrium, the density matrix will evolve and generally relax back to its equilibrium state. If one neglects said relaxation at first, the free evolution can be described by \todo{ref formula rotating frame}
+            It can be equally shown that a $\SI{180}{\degree}$ pulse inverts the populations of the diagonal elements while the coherences are untouched.  If the system is not in thermal equilibrium, the density matrix will evolve and generally relax back to its equilibrium state. If one neglects said relaxation at first, the free evolution can be described by
             \begin{equation}
                 \begin{split}
                     \ket\psi_\upsilon &= \hat R_z(\Omega^0\upsilon)\ket\psi_\tau ~ \mathrm{and} \\
@@ -148,9 +148,9 @@ This chapter will provide a basis for understanding the principles of this work 
         \end{equation}
         In addition to the pure signal, there will also be a contribution of noise to the overall signal. This contribution will be arbitrarily distributed and increases with the root of the number of acquisitions: $S_{noise} \propto \sqrt{n}$. The NMR signal increases linearly with the acquisitions $S_{NMR} \propto n$. The combined signal to noise ratio thus increases with
         \begin{equation}
-            SNR =  \frac{S_{NMR}}{ S_{noise}}  \propto \frac{n}{\sqrt{n}}
+            SNR =  \frac{S_{NMR}}{ S_{noise}}  \propto \frac{n}{\sqrt{n}} = \sqrt{n}
         \end{equation}
-        \todo{finish}
+        This is why decent noise suppression and use of low noise materials to build coils and readout electronics are key to keep measurement times small (i.e. to reduce the necessity of averaging to reach acceptable SNR values).
         \subsection{Multiple spin ensembles}
             The description above was all formulated for an ensemble of isolated spins. It can - and has to - be extended to describe more complex systems of molecules containing multiple, interacting spins. To do so, the product operators, product states and product density matrices of all operators and states need to be calculated. This can be done by expanding the operators of the single spin system into the direct product space describing a N spin system:
             \begin{equation*}
@@ -160,7 +160,7 @@ This chapter will provide a basis for understanding the principles of this work 
             \begin{equation}
                 A_n\otimes A_m = (A_n \otimes \mathbb{I}_m)(\mathbb{I}_n \otimes A_m) = A^p_nA^p_m
             \end{equation}
-            Note that this is an especially convenient way of noting but will also cover coupling effects in the off-block-diagonal elements\todo{check again!}. Similarly, the extended states are established as Kronecker products of their single states:
+            Note that this is an especially convenient notation but will also cover coupling effects between the different species in the off-block-diagonal elements\todo{check again!}. Similarly, the extended states are established as Kronecker products of their single states:
             \begin{equation}
                 \ket{a_1,a_2, \dots, a_N} = \ket{a_1}\otimes\ket{a_2}\otimes\dots\otimes\ket{a_N}
             \end{equation}
@@ -186,15 +186,16 @@ This chapter will provide a basis for understanding the principles of this work 
             In addition to the main magnetic field $B_0$, other effects influence the overall energy of the nuclei. These are intra- and inter-molecular dipole-dipole couplings and quadrupole couplings, intra-molecular J-coupling and spin rotation and so-called chemical shift, a interaction or shielding effect of electrons towards the nuclei.
             In NMR of liquids, the strongest contribution usually is the chemical shift delivering the largest contribution. 
         \subsubsection{Chemical shift}
+        \label{sec:theory:chemicalShift}
             The chemical shift can be considered linearly dependent on the external magnetic field meaning that for the chemical shift induced field $B_n^{cs}$ of the nth nucleus
             \begin{equation}
-                \vec B_n^{cs} = \vec{\delta}_n\vec B_0
+                \vec B_n^{cs} = \boldsymbol\delta_n \vec B_0
             \end{equation}
-            resulting in a corresponding Hamiltonian term if we consider the chemical shift to be isotropic (i.e. we consider the chemical shift tensor to have three equal diagonal entries only \cite{levitt_spin_nodate} \todo{or motional averaging}) and additionally constraining the principal magnetic field to the z direction, we get:
+            resulting in a corresponding Hamiltonian term if we consider the chemical shift to be isotropic (i.e. we consider the chemical shift tensor to have three equal diagonal entries only \cite{levitt_spin_nodate} and additionally constraining the principal magnetic field to the z direction, we get:
             \begin{equation}
-                \mathcal H_n^{cs} = -\gamma \delta B_0 \vec I_{nz}
+                \mathcal H_n^{cs} = -\gamma \delta_n B_0 \vec I_{nz}
             \end{equation}
-            where $\delta$ is the average over all angles of the chemical shift tensors z component $\bar{\delta = \vec{ \delta}_{zz}(\Theta)}$. \todo{deltas all thin despite vec} \cite{abraham_proton_1997}.
+            where $\delta_n$ is the average over all angles of the chemical shift tensors z component, which in isotropic liquids is constant $\delta_n = \overline{ \boldsymbol\delta_{zz}(\Theta)}$ \cite{abraham_proton_1997}.
         \subsubsection{Spin-Spin- and J-couplings}
             The direct spin-spin couplings between different nuclei also known as dipolar couplings average out in the Hamiltonian in case of liquid state NMR due to rapid molecular motion compared to the timescales of the Zeeman interaction. Different couplings are still observable in the recorded NMR spectra. These are indirect couplings or J-couplings transduced through the electrons. The Hamiltonian of this interaction is described by the coupling tensor, $J_{nm}$ and the corresponding angular momentum operators
             \begin{equation}
@@ -333,8 +334,7 @@ This chapter will provide a basis for understanding the principles of this work 
                 f_L=\frac{\omega}{2\pi} = \frac{\gamma}{2\pi}\cdot B
             \end{equation}
         \subsection{Free induction decay}
-        The NMR signal induced in a resonant circuit after a \SI{90}{\degree} pulse is called free induction decay (FID). It is generated by the net magnetization of the sample precessing in the static magnetic field B0 with its Larmor frequency. The current induced in the receive coil is stored in the resonant circuit with the resonance frequency tuned to the sample's Larmor frequency.
-        \todo{finish fill}
+        The NMR signal induced in a resonant circuit after a \SI{90}{\degree} pulse is called free induction decay (FID). It is generated by the net magnetization of the sample precessing in the static magnetic field B0 with its Larmor frequency $\omega_0$. The current induced in the receive coil is stored in the resonant circuit with the resonance frequency tuned to the sample's Larmor frequency. The decay in the name describes the reduction of the signal due to relaxation of the nuclei towards thermal equilibrium, see section \ref{chapter:theory:relaxation}.
         \subsection{Fourier transform, signal and signal to noise}
         \label{chapter:theory:fourierTransform}
         To analyze the acquired FIDs and echos, they're usually Fourier transformed leading to a frequency analysis of the signal. This is achieved using the well known formula \cite{farrar_pulse_2012}
@@ -481,7 +481,7 @@ This chapter will provide a basis for understanding the principles of this work 
             P = \frac{N_+-N_-}{N} = \tanh\left(\frac{\hbar \gamma B}{2 k T }\right)
             \label{equation:theory:polarization}
         \end{equation}
-        This means, that even at the relatively high field strengths that can be generated in the spectrometers and MR imagers (order of \SI{10}{\tesla}), only a small fraction of the spins effectively contribute to the overall signal. Figure \ref{figure:theory:boltzmannDistribution} shows this schematically for full polarization. Note the size of the energy splitting compared to the total energy differs by five orders of magnitude. In clinically relevant MRI machines that mostly operate at \SI{1.5}{\tesla} or \SI{3}{\tesla}, that means that a maximum of \todo{check number}1 in $10^6$ nuclei effectively contribute to the signal.
+        This means, that even at the relatively high field strengths that can be generated in the spectrometers and MR imagers (order of \SI{10}{\tesla}), only a small fraction of the spins effectively contribute to the overall signal. Figure \ref{figure:theory:boltzmannDistribution} shows this schematically for full polarization. Note the size of the energy splitting compared to the total energy differs by five orders of magnitude. In clinically relevant MRI machines that mostly operate at \SI{1.5}{\tesla} or \SI{3}{\tesla}, that means that a maximum of 1 in $10^5$ nuclei (at \SI{3}{\tesla}) effectively contribute to the signal.
         \begin{figure}
             \centering
             \includegraphics[width=0.9\textwidth]{/figures/theory/hyperpolarizationScheme.pdf}
@@ -586,10 +586,13 @@ This chapter will provide a basis for understanding the principles of this work 
                 where $f= \frac{1}{\omega} = \frac{1}{2\pi\sqrt{LC}}$ which means that by changing capacitance and inductance in a resonant circuit, the resulting resonance frequency can be changed \cite{rao_electronic_2011}. Moreover, capacitance and inductance sizes can be adapted in opposite directions depending on the purpose of operation.
                 Of course, in realistic cases, the oscillation is dampened by ohmic resistance of the components and radiation losses.
             \subsection{Birdcage coils}
-            Commercially available volume resonators are often manufactured in the birdcage design. The advantage of that design is the alignment of the coil's open and accessible axis with the magnetic field, meaning the coil can be accessed and loaded while installed in the scanner bore. Exchanging or repositioning samples is possible without removing the coil. The design is based on an array of individual resonant circuits, mostly in a bent, rectangular shape where one side of the rectangle is a conductor shared by neighboring circuits.
-            \todo{fin}
-            \subsection{Saddle coil dimensions}
-            \todo{write about ratios height radius length}
+            Commercially available volume resonators are often manufactured in the birdcage design. The advantage of that design is the alignment of the coil's open and accessible axis with the magnetic field, meaning the coil can be accessed and loaded while installed in the scanner bore. Exchanging or repositioning samples is possible without removing the coil. The design is based on an array of individual resonant circuits, mostly in a bent, rectangular shape called leg where one side of the leg is a conductor shared by the neighboring legs The rotating magnetization induces a current in those legs, the currents in neighboring legs are phase shifted according to the overall number of legs $\phi_{mag} = 360\si{\degree}/n_R$. As the total phase shift over the resonator must be a multiple of 2$\pi$, if all legs' impedances are the same, the coil can be driven and read out at two points only - generating the above mentioned pahse shift by itself. Birdcage coils are mostly chosen for transmission, in small animal scanners, in contrast to human scanners, where the distances are often too large, they're also used as receive coils in rodents where the diameters of the specimen are relatively small.
+            \subsection{Saddle coil}
+            The saddle coil used for RF-excitation of the sample is designed based on the publication by Hoult, \cite{hoult_signal--noise_1976}. It derives that the field generated by a saddle coil is given by
+            \begin{equation}
+                B_{xy} = \frac{\sqrt 3 \mu\mu_0}{\pi}\left(\frac{ag}{(a^2+g^2)^{3/2}}+\frac{g}{a(a^2+g^2)^{1/2}}\right)
+            \end{equation}
+            where a is the radius of the coil and g is half the height. Using these calculations, an optimum field homogeneity is reached when the opening angle of the coil is \SI{120}{\degree} and the length is equal to the diameter of the coil.
             \subsection{Nyquist theorem}
             Especially in the low field spectrometer case, where no frequency mixing is performed as is usually the case at the MRI's much higher frequencies, one had to keep in mind sampling theorems to ensure a proper signal coverage. A signal needs to be sampled at a minimum sampling frequency \cite{shannon_mathematical_1948}
                 \begin{equation}
