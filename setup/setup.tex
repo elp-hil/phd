@@ -64,6 +64,7 @@
     % You might not need the following packages, I only included them as they
     % are needed for the example floats
     % ------------------- functional, custom -------------------
+    \usepackage{enumitem}
     \usepackage{algorithm,algpseudocode}
     \usepackage{bm}  % bold greek variables (boldmath)
     \usepackage{tikz}
@@ -72,7 +73,8 @@
 
     % Improves general appearance of the text
     \usepackage[protrusion=true,expansion=true, kerning]{microtype}
-
+    % float package for appendix figures
+    \usepackage{float}
 %------------------------------------------------------------------------------
 %       (re)new commands / settings
 %------------------------------------------------------------------------------
@@ -93,6 +95,7 @@
     %------------------float pages------------------
     \renewcommand{\floatpagefraction}{.75}%
 
+    \newcommand{\miniscule}{\@setfontsize\miniscule{4}{5}}
     % ------------------- layout -------------------
     % prevents floating objects from being placed ahead of their section
     \let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
@@ -127,6 +130,7 @@
             detect-all
             }
 
+    \widowpenalty=500
     %==========================================
     % You might not need the following commands, I only included them as they
     % are needed for the example floats
